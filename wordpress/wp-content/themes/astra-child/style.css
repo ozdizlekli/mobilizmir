@@ -3,230 +3,545 @@ Theme Name: Astra Child - Mobilİzmir
 Theme URI: https://mobilizmir.com
 Template: astra
 Author: Mobilİzmir
-Description: Mobilİzmir Özel Tasarımı (Gold & Black)
-Version: 1.0.0
+Description: Mobilİzmir Özel Tasarımı — Gold & Black (v2.0 tasarım yenilemesi)
+Version: 2.0.0
 */
 
-/* MU-Plugin'den Gelen CSS Buraya Aktarıldı */
-*, *::before, *::after { box-sizing: border-box; }
+/* ==========================================================================
+   0) TASARIM SİSTEMİ / DEĞİŞKENLER
+   Sektördeki gerçek premium detailing sitelerine (koyu zemin + soğuk beyaz
+   metin + altını yalnızca vurgu/aksan olarak kullanma) yakın bir sistem.
+   Not: Başlıkların TAMAMINI altın yapmak "şablon/AI" hissi veriyordu.
+   Artık varsayılan başlık rengi kırık-beyaz; altın sadece vurgularda,
+   etiketlerde, çizgilerde, ikonlarda ve CTA'larda kullanılıyor.
+   ========================================================================== */
+   :root{
+    /* Zemin tonları — düz siyah yerine ince kademeli griler */
+    --mi-ink:        #0a0a0b;
+    --mi-ink-soft:   #121214;
+    --mi-ink-card:   #17171a;
+    --mi-ink-card-2: #1d1d21;
+    --mi-line:       rgba(255,255,255,0.07);
+    --mi-line-gold:  rgba(212,175,55,0.22);
 
-body, html {
-    margin: 0; padding: 0;
-    background: #0a0a0a !important;
-    color: #c8c8c8 !important;
-    font-family: 'Inter', -apple-system, sans-serif !important;
-    line-height: 1.8; overflow-x: hidden;
-}
+    /* Altın — tek düz ton yerine metalik his için 3 kademe */
+    --mi-gold:        #cba135;
+    --mi-gold-light:  #eecf7a;
+    --mi-gold-dark:   #9a7a24;
+    --mi-gold-gradient: linear-gradient(135deg, #eecf7a 0%, #cba135 45%, #9a7a24 100%);
 
-/* HEADER: Single row, flex, clean */
-.site-header, .ast-primary-header-bar, header.site-header {
-    background: rgba(10,10,10,0.92) !important;
-    backdrop-filter: blur(15px) !important;
-    -webkit-backdrop-filter: blur(15px) !important;
-    border-bottom: 1px solid rgba(212,175,55,0.15) !important;
-    position: sticky !important; top: 0 !important;
-    z-index: 1000 !important;
-}
-.ast-primary-header-bar .site-primary-header-wrap { display: flex; align-items: center; justify-content: space-between; flex-direction: row; max-width: 1200px; margin: 0 auto; padding: 0 30px; min-height: 70px; } /* removed extra selectors */
-.ast-primary-header-bar .ast-builder-grid-row {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    flex-direction: row !important;
-    max-width: 1200px; margin: 0 auto;
-    padding: 0 30px !important;
-    min-height: 70px;
-}
-.ast-builder-grid-row .ast-grid-common-col {
-    display: flex !important; align-items: center !important;
-}
-.site-title, .site-title a, .ast-site-identity .site-title a {
-    font-family: 'Playfair Display', serif !important;
-    font-size: 1.5rem !important; font-weight: 900 !important;
-    color: #D4AF37 !important; text-transform: uppercase !important;
-    letter-spacing: 3px !important; text-decoration: none !important;
-    white-space: nowrap !important;
-}
-.main-header-menu, .ast-builder-menu-1 .main-header-menu,
-.ast-builder-menu-1 {
-    display: flex !important; align-items: center !important;
-    gap: 0 !important;
-}
-.main-header-menu .menu-item, .ast-builder-menu-1 .menu-item {
-    display: inline-flex !important;
-}
-.main-header-menu a, .ast-builder-menu-1 a {
-    color: #b0b0b0 !important; font-weight: 400 !important;
-    font-size: 0.85rem !important; letter-spacing: 1.5px !important;
-    text-transform: uppercase !important; text-decoration: none !important;
-    padding: 8px 14px !important; transition: color 0.3s ease !important;
-    white-space: nowrap !important;
-}
-.main-header-menu a:hover, .ast-builder-menu-1 a:hover {
-    color: #D4AF37 !important;
+    /* Metin */
+    --mi-text:       #d6d6d9;
+    --mi-text-dim:   #8d8d94;
+    --mi-heading:    #f2f1ec;
+
+    /* Ölçüler */
+    --mi-radius-sm:  3px;
+    --mi-radius:     6px;
+    --mi-radius-lg:  10px;
+    --mi-container:  1220px;
+    --mi-shadow:     0 20px 45px rgba(0,0,0,0.35);
+    --mi-shadow-gold:0 10px 30px rgba(203,161,53,0.18);
+    --mi-transition: 300ms cubic-bezier(.4,0,.2,1);
 }
 
-/* HIDE PAGE TITLES */
-.page .entry-header, .page-header { display: none !important; }
+*, *::before, *::after{ box-sizing:border-box; }
 
-/* GENERAL TYPOGRAPHY */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif !important;
-    color: #D4AF37 !important; font-weight: 700 !important;
-}
-p, li, span, div { color: #c0c0c0; }
-strong { color: #D4AF37 !important; }
+html{ scroll-behavior:smooth; }
 
-/* GOLD DIVIDER */
-.gold-line {
-    width: 60px; height: 2px;
-    background: #D4AF37; margin: 25px auto; border: none;
+body, html{
+    margin:0; padding:0;
+    background:var(--mi-ink) !important;
+    color:var(--mi-text) !important;
+    font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    line-height:1.75;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
 }
 
-/* CTA BUTTONS */
-.wp-block-button__link, a.wp-block-button__link {
-    background: #D4AF37 !important;
-    color: #0a0a0a !important;
-    font-family: 'Inter', sans-serif !important;
-    font-weight: 600 !important; font-size: 0.9rem !important;
-    text-transform: uppercase !important; letter-spacing: 2px !important;
-    border: none !important; border-radius: 0 !important;
-    padding: 18px 50px !important;
-    transition: all 0.3s ease !important;
-    text-decoration: none !important; display: inline-block;
-}
-.wp-block-button__link:hover, a.wp-block-button__link:hover {
-    background: #fff !important; color: #0a0a0a !important;
+/* Sayfaya ince, gerçekçi bir doku/vinyet ver — düz siyah "AI" görünümünü kırar */
+body{
+    background-image:
+        radial-gradient(ellipse 900px 500px at 15% -10%, rgba(203,161,53,0.05), transparent 60%),
+        radial-gradient(ellipse 700px 500px at 100% 10%, rgba(203,161,53,0.035), transparent 60%),
+        radial-gradient(ellipse 1200px 800px at 50% 100%, rgba(255,255,255,0.02), transparent 70%);
+    background-attachment:fixed;
 }
 
-/* SERVICE CARDS */
-.wp-block-columns { gap: 30px !important; margin-bottom: 30px !important; }
-.wp-block-column {
-    background: #141414 !important;
-    border: 1px solid #1e1e1e !important;
-    border-radius: 4px !important;
-    padding: 45px 35px !important;
-    transition: all 0.4s ease !important;
-    position: relative; overflow: hidden;
+/* ==========================================================================
+   1) TİPOGRAFİ
+   ========================================================================== */
+h1,h2,h3,h4,h5,h6{
+    font-family:'Playfair Display', serif !important;
+    color:var(--mi-heading) !important;
+    font-weight:700 !important;
+    line-height:1.25;
+    letter-spacing:0.2px;
 }
-.wp-block-column::after {
-    content: ''; position: absolute; bottom: 0; left: 0;
-    width: 0; height: 2px; background: #D4AF37; transition: width 0.4s ease;
+h1{ font-weight:800 !important; }
+
+p, li, span, div{ color:var(--mi-text); }
+strong{ color:var(--mi-heading) !important; font-weight:600; }
+
+a{ color:var(--mi-gold-light); }
+a:hover{ color:var(--mi-gold); }
+
+/* Vurgulu kelimeler için (başlık içinde <span class="text-gold">) */
+.text-gold, .has-text-color.text-gold{ color:var(--mi-gold) !important; }
+
+/* Küçük "eyebrow" etiket — hero ve bölüm başlıklarının üstünde */
+.mi-eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Inter', sans-serif; font-size:0.72rem; font-weight:600;
+    letter-spacing:2.5px; text-transform:uppercase; color:var(--mi-gold);
+    margin-bottom:14px;
 }
-.wp-block-column:hover::after { width: 100%; }
-.wp-block-column:hover {
-    border-color: #2a2a2a !important;
-    transform: translateY(-5px) !important;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3) !important;
+.mi-eyebrow::before{
+    content:''; width:22px; height:1px; background:var(--mi-gold);
 }
 
-/* WHATSAPP STICKY */
-.wa-sticky {
-    position: fixed !important; bottom: 30px !important; right: 30px !important;
-    background: #25D366 !important;
-    width: 60px !important; height: 60px !important;
-    border-radius: 50% !important;
-    display: flex !important; align-items: center !important; justify-content: center !important;
-    box-shadow: 0 4px 15px rgba(37,211,102,0.3) !important;
-    z-index: 9999 !important; transition: all 0.3s ease !important;
+.gold-line{
+    width:56px; height:2px;
+    background:var(--mi-gold-gradient);
+    margin:22px auto; border:none; border-radius:2px;
 }
-.wa-sticky:hover {
-    transform: scale(1.08) !important;
-    box-shadow: 0 6px 25px rgba(37,211,102,0.5) !important;
-}
-.wa-sticky svg { width: 30px !important; height: 30px !important; fill: white !important; }
+.gold-line.align-left{ margin:18px 0; }
 
-/* FOOTER */
-.site-footer, .ast-builder-footer-wrap, footer {
-    background: #050505 !important;
-    border-top: 1px solid #1a1a1a !important;
-    padding: 25px 0 !important; text-align: center !important;
+/* ==========================================================================
+   2) HEADER / NAVİGASYON
+   Tek, tutarlı bir header — artık beyaza dönen çakışan blok yok.
+   ========================================================================== */
+.site-header, .ast-primary-header-bar, header.site-header{
+    background:rgba(10,10,11,0.86) !important;
+    backdrop-filter:blur(14px) !important;
+    -webkit-backdrop-filter:blur(14px) !important;
+    border-bottom:1px solid var(--mi-line-gold) !important;
+    position:sticky !important; top:0 !important; z-index:1000 !important;
+    box-shadow:0 4px 24px rgba(0,0,0,0.25);
 }
 
-/* PLACEHOLDER - BEFORE/AFTER */
-.before-after-placeholder {
-    width: 100%; height: 300px;
-    background: #1a1a1a; border: 2px dashed #D4AF37;
-    display: flex; align-items: center; justify-content: center;
-    color: #D4AF37; font-weight: bold; margin: 20px 0;
+.ast-primary-header-bar .site-primary-header-wrap,
+.ast-primary-header-bar .ast-builder-grid-row{
+    display:flex !important; align-items:center !important;
+    justify-content:space-between !important; flex-direction:row !important;
+    max-width:var(--mi-container); margin:0 auto;
+    padding:0 30px !important; min-height:76px;
 }
-/* Mobil Navigasyon Düzeltmeleri */
-@media (min-width: 922px) {
+.ast-builder-grid-row .ast-grid-common-col{ display:flex !important; align-items:center !important; }
+
+.ast-site-identity .site-title{ display:none !important; } /* özel logo görseli varsa çift yazı olmasın */
+
+.site-title, .site-title a, .ast-site-identity .site-title a{
+    font-family:'Playfair Display', serif !important;
+    font-size:1.35rem !important; font-weight:800 !important;
+    background:var(--mi-gold-gradient);
+    -webkit-background-clip:text; background-clip:text; color:transparent !important;
+    text-transform:uppercase !important; letter-spacing:2.5px !important;
+    text-decoration:none !important; white-space:nowrap !important;
+}
+
+.main-header-menu, .ast-builder-menu-1 .main-header-menu, .ast-builder-menu-1{
+    display:flex !important; align-items:center !important; gap:2px !important;
+}
+.main-header-menu .menu-item, .ast-builder-menu-1 .menu-item{ display:inline-flex !important; position:relative; }
+
+.main-header-menu a, .ast-builder-menu-1 a{
+    color:#c7c7cc !important; font-weight:500 !important;
+    font-size:0.86rem !important; letter-spacing:0.3px !important;
+    text-transform:none !important; text-decoration:none !important;
+    padding:10px 16px !important; transition:color var(--mi-transition) !important;
+    position:relative;
+}
+.main-header-menu a::after, .ast-builder-menu-1 a::after{
+    content:''; position:absolute; left:16px; right:16px; bottom:6px; height:1px;
+    background:var(--mi-gold); transform:scaleX(0); transform-origin:left;
+    transition:transform var(--mi-transition);
+}
+.main-header-menu a:hover, .ast-builder-menu-1 a:hover{ color:var(--mi-gold-light) !important; }
+.main-header-menu a:hover::after, .ast-builder-menu-1 a:hover::after{ transform:scaleX(1); }
+
+/* Header içindeki "Randevu / WhatsApp" butonu varsa öne çıksın */
+.main-header-menu .menu-item.mi-cta-item a, .ast-builder-menu-1 .mi-cta-item a{
+    background:var(--mi-gold-gradient) !important; color:var(--mi-ink) !important;
+    border-radius:var(--mi-radius-sm); font-weight:700 !important; padding:9px 20px !important;
+}
+.main-header-menu .menu-item.mi-cta-item a::after{ display:none; }
+
+/* Sayfa başlıklarını gizleme (kurumsal, hero'yu biz tasarlıyoruz) */
+.page .entry-header, .page-header{ display:none !important; }
+
+/* ==========================================================================
+   3) HERO BÖLÜMLERİ
+   ========================================================================== */
+.hero-section{
+    position:relative;
+    padding:110px 24px 90px;
+    text-align:center;
+    background:
+        radial-gradient(ellipse 800px 400px at 50% 0%, rgba(203,161,53,0.08), transparent 65%),
+        linear-gradient(180deg, var(--mi-ink-soft) 0%, var(--mi-ink) 100%);
+    border-bottom:1px solid var(--mi-line);
+    overflow:hidden;
+}
+.hero-section::before{
+    /* ince metal ızgara dokusu */
+    content:'';
+    position:absolute; inset:0;
+    background-image:linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size:42px 42px;
+    mask-image:radial-gradient(ellipse 70% 60% at 50% 30%, black 20%, transparent 75%);
+    pointer-events:none;
+}
+.hero-section h1{
+    font-size:clamp(2.1rem, 4.6vw, 3.6rem) !important;
+    letter-spacing:0.5px !important;
+    position:relative; z-index:1;
+}
+.hero-section p{ position:relative; z-index:1; }
+
+.service-hero{ padding:90px 24px 60px; }
+
+/* Küçük servis alt sayfa hero'su (h1 daha kompakt) */
+.service-hero h1{ font-size:clamp(1.8rem, 3.6vw, 2.6rem) !important; }
+
+/* ==========================================================================
+   4) BUTONLAR
+   ========================================================================== */
+.wp-block-button__link, a.wp-block-button__link{
+    background:var(--mi-gold-gradient) !important;
+    color:var(--mi-ink) !important;
+    font-family:'Inter', sans-serif !important;
+    font-weight:700 !important; font-size:0.88rem !important;
+    text-transform:uppercase !important; letter-spacing:1.2px !important;
+    border:none !important; border-radius:var(--mi-radius) !important;
+    padding:16px 40px !important;
+    box-shadow:var(--mi-shadow-gold);
+    transition:transform var(--mi-transition), box-shadow var(--mi-transition) !important;
+    text-decoration:none !important; display:inline-block;
+}
+.wp-block-button__link:hover, a.wp-block-button__link:hover{
+    transform:translateY(-2px);
+    box-shadow:0 16px 40px rgba(203,161,53,0.3) !important;
+    color:var(--mi-ink) !important;
+}
+
+/* İkincil / outline buton (is-style-outline) — rakiplerde de görülen ikinci CTA */
+.wp-block-button.is-style-outline .wp-block-button__link{
+    background:transparent !important;
+    color:var(--mi-gold-light) !important;
+    border:1.5px solid var(--mi-gold) !important;
+    box-shadow:none;
+    padding:14.5px 38px !important;
+}
+.wp-block-button.is-style-outline .wp-block-button__link:hover{
+    background:rgba(203,161,53,0.1) !important;
+    color:var(--mi-gold-light) !important;
+    transform:translateY(-2px);
+}
+
+/* WhatsApp özel buton varyantı: içeriğe class="mi-btn-whatsapp" eklenebilir */
+.mi-btn-whatsapp .wp-block-button__link{
+    background:#25D366 !important; color:#fff !important; box-shadow:0 10px 30px rgba(37,211,102,0.25);
+}
+
+/* ==========================================================================
+   5) HİZMET / ÖZELLİK KARTLARI
+   ========================================================================== */
+.wp-block-columns{ gap:26px !important; margin-bottom:26px !important; }
+
+.wp-block-column{
+    background:linear-gradient(180deg, var(--mi-ink-card) 0%, var(--mi-ink-card-2) 100%) !important;
+    border:1px solid var(--mi-line) !important;
+    border-radius:var(--mi-radius-lg) !important;
+    padding:38px 30px !important;
+    transition:transform var(--mi-transition), border-color var(--mi-transition), box-shadow var(--mi-transition) !important;
+    position:relative; overflow:hidden;
+}
+.wp-block-column::before{
+    /* üstte ince altın çizgi — "her yerde kalın border" yerine ince detay */
+    content:''; position:absolute; top:0; left:24px; right:24px; height:2px;
+    background:var(--mi-gold-gradient); opacity:0; transition:opacity var(--mi-transition);
+}
+.wp-block-column:hover::before{ opacity:1; }
+.wp-block-column:hover{
+    border-color:rgba(203,161,53,0.28) !important;
+    transform:translateY(-6px) !important;
+    box-shadow:var(--mi-shadow) !important;
+}
+.wp-block-column h3, .wp-block-column h4{ font-size:1.15rem !important; margin-top:0; }
+.wp-block-column p{ color:var(--mi-text-dim); font-size:0.95rem; }
+
+/* Kart içindeki küçük ikon rozeti (opsiyonel: <div class="mi-icon-badge">) */
+.mi-icon-badge{
+    width:52px; height:52px; border-radius:12px;
+    display:flex; align-items:center; justify-content:center;
+    background:rgba(203,161,53,0.1); border:1px solid rgba(203,161,53,0.25);
+    margin-bottom:18px;
+}
+.mi-icon-badge svg{ width:24px; height:24px; fill:var(--mi-gold); }
+
+/* ==========================================================================
+   6) GÜVEN ROZETLERİ / İSTATİSTİKLER
+   ========================================================================== */
+.trust-badge{
+    display:inline-flex; align-items:center; justify-content:center;
+    background:rgba(203,161,53,0.08); color:var(--mi-gold-light);
+    padding:9px 18px; border-radius:30px; font-weight:600; font-size:0.85rem;
+    border:1px solid rgba(203,161,53,0.25); margin-bottom:22px;
+}
+.trust-badge svg{ width:16px; height:16px; fill:var(--mi-gold); margin-right:8px; }
+
+.feature-list{ list-style:none; padding:0; margin:0; }
+.feature-list li{ display:flex; align-items:flex-start; margin-bottom:16px; }
+.feature-list svg{ width:22px; height:22px; fill:var(--mi-gold); margin-right:12px; flex-shrink:0; margin-top:2px; }
+
+.mi-stats{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:50px;
+    padding:50px 20px; text-align:center;
+}
+.mi-stat-item .counter-value{
+    font-family:'Playfair Display', serif; font-weight:800; font-size:2.6rem;
+    background:var(--mi-gold-gradient); -webkit-background-clip:text; background-clip:text; color:transparent;
+    display:block; line-height:1;
+}
+.mi-stat-item .mi-stat-label{
+    font-size:0.8rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--mi-text-dim); margin-top:8px;
+}
+
+/* ==========================================================================
+   7) ÖNCESİ / SONRASI KARŞILAŞTIRMA (gerçek, kaydırılabilir bileşen)
+   Kullanım: içerik editöründe "Özel HTML" bloğu ile
+   <div class="mi-compare" data-mi-compare>
+     <img class="mi-compare-before" src="..." alt="Öncesi">
+     <img class="mi-compare-after" src="..." alt="Sonrası">
+     <div class="mi-compare-handle"></div>
+   </div>
+   JS tarafı functions.php içinde eklendi.
+   ========================================================================== */
+.mi-compare{
+    position:relative; width:100%; max-width:640px; margin:0 auto 20px;
+    aspect-ratio:4/3; border-radius:var(--mi-radius-lg); overflow:hidden;
+    border:1px solid var(--mi-line-gold); box-shadow:var(--mi-shadow); cursor:ew-resize;
+    user-select:none;
+}
+.mi-compare img{
+    position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; display:block;
+    pointer-events:none;
+}
+.mi-compare-after{ clip-path:inset(0 0 0 50%); }
+.mi-compare-handle{
+    position:absolute; top:0; bottom:0; left:50%; width:3px; background:var(--mi-gold);
+    box-shadow:0 0 12px rgba(203,161,53,0.6); transform:translateX(-1.5px);
+}
+.mi-compare-handle::after{
+    content:'⇔'; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:42px; height:42px; border-radius:50%; background:var(--mi-gold-gradient);
+    color:var(--mi-ink); display:flex; align-items:center; justify-content:center;
+    font-size:1.1rem; font-weight:700; box-shadow:0 6px 20px rgba(0,0,0,0.4);
+}
+.mi-compare-label{
+    position:absolute; bottom:14px; font-size:0.72rem; letter-spacing:1.5px; text-transform:uppercase;
+    background:rgba(10,10,11,0.65); color:#fff; padding:5px 12px; border-radius:20px; z-index:2;
+}
+.mi-compare-label.before{ left:14px; }
+.mi-compare-label.after{ right:14px; }
+
+/* Galeri grid'i (gerçek görseller eklendiğinde kullanılacak düzen) */
+.mi-gallery-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:22px; margin:30px 0;
+}
+.mi-gallery-grid figure{
+    margin:0; border-radius:var(--mi-radius); overflow:hidden; border:1px solid var(--mi-line);
+    position:relative;
+}
+.mi-gallery-grid img{ width:100%; height:220px; object-fit:cover; display:block; transition:transform 500ms ease; }
+.mi-gallery-grid figure:hover img{ transform:scale(1.06); }
+.mi-gallery-grid figcaption{
+    position:absolute; left:0; right:0; bottom:0; padding:14px 16px;
+    background:linear-gradient(0deg, rgba(0,0,0,0.85), transparent);
+    font-size:0.85rem; color:#fff;
+}
+
+/* Eski placeholder kutuları hâlâ içerikte kalmışsa da kötü durmasın diye
+   makul bir görünüme çekiyoruz (ama hedef: bunları gerçek görsellerle değiştirmek) */
+.before-after-placeholder{
+    width:100%; min-height:220px;
+    background:var(--mi-ink-card);
+    border:1.5px dashed rgba(203,161,53,0.35);
+    border-radius:var(--mi-radius-lg);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--mi-text-dim); font-weight:500; margin:16px 0; text-align:center; padding:20px;
+}
+
+/* ==========================================================================
+   8) MÜŞTERİ YORUMLARI
+   Kullanım: <div class="mi-testimonial"><p>...</p><div class="mi-testimonial-author">
+   <strong>Ad Soyad</strong><span>Araç / Tarih</span></div></div>
+   ========================================================================== */
+.mi-testimonials{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:22px; }
+.mi-testimonial{
+    background:var(--mi-ink-card); border:1px solid var(--mi-line); border-radius:var(--mi-radius-lg);
+    padding:30px 26px; position:relative;
+}
+.mi-testimonial::before{
+    content:'"'; font-family:'Playfair Display', serif; font-size:3.5rem; color:var(--mi-gold);
+    opacity:0.35; position:absolute; top:6px; left:16px; line-height:1;
+}
+.mi-testimonial p{ position:relative; z-index:1; font-style:italic; color:var(--mi-text); margin-top:14px; }
+.mi-testimonial .mi-stars{ color:var(--mi-gold); letter-spacing:2px; font-size:0.9rem; margin-bottom:10px; }
+.mi-testimonial-author{ display:flex; flex-direction:column; margin-top:16px; }
+.mi-testimonial-author strong{ font-family:'Inter',sans-serif; font-size:0.92rem; }
+.mi-testimonial-author span{ font-size:0.8rem; color:var(--mi-text-dim); }
+
+/* ==========================================================================
+   9) MARKA / ÜRÜN LOGO ŞERİDİ
+   ========================================================================== */
+.mi-brand-strip{
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+    gap:44px; padding:36px 20px; opacity:0.75;
+}
+.mi-brand-strip img{ height:26px; width:auto; filter:grayscale(1) brightness(1.8); opacity:0.6; transition:opacity var(--mi-transition), filter var(--mi-transition); }
+.mi-brand-strip img:hover{ opacity:1; filter:grayscale(0) brightness(1); }
+
+/* ==========================================================================
+   10) SSS AKORDEON
+   Kullanım: <div class="mi-accordion"><div class="mi-accordion-item">
+   <button class="mi-accordion-trigger">Soru</button>
+   <div class="mi-accordion-panel"><p>Cevap</p></div></div></div>
+   ========================================================================== */
+.mi-accordion-item{ border-bottom:1px solid var(--mi-line); }
+.mi-accordion-trigger{
+    width:100%; text-align:left; background:none; border:none; cursor:pointer;
+    padding:22px 4px; display:flex; justify-content:space-between; align-items:center; gap:16px;
+    font-family:'Playfair Display', serif; font-size:1.05rem; color:var(--mi-heading); font-weight:700;
+}
+.mi-accordion-trigger::after{
+    content:'+'; font-family:'Inter',sans-serif; font-size:1.4rem; color:var(--mi-gold);
+    transition:transform var(--mi-transition); flex-shrink:0;
+}
+.mi-accordion-item.is-open .mi-accordion-trigger::after{ transform:rotate(45deg); }
+.mi-accordion-panel{
+    max-height:0; overflow:hidden; transition:max-height 400ms ease;
+}
+.mi-accordion-panel p{ padding:0 4px 22px; color:var(--mi-text-dim); }
+
+/* ==========================================================================
+   11) FORMLAR (WPForms)
+   ========================================================================== */
+.wpforms-container input[type=text], .wpforms-container input[type=email],
+.wpforms-container input[type=tel], .wpforms-container select,
+.wpforms-container textarea{
+    background:var(--mi-ink-card) !important; border:1px solid var(--mi-line) !important;
+    color:var(--mi-heading) !important; border-radius:var(--mi-radius-sm) !important;
+    padding:13px 16px !important; font-family:'Inter',sans-serif !important;
+}
+.wpforms-container input:focus, .wpforms-container select:focus, .wpforms-container textarea:focus{
+    border-color:var(--mi-gold) !important; outline:none !important;
+    box-shadow:0 0 0 3px rgba(203,161,53,0.15) !important;
+}
+.wpforms-container label, .wpforms-field-label{ color:var(--mi-text) !important; font-weight:500 !important; }
+.wpforms-submit-container button, .wpforms-container .wpforms-submit{
+    background:var(--mi-gold-gradient) !important; color:var(--mi-ink) !important;
+    border:none !important; border-radius:var(--mi-radius) !important;
+    font-weight:700 !important; text-transform:uppercase !important; letter-spacing:1px !important;
+    padding:14px 34px !important;
+}
+
+/* ==========================================================================
+   12) FOOTER
+   ========================================================================== */
+.site-footer, .ast-builder-footer-wrap, footer{
+    background:var(--mi-ink-soft) !important;
+    border-top:1px solid var(--mi-line-gold) !important;
+    padding:60px 0 24px !important;
+}
+.mi-footer-grid{
+    display:grid; grid-template-columns:1.4fr 1fr 1fr 1.2fr; gap:36px;
+    max-width:var(--mi-container); margin:0 auto; padding:0 24px 40px; text-align:left;
+}
+.mi-footer-grid h4{
+    font-family:'Inter',sans-serif !important; font-size:0.8rem !important; letter-spacing:1.5px;
+    text-transform:uppercase; color:var(--mi-gold) !important; margin-bottom:16px;
+}
+.mi-footer-grid ul{ list-style:none; padding:0; margin:0; }
+.mi-footer-grid li{ margin-bottom:10px; }
+.mi-footer-grid a{ color:var(--mi-text-dim); font-size:0.9rem; text-decoration:none; }
+.mi-footer-grid a:hover{ color:var(--mi-gold-light); }
+
+.mi-social-row{ display:flex; gap:12px; margin-top:18px; }
+.mi-social-row a{
+    width:38px; height:38px; border-radius:50%; border:1px solid var(--mi-line);
+    display:flex; align-items:center; justify-content:center; transition:all var(--mi-transition);
+}
+.mi-social-row a:hover{ border-color:var(--mi-gold); background:rgba(203,161,53,0.1); }
+.mi-social-row svg{ width:16px; height:16px; fill:var(--mi-text-dim); transition:fill var(--mi-transition); }
+.mi-social-row a:hover svg{ fill:var(--mi-gold); }
+
+.mi-footer-bottom{
+    border-top:1px solid var(--mi-line); max-width:var(--mi-container); margin:0 auto; padding-top:22px;
+    text-align:center; font-size:0.8rem; color:var(--mi-text-dim); padding-left:24px; padding-right:24px;
+}
+
+/* ==========================================================================
+   13) WHATSAPP YAPIŞKAN BUTON
+   ========================================================================== */
+.wa-sticky{
+    position:fixed !important; bottom:28px !important; right:28px !important;
+    background:#25D366 !important; width:58px !important; height:58px !important;
+    border-radius:50% !important;
+    display:flex !important; align-items:center !important; justify-content:center !important;
+    box-shadow:0 6px 22px rgba(37,211,102,0.35) !important;
+    z-index:9999 !important; transition:transform var(--mi-transition) !important;
+    animation:mi-wa-pulse 2.6s infinite;
+}
+.wa-sticky:hover{ transform:scale(1.08) !important; }
+.wa-sticky svg{ width:28px !important; height:28px !important; fill:white !important; }
+@keyframes mi-wa-pulse{
+    0%{ box-shadow:0 6px 22px rgba(37,211,102,0.35), 0 0 0 0 rgba(37,211,102,0.4); }
+    70%{ box-shadow:0 6px 22px rgba(37,211,102,0.35), 0 0 0 14px rgba(37,211,102,0); }
+    100%{ box-shadow:0 6px 22px rgba(37,211,102,0.35), 0 0 0 0 rgba(37,211,102,0); }
+}
+
+/* ==========================================================================
+   14) BÖLÜM ARKA PLANLARI + SCROLL REVEAL
+   ========================================================================== */
+.section-dark{ background-color:var(--mi-ink) !important; }
+.section-darker{ background-color:var(--mi-ink-soft) !important; }
+
+.reveal{ opacity:0; transform:translateY(28px); transition:all 700ms cubic-bezier(.4,0,.2,1); }
+.reveal.active{ opacity:1; transform:translateY(0); }
+
+/* ==========================================================================
+   15) MOBİL NAVİGASYON
+   ========================================================================== */
+@media (min-width:922px){
     .ast-primary-header-bar .site-primary-header-wrap,
-    .ast-primary-header-bar .ast-builder-grid-row {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        flex-direction: row !important;
-        max-width: 1200px; margin: 0 auto;
-        padding: 0 30px !important;
-        min-height: 70px;
+    .ast-primary-header-bar .ast-builder-grid-row{
+        display:flex !important; align-items:center !important; justify-content:space-between !important;
+        flex-direction:row !important; max-width:var(--mi-container); margin:0 auto;
+        padding:0 30px !important; min-height:76px;
     }
-    .main-header-menu, .ast-builder-menu-1 .main-header-menu,
-    .ast-builder-menu-1 {
-        display: flex !important; align-items: center !important;
-        gap: 0 !important;
+    .main-header-menu, .ast-builder-menu-1 .main-header-menu, .ast-builder-menu-1{
+        display:flex !important; align-items:center !important; gap:2px !important;
     }
 }
-@media (max-width: 921px) {
-    /* Mobilde zorlanmış flex ve nowrap'i iptal et, Astra'nın doğal hamburgerine bırak */
-    .site-title, .site-title a, .ast-site-identity .site-title a { white-space: normal !important; font-size: 1.2rem !important; }
-    .main-header-menu a, .ast-builder-menu-1 a { white-space: normal !important; }
-    
-    /* Hamburger ikonunu altın sarısı yap */
-    .ast-mobile-menu-buttons .menu-toggle { color: #D4AF37 !important; background: transparent !important; }
-    .ast-mobile-menu-buttons .menu-toggle .menu-toggle-icon { fill: #D4AF37 !important; }
-    
-    /* Mobil menü açılır paneli siyah */
-    .ast-mobile-header-wrap .ast-mobile-header-content { background: #0a0a0a !important; border-top: 1px solid #1a1a1a !important; }
-    .ast-mobile-header-wrap .main-header-menu { display: block !important; }
-}
+@media (max-width:921px){
+    .site-title, .site-title a, .ast-site-identity .site-title a{ white-space:normal !important; font-size:1.1rem !important; }
+    .main-header-menu a, .ast-builder-menu-1 a{ white-space:normal !important; }
+    .ast-mobile-menu-buttons .menu-toggle{ color:var(--mi-gold) !important; background:transparent !important; }
+    .ast-mobile-menu-buttons .menu-toggle .menu-toggle-icon{ fill:var(--mi-gold) !important; }
+    .ast-mobile-header-wrap .ast-mobile-header-content{ background:var(--mi-ink) !important; border-top:1px solid var(--mi-line) !important; }
+    .ast-mobile-header-wrap .main-header-menu{ display:block !important; }
+    .main-header-menu a::after, .ast-builder-menu-1 a::after{ display:none; }
 
-/* MOBİLİZMİR ÇİFT YAZI GİZLEME */
-.ast-site-identity .site-title { display: none !important; }
-
-/* BEYAZ KURUMSAL NAVBAR */
-.site-header, .ast-primary-header-bar, header.site-header {
-    background: #ffffff !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border-bottom: 1px solid #eeeeee !important;
-    box-shadow: 0 1px 12px rgba(0,0,0,0.08) !important;
+    .mi-footer-grid{ grid-template-columns:1fr 1fr; }
+    .hero-section{ padding:80px 20px 60px; }
+    .wa-sticky{ width:52px !important; height:52px !important; bottom:20px !important; right:20px !important; }
 }
-.main-header-menu a, .ast-builder-menu-1 a {
-    color: #333333 !important;
-    font-weight: 500 !important;
+@media (max-width:560px){
+    .mi-footer-grid{ grid-template-columns:1fr; text-align:center; }
+    .mi-social-row{ justify-content:center; }
+    .mi-stats{ gap:30px; }
 }
-.main-header-menu a:hover, .ast-builder-menu-1 a:hover {
-    color: #D4AF37 !important;
-}
-.ast-mobile-menu-buttons .menu-toggle { color: #333333 !important; }
-.ast-mobile-menu-buttons .menu-toggle .menu-toggle-icon { fill: #333333 !important; }
-.ast-mobile-header-wrap .ast-mobile-header-content { background: #ffffff !important; border-top: 1px solid #eeeeee !important; }
-
-/* ANİMASYONLAR VE GÖRSEL RİTİM (DARK/DARKER) */
-.section-dark { background-color: #0a0a0a !important; }
-.section-darker { background-color: #0f0f0f !important; }
-
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-}
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.trust-badge {
-    display: inline-flex; align-items: center; justify-content: center;
-    background: rgba(212,175,55,0.1); color: #D4AF37;
-    padding: 8px 16px; border-radius: 30px; font-weight: 600; font-size: 0.9rem;
-    border: 1px solid rgba(212,175,55,0.3); margin-bottom: 20px;
-}
-.trust-badge svg { width: 18px; height: 18px; fill: #D4AF37; margin-right: 8px; }
-
-/* İkonlu özellik listeleri */
-.feature-list { list-style: none; padding: 0; margin: 0; }
-.feature-list li { display: flex; align-items: flex-start; margin-bottom: 15px; }
-.feature-list svg { width: 24px; height: 24px; fill: #D4AF37; margin-right: 12px; flex-shrink: 0; }
