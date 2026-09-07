@@ -43,11 +43,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <a href="/#galeri">Galeri</a>
       <a href="/#fiyat">Fiyatlandırma</a>
       <a href="/#hakkimizda">Hakkımızda</a>
+      <a href="/sss/">SSS</a>
       <a href="/blog/">Blog</a>
       <a href="/iletisim/">İletişim</a>
     </nav>
     <div style="display:flex; gap:10px; align-items:center;">
-      <a href="/randevu-al/" class="btn form-btn">Formla Randevu</a>
       <a href="https://wa.me/905401872003" class="btn solid">WhatsApp'tan Randevu</a>
       <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false">
         <span></span><span></span><span></span>

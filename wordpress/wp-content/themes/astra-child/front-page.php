@@ -76,7 +76,7 @@ get_header(); ?>
 <!-- ============ SÜREÇ ============ -->
 <section class="alt">
   <div class="wrap">
-    <div class="folio"><span class="num">02</span><div class="rule"></div><h2 class="serif">Nasıl çalışır</h2></div>
+    <div class="folio"><span class="num">02</span><div class="rule"></div><h2 class="serif">Nasıl çalışıyoruz</h2></div>
     <div class="process">
       <div><div class="step-num serif">1</div><h4>WhatsApp'tan yazın</h4><p>Aracınızın modelini ve talebiniz olan hizmeti iletin, size uygun paketi ve fiyatı anında öğrenin.</p></div>
       <div><div class="step-num serif">2</div><h4>Adres ve saat belirleyin</h4><p>Ev, iş yeri veya dilediğiniz nokta — size en uygun gün ve saati birlikte planlayalım.</p></div>
@@ -181,34 +181,10 @@ get_header(); ?>
   </div>
 </section>
 
-<!-- ============ BLOG ============ -->
-<section class="alt" id="blog">
-  <div class="wrap">
-    <div class="folio"><span class="num">08</span><div class="rule"></div><h2 class="serif">Blog'dan</h2></div>
-    <div>
-      <div class="blog-row">
-        <div class="ph" data-label="PASTA CİLA"></div>
-        <div><span class="meta">BAKIM REHBERİ · 5 dk okuma</span><h4>Pasta cila kaç ayda bir yapılmalı?</h4></div>
-        <a href="/blog/" class="go">Oku</a>
-      </div>
-      <div class="blog-row">
-        <div class="ph" data-label="FAR TEMİZLİĞİ"></div>
-        <div><span class="meta">BAKIM REHBERİ · 4 dk okuma</span><h4>Far sararması neden olur, nasıl giderilir?</h4></div>
-        <a href="/blog/" class="go">Oku</a>
-      </div>
-      <div class="blog-row">
-        <div class="ph" data-label="PDR"></div>
-        <div><span class="meta">HİZMET REHBERİ · 6 dk okuma</span><h4>Boyasız göçük düzeltme (PDR) nedir?</h4></div>
-        <a href="/blog/" class="go">Oku</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ SSS ============ -->
 <section>
   <div class="wrap" style="max-width:760px;">
-    <div class="folio"><span class="num">09</span><div class="rule"></div><h2 class="serif">Sıkça sorulanlar</h2></div>
+    <div class="folio"><span class="num">08</span><div class="rule"></div><h2 class="serif">Sıkça sorulanlar</h2></div>
     <div class="faq">
       <div class="faq-item open">
         <button class="faq-q">Mobil hizmet nasıl çalışıyor?<span class="mark">+</span></button>
