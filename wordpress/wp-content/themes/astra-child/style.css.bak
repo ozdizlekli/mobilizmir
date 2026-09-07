@@ -27,7 +27,7 @@ body, html {
     position: sticky !important; top: 0 !important;
     z-index: 1000 !important;
 }
-.ast-primary-header-bar .site-primary-header-wrap { display: flex; align-items: center; justify-content: space-between; flex-direction: row; max-width: 1200px; margin: 0 auto; padding: 0 30px; min-height: 70px; } /* removed extra selectors */
+.ast-primary-header-bar .site-primary-header-wrap,
 .ast-primary-header-bar .ast-builder-grid-row {
     display: flex !important;
     align-items: center !important;
@@ -149,35 +149,4 @@ strong { color: #D4AF37 !important; }
     background: #1a1a1a; border: 2px dashed #D4AF37;
     display: flex; align-items: center; justify-content: center;
     color: #D4AF37; font-weight: bold; margin: 20px 0;
-}
-/* Mobil Navigasyon Düzeltmeleri */
-@media (min-width: 922px) {
-    .ast-primary-header-bar .site-primary-header-wrap,
-    .ast-primary-header-bar .ast-builder-grid-row {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        flex-direction: row !important;
-        max-width: 1200px; margin: 0 auto;
-        padding: 0 30px !important;
-        min-height: 70px;
-    }
-    .main-header-menu, .ast-builder-menu-1 .main-header-menu,
-    .ast-builder-menu-1 {
-        display: flex !important; align-items: center !important;
-        gap: 0 !important;
-    }
-}
-@media (max-width: 921px) {
-    /* Mobilde zorlanmış flex ve nowrap'i iptal et, Astra'nın doğal hamburgerine bırak */
-    .site-title, .site-title a, .ast-site-identity .site-title a { white-space: normal !important; font-size: 1.2rem !important; }
-    .main-header-menu a, .ast-builder-menu-1 a { white-space: normal !important; }
-    
-    /* Hamburger ikonunu altın sarısı yap */
-    .ast-mobile-menu-buttons .menu-toggle { color: #D4AF37 !important; background: transparent !important; }
-    .ast-mobile-menu-buttons .menu-toggle .menu-toggle-icon { fill: #D4AF37 !important; }
-    
-    /* Mobil menü açılır paneli siyah */
-    .ast-mobile-header-wrap .ast-mobile-header-content { background: #0a0a0a !important; border-top: 1px solid #1a1a1a !important; }
-    .ast-mobile-header-wrap .main-header-menu { display: block !important; }
 }

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" width="400" height="80">
+  <rect width="400" height="80" fill="transparent"/>
+  <text x="200" y="55" font-family="'Playfair Display', serif" font-weight="900" font-size="46" fill="#D4AF37" text-anchor="middle" letter-spacing="3">MOBİLİZMİR</text>
+  <path d="M 50 65 L 350 65" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+</svg>
