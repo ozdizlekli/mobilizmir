@@ -518,18 +518,9 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 /* ==========================================
    CLAUDE TWEAKS (Light Card & Mobile CTA)
    ========================================== */
-.styled-content.light-card {
-  background: var(--cream);
-  color: var(--ink);
-  border-radius: var(--radius);
-  padding: 40px;
-}
-.styled-content.light-card p, .styled-content.light-card li {
-  color: var(--ink-2);
-}
-.styled-content.light-card h1, .styled-content.light-card h2, .styled-content.light-card h3 {
-  color: var(--ink);
-}
+
+
+
 
 @media (max-width: 920px) {
   /* Make sure primary CTA is visible in mobile menu */
@@ -557,32 +548,7 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 .price-box h3 { color: var(--gold); text-align: center; }
 .price-box p { text-align: center; color: #ccc; }
 
-/* ==========================================
-   AÇIK KART VARYANTI (OKUNABİLİRLİK İÇİN)
-   ========================================== */
-.styled-content.light-panel {
-  background: var(--cream);
-  color: var(--ink);
-  padding: 40px;
-  border-radius: var(--radius);
-}
-.styled-content.light-panel h1, 
-.styled-content.light-panel h2, 
-.styled-content.light-panel h3, 
-.styled-content.light-panel h4 {
-  color: var(--ink-2);
-}
-.styled-content.light-panel p,
-.styled-content.light-panel li {
-  color: var(--ink-3);
-  font-weight: 500;
-}
-.styled-content.light-panel .rule {
-  background: var(--stone);
-}
-@media(max-width: 600px) {
-  .styled-content.light-panel { padding: 24px; }
-}
+
 /* Görsel eklendiğinde ph yerine kullanılacak varsayılan img stilleri */
 .gallery-grid .g-item img,
 .mini-gallery img,

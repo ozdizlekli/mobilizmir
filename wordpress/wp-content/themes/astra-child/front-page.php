@@ -4,6 +4,44 @@
  */
 get_header(); ?>
 
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="kicker">İzmir'in yerinde araç bakım servisi</div>
+      <h1 class="serif">Aracınız neredeyse, ekibimiz oraya gelir.</h1>
+      <p class="lede">Evinizde ya da iş yerinizde; koltuk yıkamadan boyasız göçük düzeltmeye kadar, tam donanımlı mobil ekibimizle showroom kalitesinde bakım.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/905401872003" class="btn solid">Randevu Talep Et</a>
+        <a href="#hizmetler" class="btn">Hizmetleri Gör</a>
+      </div>
+      <div class="hero-stats">
+        <div><b><span class="counter-val" data-target="500">0</span>+</b><span class="lbl">Memnun Müşteri</span></div>
+        <div><b><span class="counter-val" data-target="5">0</span></b><span class="lbl">Yıllık Tecrübe</span></div>
+        <div><b><span class="counter-val" data-target="12">0</span></b><span class="lbl">İlçede Hizmet</span></div>
+        <div><b>%<span class="counter-val" data-target="98">0</span></b><span class="lbl">Memnuniyet</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="ph" data-label="ARAÇ BAKIM UYGULAMASI — FOTOĞRAF"></div>
+      <div class="hero-card">
+        <div class="stars">★★★★★</div>
+        <p>"Aracımı evime kadar gelip pasta cila yaptılar, sonuç showroom gibiydi."</p>
+        <small>Elif K. — Karşıyaka</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="area-strip">
+  <div class="area-track">
+    <span><b>Bornova</b></span><span><b>Karşıyaka</b></span><span><b>Alsancak</b></span><span><b>Bayraklı</b></span><span><b>Buca</b></span><span><b>Çeşme</b></span><span><b>Karabağlar</b></span><span><b>Gaziemir</b></span>
+    <span><b>Bornova</b></span><span><b>Karşıyaka</b></span><span><b>Alsancak</b></span><span><b>Bayraklı</b></span><span><b>Buca</b></span><span><b>Çeşme</b></span><span><b>Karabağlar</b></span><span><b>Gaziemir</b></span>
+  </div>
+</div>
+
+
+
 <!-- ============ HİZMETLER ============ -->
 <section id="hizmetler">
   <div class="wrap">
@@ -171,39 +209,3 @@ get_header(); ?>
 </section>
 
 <?php get_footer(); ?>
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-copy">
-      <div class="kicker">İzmir'in yerinde araç bakım servisi</div>
-      <h1 class="serif">Aracınız neredeyse, ekibimiz oraya gelir.</h1>
-      <p class="lede">Evinizde ya da iş yerinizde; koltuk yıkamadan boyasız göçük düzeltmeye kadar, tam donanımlı mobil ekibimizle showroom kalitesinde bakım.</p>
-      <div class="hero-actions">
-        <a href="https://wa.me/905401872003" class="btn solid">Randevu Talep Et</a>
-        <a href="#hizmetler" class="btn">Hizmetleri Gör</a>
-      </div>
-      <div class="hero-stats">
-        <div><b><span class="counter-val" data-target="500">0</span>+</b><span class="lbl">Memnun Müşteri</span></div>
-        <div><b><span class="counter-val" data-target="5">0</span></b><span class="lbl">Yıllık Tecrübe</span></div>
-        <div><b><span class="counter-val" data-target="12">0</span></b><span class="lbl">İlçede Hizmet</span></div>
-        <div><b>%<span class="counter-val" data-target="98">0</span></b><span class="lbl">Memnuniyet</span></div>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="ph" data-label="ARAÇ BAKIM UYGULAMASI — FOTOĞRAF"></div>
-      <div class="hero-card">
-        <div class="stars">★★★★★</div>
-        <p>"Aracımı evime kadar gelip pasta cila yaptılar, sonuç showroom gibiydi."</p>
-        <small>Elif K. — Karşıyaka</small>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="area-strip">
-  <div class="area-track">
-    <span><b>Bornova</b></span><span><b>Karşıyaka</b></span><span><b>Alsancak</b></span><span><b>Bayraklı</b></span><span><b>Buca</b></span><span><b>Çeşme</b></span><span><b>Karabağlar</b></span><span><b>Gaziemir</b></span>
-    <span><b>Bornova</b></span><span><b>Karşıyaka</b></span><span><b>Alsancak</b></span><span><b>Bayraklı</b></span><span><b>Buca</b></span><span><b>Çeşme</b></span><span><b>Karabağlar</b></span><span><b>Gaziemir</b></span>
-  </div>
-</div>
-
