@@ -318,3 +318,63 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
   box-shadow:0 10px 26px rgba(0,0,0,.4);
 }
 .wa-fab svg{width:26px; height:26px; fill:#fff;}
+
+/* ==========================================
+   FAZ 1 - ALT SAYFALAR & MOBİL MENÜ
+   ========================================== */
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;z-index:70;}
+.nav-toggle span{width:24px;height:2px;background:var(--cream);transition:all .3s ease;}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+
+@media(max-width:920px){
+  .nav-toggle{display:flex;}
+  nav.primary{
+    position:fixed; inset:0 0 0 30%; background:var(--ink);
+    flex-direction:column; justify-content:center; align-items:flex-start;
+    padding:40px; gap:26px; transform:translateX(100%);
+    transition:transform .3s ease; border-left:1px solid var(--line);
+    box-shadow:-10px 0 30px rgba(0,0,0,0.5);
+  }
+  nav.primary.open{transform:translateX(0);}
+  header.site .wrap .btn.solid{display:none;}
+  header.site .wrap .btn.form-btn{display:none;}
+}
+
+/* Alt Sayfa Şablonu */
+.page-hero{padding:120px 0 60px;border-bottom:1px solid var(--line-soft);}
+.page-hero h1{font-size:clamp(2rem,4vw,3rem);margin:0;}
+.page-body{padding:70px 0;}
+
+.styled-content p, .styled-content li{color:#c4beac;font-size:16px;line-height:1.75;}
+.styled-content h2, .styled-content h3{font-family:'Fraunces',serif;color:var(--cream);margin-top:46px;margin-bottom:16px;}
+.styled-content strong{color:var(--gold-bright);}
+.styled-content a{color:var(--gold-bright);border-bottom:1px solid var(--gold);}
+.styled-content .wp-block-quote{border-left:2px solid var(--gold);padding-left:24px;font-style:italic;}
+.styled-content .wp-block-button__link{background:var(--gold)!important;color:#0b0b0a!important;border-radius:var(--radius)!important;}
+.page-cta{margin-top:60px;padding-top:40px;border-top:1px solid var(--line);}
+
+/* Blog Listesi */
+.blog-row{display:grid; grid-template-columns:120px 1fr auto; gap:24px; align-items:center; padding:22px 0; border-bottom:1px solid var(--line-soft);}
+.blog-row .ph{aspect-ratio:4/3;}
+.blog-row img{aspect-ratio:4/3;object-fit:cover;}
+.blog-row h4{font-size:15.5px; font-weight:600; margin:0 0 6px;}
+.blog-row span.meta{font-size:11.5px; color:var(--stone-dim);}
+.blog-row .go{font-size:12px; color:var(--gold-bright); border-bottom:1px solid var(--gold);}
+@media(max-width:700px){.blog-row{grid-template-columns:80px 1fr; }.blog-row .go{display:none;}}
+
+/* FAZ 2 - ÖNCESİ / SONRASI SLIDER */
+.ba-slider{position:relative;aspect-ratio:4/3;overflow:hidden;}
+.ba-slider img, .ba-slider .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.ba-before-wrap{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos)) 0 0);}
+.ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;}
+.ba-slider-handle{
+  position:absolute; top:0; bottom:0; left:var(--pos); width:2px; background:var(--gold);
+  transform:translateX(-50%); pointer-events:none;
+}
+.ba-slider-handle::after{
+  content:'< >'; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:36px; height:36px; border-radius:50%; background:var(--gold); border:2px solid var(--ink);
+  display:flex; align-items:center; justify-content:center; color:var(--ink); font-size:12px; font-weight:bold; font-family:'Inter',sans-serif;
+}

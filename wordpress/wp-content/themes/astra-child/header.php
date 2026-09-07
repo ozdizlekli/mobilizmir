@@ -1,8 +1,4 @@
 <?php
-/**
- * The header for Astra Child theme.
- */
-
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
@@ -32,16 +28,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <header class="site">
   <div class="wrap">
-    <div class="logo">Mobil<em>İzmir</em></div>
+    <div class="logo"><a href="<?php echo home_url(); ?>">Mobil<em>İzmir</em></a></div>
     <nav class="primary">
       <a href="/#hizmetler">Hizmetler</a>
       <a href="/#galeri">Galeri</a>
       <a href="/#fiyat">Fiyatlandırma</a>
       <a href="/#hakkimizda">Hakkımızda</a>
-      <a href="/#blog">Blog</a>
+      <a href="/blog/">Blog</a>
       <a href="/iletisim/">İletişim</a>
     </nav>
-    <a href="https://wa.me/905401872003" class="btn solid">WhatsApp'tan Randevu</a>
+    <div style="display:flex; gap:10px; align-items:center;">
+      <a href="/randevu-al/" class="btn form-btn">Formla Randevu</a>
+      <a href="https://wa.me/905401872003" class="btn solid">WhatsApp'tan Randevu</a>
+      <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 

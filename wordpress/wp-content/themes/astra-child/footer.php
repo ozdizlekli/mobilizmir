@@ -1,7 +1,4 @@
 <?php
-/**
- * The template for displaying the footer.
- */
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
@@ -42,7 +39,6 @@ if ( ! defined( 'ABSPATH' ) ) {
           <li><a href="/hakkimizda/">Hakkımızda</a></li>
           <li><a href="/uygulamalarimiz-galeri/">Galeri</a></li>
           <li><a href="/blog/">Blog</a></li>
-          <li><a href="#">Hizmet Bölgeleri</a></li>
           <li><a href="/sss/">SSS</a></li>
         </ul>
       </div>
@@ -57,7 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
     <div class="foot-bottom">
       <span>© <?php echo date('Y'); ?> Mobilİzmir — Tüm hakları saklıdır.</span>
-      <span>Gizlilik Politikası · KVKK</span>
+      <span><a href="/gizlilik-politikasi/" style="color:inherit;text-decoration:underline;">Gizlilik Politikası · KVKK</a></span>
     </div>
   </div>
 </footer>
@@ -67,12 +63,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 </a>
 
 <script>
+// FAQ Accordion
 document.querySelectorAll('.faq-q').forEach(function(btn){
   btn.addEventListener('click', function(){
     var item = btn.closest('.faq-item');
     var wasOpen = item.classList.contains('open');
     document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
     if(!wasOpen) item.classList.add('open');
+  });
+});
+
+// Mobile Menu
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('nav.primary');
+toggle?.addEventListener('click', () => {
+  nav.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', nav.classList.contains('open'));
+});
+
+// Before/After Slider
+document.querySelectorAll('.ba-range').forEach(r=>{
+  r.addEventListener('input', e=>{
+    e.target.closest('.ba-slider').style.setProperty('--pos', e.target.value+'%');
   });
 });
 </script>
