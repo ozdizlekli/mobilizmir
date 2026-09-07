@@ -421,3 +421,27 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
   }
   .dropdown a { padding: 6px 0 !important; }
 }
+
+/* ==========================================
+   DİNAMİK İSTATİSTİKLER (4 SÜTUNLU HERO STATS)
+   ========================================== */
+.hero-stats {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 10px; max-width: 100%;
+}
+.hero-stats > div {
+  flex: 1; text-align: center;
+}
+.hero-stats b {
+  display: flex; justify-content: center; align-items: baseline;
+  font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 500; color: var(--gold-bright);
+  line-height: 1;
+}
+.hero-stats span.lbl {
+  font-size: 10.5px; letter-spacing: 0.08em; color: var(--stone);
+  text-transform: uppercase; display: block; margin-top: 10px;
+}
+@media(max-width: 600px) {
+  .hero-stats { flex-wrap: wrap; }
+  .hero-stats > div { flex: 0 0 50%; padding: 16px 0; }
+}

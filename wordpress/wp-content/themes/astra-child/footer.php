@@ -87,6 +87,34 @@ document.querySelectorAll('.ba-range').forEach(r=>{
     e.target.closest('.ba-slider').style.setProperty('--pos', e.target.value+'%');
   });
 });
+
+// Dinamik İstatistik Sayacı
+const counters = document.querySelectorAll('.counter-val');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      const counter = entry.target;
+      const target = +counter.getAttribute('data-target');
+      const duration = 1500;
+      const stepTime = 30;
+      const steps = duration / stepTime;
+      const increment = target / steps;
+      let current = 0;
+      const updateCounter = setInterval(() => {
+        current += increment;
+        if(current >= target) {
+          counter.innerText = target;
+          clearInterval(updateCounter);
+        } else {
+          counter.innerText = Math.ceil(current);
+        }
+      }, stepTime);
+      observer.unobserve(counter);
+    }
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => observer.observe(c));
+
 </script>
 <?php wp_footer(); ?>
 </body>

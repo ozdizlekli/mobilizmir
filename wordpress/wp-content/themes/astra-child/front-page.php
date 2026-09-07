@@ -15,10 +15,11 @@ get_header(); ?>
         <a href="https://wa.me/905401872003" class="btn solid">Randevu Talep Et</a>
         <a href="#hizmetler" class="btn">Hizmetleri Gör</a>
       </div>
-      <div class="hero-facts">
-        <div><b>5 yıl</b><span>Sektör tecrübesi</span></div>
-        <div><b>12 ilçe</b><span>İzmir geneli hizmet</span></div>
-        <div><b>4.9/5</b><span>Google puanı</span></div>
+      <div class="hero-stats">
+        <div><b><span class="counter-val" data-target="500">0</span>+</b><span class="lbl">Memnun Müşteri</span></div>
+        <div><b><span class="counter-val" data-target="5">0</span></b><span class="lbl">Yıllık Tecrübe</span></div>
+        <div><b><span class="counter-val" data-target="12">0</span></b><span class="lbl">İlçede Hizmet</span></div>
+        <div><b>%<span class="counter-val" data-target="98">0</span></b><span class="lbl">Memnuniyet</span></div>
       </div>
     </div>
     <div class="hero-visual">
