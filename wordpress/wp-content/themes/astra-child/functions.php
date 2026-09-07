@@ -9,7 +9,7 @@
 // --------------------------------------------------------------------------
 add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style('astra-parent-style', get_template_directory_uri() . '/style.css');
-    wp_enqueue_style('astra-child-style', get_stylesheet_directory_uri() . '/style.css', array('astra-parent-style'), '2.0.0');
+    wp_enqueue_style('astra-child-style', get_stylesheet_directory_uri() . '/style.css', array('astra-parent-style'), filemtime(get_stylesheet_directory() . '/style.css'));
     wp_enqueue_style(
         'mobilizmir-fonts',
         'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap',
