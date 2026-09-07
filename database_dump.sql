@@ -399,7 +399,7 @@ INSERT INTO `wp_options` VALUES
 (131,'current_theme','Astra Child - Mobilİzmir','auto'),
 (132,'theme_mods_spectra-one','a:4:{s:19:\"wp_classic_sidebars\";a:0:{}s:18:\"nav_menu_locations\";a:0:{}s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1788767568;s:4:\"data\";a:1:{s:19:\"wp_inactive_widgets\";a:5:{i:0;s:7:\"block-2\";i:1;s:7:\"block-3\";i:2;s:7:\"block-4\";i:3;s:7:\"block-5\";i:4;s:7:\"block-6\";}}}s:18:\"custom_css_post_id\";i:-1;}','off'),
 (133,'theme_switched','','auto'),
-(134,'_transient_doing_cron','1788776831.7845458984375000000000','on'),
+(134,'_transient_doing_cron','1788777078.0565950870513916015625','on'),
 (139,'theme_mods_mobilizmir-theme','a:4:{s:19:\"wp_classic_sidebars\";a:0:{}s:18:\"nav_menu_locations\";a:0:{}s:18:\"custom_css_post_id\";i:-1;s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1788767395;s:4:\"data\";a:1:{s:19:\"wp_inactive_widgets\";a:5:{i:0;s:7:\"block-2\";i:1;s:7:\"block-3\";i:2;s:7:\"block-4\";i:3;s:7:\"block-5\";i:4;s:7:\"block-6\";}}}}','off'),
 (145,'_transient_wp_styles_for_blocks','a:2:{s:4:\"hash\";s:32:\"ae05831c832f0193d08556eb63905e59\";s:6:\"blocks\";a:9:{s:32:\"832dc2d864d79097d8b8b493ad93453b\";s:0:\"\";s:32:\"45d3e0c4afcbd8cf25cb1ba51abfb3d7\";s:46:\":root :where(.wp-block-icon svg){width: 24px;}\";s:32:\"feca6e996f694be2d29599793228e0d7\";s:0:\"\";s:32:\"5eef131663eddaf830554df656fc2968\";s:0:\"\";s:32:\"c99c05932c6685777ec5b856698fcc7d\";s:0:\"\";s:32:\"dec8d648f30b13caec8e61374591787d\";s:0:\"\";s:32:\"6c35533f7a92cce94808323603db9fc8\";s:0:\"\";s:32:\"6a0505cd5c78a87ed77570cda43c1132\";s:0:\"\";s:32:\"25a66f156386551185570f72a9f7d44e\";s:69:\":root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}\";}}','on'),
 (155,'bsf_usage_migrated','1','off'),
@@ -443,8 +443,7 @@ INSERT INTO `wp_options` VALUES
 (223,'_transient_timeout_wpseo_total_unindexed_post_type_archives','1788863227','off'),
 (224,'_transient_wpseo_total_unindexed_post_type_archives','0','off'),
 (225,'_transient_timeout_wpseo_total_unindexed_general_items','1788863228','off'),
-(226,'_transient_wpseo_total_unindexed_general_items','0','off'),
-(231,'_transient_is_multi_author','1','on');
+(226,'_transient_wpseo_total_unindexed_general_items','0','off');
 /*!40000 ALTER TABLE `wp_options` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -463,7 +462,7 @@ CREATE TABLE `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -475,60 +474,100 @@ LOCK TABLES `wp_postmeta` WRITE;
 INSERT INTO `wp_postmeta` VALUES
 (1,2,'_wp_page_template','default'),
 (2,3,'_wp_page_template','default'),
-(3,24,'_menu_item_type','post_type'),
-(4,24,'_menu_item_menu_item_parent','0'),
-(5,24,'_menu_item_object_id','18'),
-(6,24,'_menu_item_object','page'),
-(7,24,'_menu_item_target',''),
-(8,24,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
-(9,24,'_menu_item_xfn',''),
-(10,24,'_menu_item_url',''),
-(11,25,'_menu_item_type','post_type'),
-(12,25,'_menu_item_menu_item_parent','0'),
-(13,25,'_menu_item_object_id','19'),
-(14,25,'_menu_item_object','page'),
-(15,25,'_menu_item_target',''),
-(16,25,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
-(17,25,'_menu_item_xfn',''),
-(18,25,'_menu_item_url',''),
-(19,26,'_menu_item_type','post_type'),
-(20,26,'_menu_item_menu_item_parent','0'),
-(21,26,'_menu_item_object_id','20'),
-(22,26,'_menu_item_object','page'),
-(23,26,'_menu_item_target',''),
-(24,26,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
-(25,26,'_menu_item_xfn',''),
-(26,26,'_menu_item_url',''),
-(27,27,'_menu_item_type','post_type'),
-(28,27,'_menu_item_menu_item_parent','0'),
-(29,27,'_menu_item_object_id','21'),
-(30,27,'_menu_item_object','page'),
-(31,27,'_menu_item_target',''),
-(32,27,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
-(33,27,'_menu_item_xfn',''),
-(34,27,'_menu_item_url',''),
-(35,28,'_menu_item_type','post_type'),
-(36,28,'_menu_item_menu_item_parent','0'),
-(37,28,'_menu_item_object_id','22'),
-(38,28,'_menu_item_object','page'),
-(39,28,'_menu_item_target',''),
-(40,28,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
-(41,28,'_menu_item_xfn',''),
-(42,28,'_menu_item_url',''),
-(43,29,'_menu_item_type','post_type'),
-(44,29,'_menu_item_menu_item_parent','0'),
-(45,29,'_menu_item_object_id','23'),
-(46,29,'_menu_item_object','page'),
-(47,29,'_menu_item_target',''),
-(48,29,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
-(49,29,'_menu_item_xfn',''),
-(50,29,'_menu_item_url',''),
 (51,53,'_pingme','1'),
 (52,53,'_encloseme','1'),
 (53,54,'_pingme','1'),
 (54,54,'_encloseme','1'),
 (55,55,'_pingme','1'),
-(56,55,'_encloseme','1');
+(56,55,'_encloseme','1'),
+(57,56,'_menu_item_type','post_type'),
+(58,56,'_menu_item_menu_item_parent','0'),
+(59,56,'_menu_item_object_id','18'),
+(60,56,'_menu_item_object','page'),
+(61,56,'_menu_item_target',''),
+(62,56,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
+(63,56,'_menu_item_xfn',''),
+(64,56,'_menu_item_url',''),
+(65,57,'_menu_item_type','post_type'),
+(66,57,'_menu_item_menu_item_parent','0'),
+(67,57,'_menu_item_object_id','49'),
+(68,57,'_menu_item_object','page'),
+(69,57,'_menu_item_target',''),
+(70,57,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
+(71,57,'_menu_item_xfn',''),
+(72,57,'_menu_item_url',''),
+(73,58,'_menu_item_type','post_type'),
+(74,58,'_menu_item_menu_item_parent','0'),
+(75,58,'_menu_item_object_id','5'),
+(76,58,'_menu_item_object','page'),
+(77,58,'_menu_item_target',''),
+(78,58,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
+(79,58,'_menu_item_xfn',''),
+(80,58,'_menu_item_url',''),
+(81,59,'_menu_item_type','post_type'),
+(82,59,'_menu_item_menu_item_parent','58'),
+(83,59,'_menu_item_object_id','19'),
+(84,59,'_menu_item_object','page'),
+(85,59,'_menu_item_target',''),
+(86,59,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
+(87,59,'_menu_item_xfn',''),
+(88,59,'_menu_item_url',''),
+(89,60,'_menu_item_type','post_type'),
+(90,60,'_menu_item_menu_item_parent','58'),
+(91,60,'_menu_item_object_id','20'),
+(92,60,'_menu_item_object','page'),
+(93,60,'_menu_item_target',''),
+(94,60,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
+(95,60,'_menu_item_xfn',''),
+(96,60,'_menu_item_url',''),
+(97,61,'_menu_item_type','post_type'),
+(98,61,'_menu_item_menu_item_parent','58'),
+(99,61,'_menu_item_object_id','21'),
+(100,61,'_menu_item_object','page'),
+(101,61,'_menu_item_target',''),
+(102,61,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
+(103,61,'_menu_item_xfn',''),
+(104,61,'_menu_item_url',''),
+(105,62,'_menu_item_type','post_type'),
+(106,62,'_menu_item_menu_item_parent','58'),
+(107,62,'_menu_item_object_id','22'),
+(108,62,'_menu_item_object','page'),
+(109,62,'_menu_item_target',''),
+(110,62,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
+(111,62,'_menu_item_xfn',''),
+(112,62,'_menu_item_url',''),
+(113,63,'_menu_item_type','post_type'),
+(114,63,'_menu_item_menu_item_parent','58'),
+(115,63,'_menu_item_object_id','23'),
+(116,63,'_menu_item_object','page'),
+(117,63,'_menu_item_target',''),
+(118,63,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
+(119,63,'_menu_item_xfn',''),
+(120,63,'_menu_item_url',''),
+(121,64,'_menu_item_type','post_type'),
+(122,64,'_menu_item_menu_item_parent','0'),
+(123,64,'_menu_item_object_id','6'),
+(124,64,'_menu_item_object','page'),
+(125,64,'_menu_item_target',''),
+(126,64,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
+(127,64,'_menu_item_xfn',''),
+(128,64,'_menu_item_url',''),
+(129,65,'_menu_item_type','post_type'),
+(130,65,'_menu_item_menu_item_parent','0'),
+(131,65,'_menu_item_object_id','52'),
+(132,65,'_menu_item_object','page'),
+(133,65,'_menu_item_target',''),
+(134,65,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
+(135,65,'_menu_item_xfn',''),
+(136,65,'_menu_item_url',''),
+(137,66,'_menu_item_type','post_type'),
+(138,66,'_menu_item_menu_item_parent','0'),
+(139,66,'_menu_item_object_id','7'),
+(140,66,'_menu_item_object','page'),
+(141,66,'_menu_item_target',''),
+(142,66,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
+(143,66,'_menu_item_xfn',''),
+(144,66,'_menu_item_url','');
 /*!40000 ALTER TABLE `wp_postmeta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -569,7 +608,7 @@ CREATE TABLE `wp_posts` (
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`),
   KEY `type_status_author` (`post_type`,`post_status`,`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -601,12 +640,6 @@ INSERT INTO `wp_posts` VALUES
 (21,0,'2026-09-07 07:42:28','2026-09-07 07:42:28','<!-- wp:group {\"align\":\"full\",\"className\":\"service-hero\"} -->\n<div class=\"wp-block-group alignfull service-hero\">\n<!-- wp:heading {\"textAlign\":\"center\",\"level\":1,\"style\":{\"color\":{\"text\":\"#d4af37\"},\"typography\":{\"fontSize\":\"clamp(2rem, 4vw, 3rem)\",\"fontWeight\":\"900\",\"letterSpacing\":\"2px\"}}} --><h1 class=\"has-text-align-center has-text-color\" style=\"color:#d4af37;font-size:clamp(2rem, 4vw, 3rem);font-weight:900;letter-spacing:2px\">FAR TEMİZLİĞİ</h1><!-- /wp:heading -->\n<!-- wp:paragraph {\"align\":\"center\",\"style\":{\"color\":{\"text\":\"#888888\"},\"typography\":{\"fontSize\":\"1.1rem\",\"fontStyle\":\"italic\",\"letterSpacing\":\"1px\"}}} --><p class=\"has-text-align-center has-text-color\" style=\"color:#888888;font-size:1.1rem;font-style:italic;letter-spacing:1px\">Daha Parlak, Daha Güvenli Sürüş</p><!-- /wp:paragraph -->\n<!-- wp:html --><div class=\"gold-line\"></div><!-- /wp:html -->\n</div><!-- /wp:group -->\n\n<!-- wp:spacer {\"height\":\"60px\"} --><div style=\"height:60px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div><!-- /wp:spacer -->\n\n<!-- wp:paragraph {\"style\":{\"color\":{\"text\":\"#bbbbbb\"},\"typography\":{\"fontSize\":\"1.05rem\",\"lineHeight\":\"2\"}}} --><p class=\"has-text-color\" style=\"color:#bbbbbb;font-size:1.05rem;line-height:2\">Güneşin UV ışınları ve yol koşulları zamanla farlarınızın sararmasına ve matlaşmasına neden olarak görüş mesafenizi tehlikeli şekilde düşürür. <strong>Mobilİzmir</strong> far temizliği hizmeti ile farlardaki matlaşmayı gideriyor, ışık performansını artırıyor ve araç değerinizi koruyoruz.</p><!-- /wp:paragraph -->\n\n<!-- wp:spacer {\"height\":\"50px\"} --><div style=\"height:50px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div><!-- /wp:spacer -->\n\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">\n<!-- wp:column -->\n<div class=\"wp-block-column\">\n<!-- wp:heading {\"level\":4,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} --><h4 class=\"has-text-color\" style=\"color:#d4af37\">Daha Parlak</h4><!-- /wp:heading -->\n<!-- wp:paragraph --><p>Özel polisaj işlemiyle far yüzeyindeki mat tabaka kaldırılır, farlarınız ilk günkü şeffaflığına kavuşur.</p><!-- /wp:paragraph -->\n</div><!-- /wp:column -->\n<!-- wp:column -->\n<div class=\"wp-block-column\">\n<!-- wp:heading {\"level\":4,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} --><h4 class=\"has-text-color\" style=\"color:#d4af37\">Daha Güvenli</h4><!-- /wp:heading -->\n<!-- wp:paragraph --><p>Gece sürüşlerinde, yağmurlu ve sisli havalarda görüş mesafenizi ciddi oranda artırarak güvenliğinizi sağlar.</p><!-- /wp:paragraph -->\n</div><!-- /wp:column -->\n</div><!-- /wp:columns -->\n\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">\n<!-- wp:column -->\n<div class=\"wp-block-column\">\n<!-- wp:heading {\"level\":4,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} --><h4 class=\"has-text-color\" style=\"color:#d4af37\">Hızlı Uygulama</h4><!-- /wp:heading -->\n<!-- wp:paragraph --><p>İşlem kısa sürer, kullanılan koruyucu ürünler sayesinde farlarınızın yeniden sararması uzun süre engellenir.</p><!-- /wp:paragraph -->\n</div><!-- /wp:column -->\n<!-- wp:column -->\n<div class=\"wp-block-column\">\n<!-- wp:heading {\"level\":4,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} --><h4 class=\"has-text-color\" style=\"color:#d4af37\">Ekonomik Çözüm</h4><!-- /wp:heading -->\n<!-- wp:paragraph --><p>Yeni far maliyetine gerek kalmaz. Farlarınızı yenilemek hem bütçenizi hem aracınızın değerini korur.</p><!-- /wp:paragraph -->\n</div><!-- /wp:column -->\n</div><!-- /wp:columns -->\n\n<!-- wp:spacer {\"height\":\"50px\"} --><div style=\"height:50px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div><!-- /wp:spacer -->\n<!-- wp:buttons {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"}} --><div class=\"wp-block-buttons\"><!-- wp:button --><div class=\"wp-block-button\"><a class=\"wp-block-button__link wp-element-button\" href=\"https://wa.me/905401872003\" target=\"_blank\">RANDEVU AL</a></div><!-- /wp:button --></div><!-- /wp:buttons -->\n<!-- wp:spacer {\"height\":\"60px\"} --><div style=\"height:60px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div><!-- /wp:spacer -->\n','Far Temizliği','','publish','closed','closed','','far-temizligi','','','2026-09-07 08:30:42','2026-09-07 08:30:42','',0,'http://localhost:8000/?page_id=21',0,'page','',0),
 (22,0,'2026-09-07 07:42:28','2026-09-07 07:42:28','<!-- wp:group {\"align\":\"full\",\"className\":\"service-hero\"} -->\n<div class=\"wp-block-group alignfull service-hero\">\n<!-- wp:heading {\"textAlign\":\"center\",\"level\":1,\"style\":{\"color\":{\"text\":\"#d4af37\"},\"typography\":{\"fontSize\":\"clamp(2rem, 4vw, 3rem)\",\"fontWeight\":\"900\",\"letterSpacing\":\"2px\"}}} --><h1 class=\"has-text-align-center has-text-color\" style=\"color:#d4af37;font-size:clamp(2rem, 4vw, 3rem);font-weight:900;letter-spacing:2px\">BOYASIZ GÖÇÜK DÜZELTME</h1><!-- /wp:heading -->\n<!-- wp:paragraph {\"align\":\"center\",\"style\":{\"color\":{\"text\":\"#888888\"},\"typography\":{\"fontSize\":\"1.1rem\",\"fontStyle\":\"italic\",\"letterSpacing\":\"1px\"}}} --><p class=\"has-text-align-center has-text-color\" style=\"color:#888888;font-size:1.1rem;font-style:italic;letter-spacing:1px\">Aracınızın Değerini Koruyoruz</p><!-- /wp:paragraph -->\n<!-- wp:html --><div class=\"gold-line\"></div><!-- /wp:html -->\n</div><!-- /wp:group -->\n\n<!-- wp:spacer {\"height\":\"60px\"} --><div style=\"height:60px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div><!-- /wp:spacer -->\n\n<!-- wp:paragraph {\"style\":{\"color\":{\"text\":\"#bbbbbb\"},\"typography\":{\"fontSize\":\"1.05rem\",\"lineHeight\":\"2\"}}} --><p class=\"has-text-color\" style=\"color:#bbbbbb;font-size:1.05rem;line-height:2\">Park hasarları, ufak çarpmalar veya dolu yağışı sebebiyle oluşan göçükler canınızı sıkmasın. <strong>Mobilİzmir</strong> boyasız göçük düzeltme (PDR) teknolojisi ile aracınızın orijinal fabrikasyon boyasına dokunmadan, göçükleri iz bırakmadan gideriyoruz. Değer kaybını önler, orijinal görünümü korur.</p><!-- /wp:paragraph -->\n\n<!-- wp:spacer {\"height\":\"50px\"} --><div style=\"height:50px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div><!-- /wp:spacer -->\n\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">\n<!-- wp:column -->\n<div class=\"wp-block-column\">\n<!-- wp:heading {\"level\":4,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} --><h4 class=\"has-text-color\" style=\"color:#d4af37\">Boyasız Onarım</h4><!-- /wp:heading -->\n<!-- wp:paragraph --><p>Boya ve macun kullanılmaz. Orijinal fabrikasyon boya korunur, Tramer kaydı oluşmaz, değer kaybı yaşanmaz.</p><!-- /wp:paragraph -->\n</div><!-- /wp:column -->\n<!-- wp:column -->\n<div class=\"wp-block-column\">\n<!-- wp:heading {\"level\":4,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} --><h4 class=\"has-text-color\" style=\"color:#d4af37\">Hızlı ve Pratik</h4><!-- /wp:heading -->\n<!-- wp:paragraph --><p>Geleneksel kaporta onarımı günlerce sürerken, boyasız göçük düzeltme saatler içinde tamamlanır.</p><!-- /wp:paragraph -->\n</div><!-- /wp:column -->\n</div><!-- /wp:columns -->\n\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">\n<!-- wp:column -->\n<div class=\"wp-block-column\">\n<!-- wp:heading {\"level\":4,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} --><h4 class=\"has-text-color\" style=\"color:#d4af37\">Uzman Ekip</h4><!-- /wp:heading -->\n<!-- wp:paragraph --><p>Deneyimli ve profesyonel kadromuzla, aracınıza zerre zarar vermeden mükemmel sonuçlar üretiyoruz.</p><!-- /wp:paragraph -->\n</div><!-- /wp:column -->\n<!-- wp:column -->\n<div class=\"wp-block-column\">\n<!-- wp:heading {\"level\":4,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} --><h4 class=\"has-text-color\" style=\"color:#d4af37\">%100 Güven</h4><!-- /wp:heading -->\n<!-- wp:paragraph --><p>Boya masrafı çıkarmaz, ikinci elde değer kaybını önleyerek büyük bir ekonomik fayda sağlar.</p><!-- /wp:paragraph -->\n</div><!-- /wp:column -->\n</div><!-- /wp:columns -->\n\n<!-- wp:spacer {\"height\":\"50px\"} --><div style=\"height:50px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div><!-- /wp:spacer -->\n<!-- wp:buttons {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"}} --><div class=\"wp-block-buttons\"><!-- wp:button --><div class=\"wp-block-button\"><a class=\"wp-block-button__link wp-element-button\" href=\"https://wa.me/905401872003\" target=\"_blank\">RANDEVU AL</a></div><!-- /wp:button --></div><!-- /wp:buttons -->\n<!-- wp:spacer {\"height\":\"60px\"} --><div style=\"height:60px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div><!-- /wp:spacer -->\n','Boyasız Göçük Düzeltme','','publish','closed','closed','','boyasiz-gocuk-duzeltme','','','2026-09-07 08:30:42','2026-09-07 08:30:42','',0,'http://localhost:8000/?page_id=22',0,'page','',0),
 (23,0,'2026-09-07 07:42:28','2026-09-07 07:42:28','<!-- wp:group {\"align\":\"full\",\"className\":\"service-hero\"} -->\n<div class=\"wp-block-group alignfull service-hero\">\n<!-- wp:heading {\"textAlign\":\"center\",\"level\":1,\"style\":{\"color\":{\"text\":\"#d4af37\"},\"typography\":{\"fontSize\":\"clamp(2rem, 4vw, 3rem)\",\"fontWeight\":\"900\",\"letterSpacing\":\"2px\"}}} --><h1 class=\"has-text-align-center has-text-color\" style=\"color:#d4af37;font-size:clamp(2rem, 4vw, 3rem);font-weight:900;letter-spacing:2px\">PERİYODİK BAKIM</h1><!-- /wp:heading -->\n<!-- wp:paragraph {\"align\":\"center\",\"style\":{\"color\":{\"text\":\"#888888\"},\"typography\":{\"fontSize\":\"1.1rem\",\"fontStyle\":\"italic\",\"letterSpacing\":\"1px\"}}} --><p class=\"has-text-align-center has-text-color\" style=\"color:#888888;font-size:1.1rem;font-style:italic;letter-spacing:1px\">Daha Güvenli, Daha Verimli, Daha Uzun Ömürlü</p><!-- /wp:paragraph -->\n<!-- wp:html --><div class=\"gold-line\"></div><!-- /wp:html -->\n</div><!-- /wp:group -->\n\n<!-- wp:spacer {\"height\":\"60px\"} --><div style=\"height:60px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div><!-- /wp:spacer -->\n\n<!-- wp:paragraph {\"style\":{\"color\":{\"text\":\"#bbbbbb\"},\"typography\":{\"fontSize\":\"1.05rem\",\"lineHeight\":\"2\"}}} --><p class=\"has-text-color\" style=\"color:#bbbbbb;font-size:1.05rem;line-height:2\">Aracınızın yolda sizi yarı yolda bırakmaması için düzenli bakım şarttır. <strong>Mobilİzmir</strong> periyodik bakım hizmeti ile yağ-filtre değişimi, sıvı kontrolleri, fren ve akü kontrolleri, genel arıza tespiti gibi hayati bakımları bulunduğunuz konumda gerçekleştiriyoruz.</p><!-- /wp:paragraph -->\n\n<!-- wp:spacer {\"height\":\"50px\"} --><div style=\"height:50px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div><!-- /wp:spacer -->\n\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">\n<!-- wp:column -->\n<div class=\"wp-block-column\">\n<!-- wp:heading {\"level\":4,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} --><h4 class=\"has-text-color\" style=\"color:#d4af37\">Güvenli Sürüş</h4><!-- /wp:heading -->\n<!-- wp:paragraph --><p>Düzenli bakım olası arızaların önüne geçer ve sürüş güvenliğinizi artırır. Yolda kalma riskinizi sıfırlar.</p><!-- /wp:paragraph -->\n</div><!-- /wp:column -->\n<!-- wp:column -->\n<div class=\"wp-block-column\">\n<!-- wp:heading {\"level\":4,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} --><h4 class=\"has-text-color\" style=\"color:#d4af37\">Yakıt Tasarrufu</h4><!-- /wp:heading -->\n<!-- wp:paragraph --><p>Temiz filtreler ve taze motor yağı motorun rahat çalışmasını sağlayarak yakıt tüketimini düşürür.</p><!-- /wp:paragraph -->\n</div><!-- /wp:column -->\n</div><!-- /wp:columns -->\n\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">\n<!-- wp:column -->\n<div class=\"wp-block-column\">\n<!-- wp:heading {\"level\":4,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} --><h4 class=\"has-text-color\" style=\"color:#d4af37\">Performans Artışı</h4><!-- /wp:heading -->\n<!-- wp:paragraph --><p>Motor ömrünü uzatır, aracınızın performansını en üst seviyede tutar. Eski çevikliğine kavuşur.</p><!-- /wp:paragraph -->\n</div><!-- /wp:column -->\n<!-- wp:column -->\n<div class=\"wp-block-column\">\n<!-- wp:heading {\"level\":4,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} --><h4 class=\"has-text-color\" style=\"color:#d4af37\">Ekonomik Çözüm</h4><!-- /wp:heading -->\n<!-- wp:paragraph --><p>Düzenli küçük bakımlar ileride oluşabilecek büyük motor hasarlarını ve ağır masrafları önler.</p><!-- /wp:paragraph -->\n</div><!-- /wp:column -->\n</div><!-- /wp:columns -->\n\n<!-- wp:spacer {\"height\":\"50px\"} --><div style=\"height:50px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div><!-- /wp:spacer -->\n<!-- wp:buttons {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"}} --><div class=\"wp-block-buttons\"><!-- wp:button --><div class=\"wp-block-button\"><a class=\"wp-block-button__link wp-element-button\" href=\"https://wa.me/905401872003\" target=\"_blank\">RANDEVU AL</a></div><!-- /wp:button --></div><!-- /wp:buttons -->\n<!-- wp:spacer {\"height\":\"60px\"} --><div style=\"height:60px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div><!-- /wp:spacer -->\n','Periyodik Bakım','','publish','closed','closed','','periyodik-bakim','','','2026-09-07 08:30:42','2026-09-07 08:30:42','',0,'http://localhost:8000/?page_id=23',0,'page','',0),
-(24,0,'2026-09-07 07:42:52','2026-09-07 07:42:52',' ','','','publish','closed','closed','','24','','','2026-09-07 07:42:52','2026-09-07 07:42:52','',0,'http://localhost:8000/?p=24',0,'nav_menu_item','',0),
-(25,0,'2026-09-07 07:42:52','2026-09-07 07:42:52',' ','','','publish','closed','closed','','25','','','2026-09-07 07:42:52','2026-09-07 07:42:52','',0,'http://localhost:8000/?p=25',2,'nav_menu_item','',0),
-(26,0,'2026-09-07 07:42:53','2026-09-07 07:42:53',' ','','','publish','closed','closed','','26','','','2026-09-07 07:42:53','2026-09-07 07:42:53','',0,'http://localhost:8000/?p=26',3,'nav_menu_item','',0),
-(27,0,'2026-09-07 07:42:53','2026-09-07 07:42:53',' ','','','publish','closed','closed','','27','','','2026-09-07 07:42:53','2026-09-07 07:42:53','',0,'http://localhost:8000/?p=27',4,'nav_menu_item','',0),
-(28,0,'2026-09-07 07:42:53','2026-09-07 07:42:53',' ','','','publish','closed','closed','','28','','','2026-09-07 07:42:53','2026-09-07 07:42:53','',0,'http://localhost:8000/?p=28',5,'nav_menu_item','',0),
-(29,0,'2026-09-07 07:42:54','2026-09-07 07:42:54',' ','','','publish','closed','closed','','29','','','2026-09-07 07:42:54','2026-09-07 07:42:54','',0,'http://localhost:8000/?p=29',6,'nav_menu_item','',0),
 (30,0,'2026-09-07 08:01:53','2026-09-07 08:01:53','<!-- wp:group {\"align\":\"full\",\"style\":{\"spacing\":{\"padding\":{\"top\":\"5rem\",\"bottom\":\"5rem\"}}},\"backgroundColor\":\"black\"} -->\n<div class=\"wp-block-group alignfull has-black-background-color has-background\" style=\"padding-top:5rem;padding-bottom:5rem\">\n<!-- wp:heading {\"textAlign\":\"center\",\"level\":1,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} -->\n<h1 class=\"has-text-align-center has-text-color\" style=\"color:#d4af37;font-size:3rem;font-weight:bold;\">SİZ NEREDE İSTERSENİZ, BİZ ORADAYIZ!</h1>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"align\":\"center\",\"style\":{\"typography\":{\"fontSize\":\"1.2rem\"},\"color\":{\"text\":\"#ffffff\"}}} -->\n<p class=\"has-text-align-center has-text-color\" style=\"color:#ffffff;font-size:1.2rem;\">Mobilİzmir olarak aracınızın ihtiyaç duyduğu profesyonel bakımı ayağınıza getiriyoruz. Evinizde, iş yerinizde veya dilediğiniz konumda; zaman kaybetmeden premium hizmetin ayrıcalığını yaşayın.</p>\n<!-- /wp:paragraph -->\n<!-- wp:buttons {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"}} -->\n<div class=\"wp-block-buttons\">\n<!-- wp:button {\"style\":{\"color\":{\"background\":\"#d4af37\",\"text\":\"#121212\"},\"typography\":{\"fontWeight\":\"700\"}}} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-text-color has-background wp-element-button\" href=\"https://wa.me/905401872003\" style=\"border-radius:5px;color:#121212;background-color:#d4af37;font-weight:700;padding:15px 30px;\">Hemen WhatsApp\'tan Randevu Al</a></div>\n<!-- /wp:button -->\n</div>\n<!-- /wp:buttons -->\n</div>\n<!-- /wp:group -->\n\n<!-- wp:heading {\"textAlign\":\"center\",\"style\":{\"color\":{\"text\":\"#d4af37\"},\"spacing\":{\"margin\":{\"top\":\"3rem\",\"bottom\":\"2rem\"}}}} -->\n<h2 class=\"has-text-align-center has-text-color\" style=\"color:#d4af37;margin-top:3rem;margin-bottom:2rem\">Premium Hizmetlerimiz</h2>\n<!-- /wp:heading -->\n\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">\n<!-- wp:column -->\n<div class=\"wp-block-column\">\n<!-- wp:heading {\"level\":3,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} -->\n<h3 class=\"has-text-color\" style=\"color:#d4af37\">Koltuk Yıkama</h3>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"style\":{\"color\":{\"text\":\"#ffffff\"}}} -->\n<p class=\"has-text-color\" style=\"color:#ffffff\">Derinlemesine temizlik ile aracınızın içinde sağlıklı bir yaşam alanı yaratın.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:column -->\n<!-- wp:column -->\n<div class=\"wp-block-column\">\n<!-- wp:heading {\"level\":3,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} -->\n<h3 class=\"has-text-color\" style=\"color:#d4af37\">Pasta Cila</h3>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"style\":{\"color\":{\"text\":\"#ffffff\"}}} -->\n<p class=\"has-text-color\" style=\"color:#ffffff\">Özel cilalarımız sayesinde aracınıza ilk günkü parlaklığını geri kazandırın.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:column -->\n<!-- wp:column -->\n<div class=\"wp-block-column\">\n<!-- wp:heading {\"level\":3,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} -->\n<h3 class=\"has-text-color\" style=\"color:#d4af37\">Far Temizliği</h3>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"style\":{\"color\":{\"text\":\"#ffffff\"}}} -->\n<p class=\"has-text-color\" style=\"color:#ffffff\">Daha parlak farlar ile gece sürüşlerinde maksimum güvenlik sağlayın.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:column -->\n</div>\n<!-- /wp:columns -->\n','Anasayfa','','inherit','closed','closed','','18-revision-v1','','','2026-09-07 08:01:53','2026-09-07 08:01:53','',18,'http://localhost:8000/?p=30',0,'revision','',0),
 (31,0,'2026-09-07 08:01:53','2026-09-07 08:01:53','<!-- wp:heading {\"level\":1,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} -->\n<h1 class=\"has-text-color\" style=\"color:#d4af37;font-weight:bold;\">Koltuk Yıkama: Daha Temiz, Daha Ferah, Daha Sağlıklı</h1>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"style\":{\"color\":{\"text\":\"#ffffff\"}}} -->\n<p class=\"has-text-color\" style=\"color:#ffffff\">Aracınızın içi, gün boyu en çok vakit geçirdiğiniz alanlardan biridir. Zamanla koltuklarınıza işleyen ter, toz, alerjen maddeler ve zorlu lekeler sadece kötü koku yapmakla kalmaz, aynı zamanda sağlığınızı da olumsuz etkiler. Mobilİzmir olarak sunduğumuz profesyonel koltuk yıkama hizmeti, derinlemesine bir hijyen ve yepyeni bir ferahlık sunar.</p>\n<!-- /wp:paragraph -->\n<!-- wp:list {\"style\":{\"color\":{\"text\":\"#ffffff\"}}} -->\n<ul class=\"has-text-color\" style=\"color:#ffffff\">\n<li><strong>Derin Temizlik:</strong> Koltuklarınızın derinlerine nüfuz eden kir, leke ve bakterileri kökünden temizler. Kötü kokuları tamamen yok eder.</li>\n<li><strong>Sağlıklı Yaşam Alanı:</strong> Alerjen, toz ve sağlığa zararlı mikroorganizmaları ortadan kaldırarak daha temiz bir hava solumanızı sağlar.</li>\n<li><strong>Hızlı Kuruma Teknolojisi:</strong> Kullandığımız özel ekipman ve ürünler sayesinde koltuklarınız kısa sürede kurur ve aracınız kullanıma hazır hale gelir.</li>\n<li><strong>Ekonomik ve Etkili Çözüm:</strong> Koltuklarınızı yeniler, ömrünü uzatır ve yeni masrafların önüne geçer. Aracınızın iç değerini korur.</li>\n</ul>\n<!-- /wp:list -->\n<!-- wp:paragraph {\"style\":{\"color\":{\"text\":\"#ffffff\"}}} -->\n<p class=\"has-text-color\" style=\"color:#ffffff\">Koltuk yıkama işlemi sadece görünümü düzeltmekle kalmaz, lekeleri çıkarır ve koltuklarınızı ilk günkü haline döndürür. İster adresinizde, isterseniz stüdyomuzda profesyonel çözümlerle yanınızdayız.</p>\n<!-- /wp:paragraph -->\n<!-- wp:buttons {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"},\"style\":{\"spacing\":{\"margin\":{\"top\":\"2rem\"}}}} -->\n<div class=\"wp-block-buttons\" style=\"margin-top:2rem\">\n<!-- wp:button {\"style\":{\"color\":{\"background\":\"#d4af37\",\"text\":\"#121212\"},\"typography\":{\"fontWeight\":\"700\"}}} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-text-color has-background wp-element-button\" href=\"https://wa.me/905401872003\" style=\"border-radius:5px;color:#121212;background-color:#d4af37;font-weight:700;padding:15px 30px;\">Hemen WhatsApp\'tan Randevu Al</a></div>\n<!-- /wp:button -->\n</div>\n<!-- /wp:buttons -->\n','Koltuk Yıkama','','inherit','closed','closed','','19-revision-v1','','','2026-09-07 08:01:53','2026-09-07 08:01:53','',19,'http://localhost:8000/?p=31',0,'revision','',0),
 (32,0,'2026-09-07 08:01:54','2026-09-07 08:01:54','<!-- wp:heading {\"level\":1,\"style\":{\"color\":{\"text\":\"#d4af37\"}}} -->\n<h1 class=\"has-text-color\" style=\"color:#d4af37;font-weight:bold;\">Pasta Cila: Daha Parlak, Daha Korumalı, Daha Değerli</h1>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"style\":{\"color\":{\"text\":\"#ffffff\"}}} -->\n<p class=\"has-text-color\" style=\"color:#ffffff\">Aracınızın boyası zamanla güneş ışınları, toz, yağmur ve dış etkenler sebebiyle matlaşır ve kılcal çiziklerle dolar. Bu durum hem aracınızın estetiğini bozar hem de ikinci el değerini düşürür. Mobilİzmir\'in profesyonel pasta cila uygulaması, aracınızın yüzeyini yenileyerek adeta fabrikadan yeni çıkmış bir görünüme kavuşturur.</p>\n<!-- /wp:paragraph -->\n<!-- wp:list {\"style\":{\"color\":{\"text\":\"#ffffff\"}}} -->\n<ul class=\"has-text-color\" style=\"color:#ffffff\">\n<li><strong>Derin Parlaklık (Matlaşmayı Giderir):</strong> Solmuş ve matlaşmış yüzeyleri profesyonel ekipmanlarla onarır. Boyanın altındaki o göz alıcı ilk günkü parlaklığı ortaya çıkarır.</li>\n<li><strong>Üstün Boya Koruma (Boyayı Yeniler ve Korur):</strong> Uygulanan cila katmanı sayesinde, boyanızın üzerinde şeffaf bir zırh oluşturur. Dış etkenlere karşı uzun vadeli koruma kalkanı görevi görür.</li>\n<li><strong>Uzun Süre Kalıcı Etki:</strong> Yüksek kaliteli cila ürünlerimiz sayesinde geçici değil, aylarca süren kalıcı bir parlaklık ve koruma elde edersiniz.</li>\n<li><strong>Ekonomik Değer Koruma:</strong> Aracınızın boyasını koruyarak yeni bir araç görünümü kazandırır. Satış anında aracınızın değerini maksimize eder.</li>\n</ul>\n<!-- /wp:list -->\n<!-- wp:paragraph {\"style\":{\"color\":{\"text\":\"#ffffff\"}}} -->\n<p class=\"has-text-color\" style=\"color:#ffffff\">Evinizde, iş yerinizde veya dilediğiniz konumda bu hizmeti alarak zaman kazanabilir ya da merkezimizdeki modern ekipmanlarla kusursuz bir deneyim yaşayabilirsiniz. Unutmayın, iyi bir pasta cila sadece parlaklık değil, uzun ömürlü bir yatırım demektir.</p>\n<!-- /wp:paragraph -->\n<!-- wp:buttons {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"},\"style\":{\"spacing\":{\"margin\":{\"top\":\"2rem\"}}}} -->\n<div class=\"wp-block-buttons\" style=\"margin-top:2rem\">\n<!-- wp:button {\"style\":{\"color\":{\"background\":\"#d4af37\",\"text\":\"#121212\"},\"typography\":{\"fontWeight\":\"700\"}}} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-text-color has-background wp-element-button\" href=\"https://wa.me/905401872003\" style=\"border-radius:5px;color:#121212;background-color:#d4af37;font-weight:700;padding:15px 30px;\">Hemen WhatsApp\'tan Randevu Al</a></div>\n<!-- /wp:button -->\n</div>\n<!-- /wp:buttons -->\n','Pasta Cila','','inherit','closed','closed','','20-revision-v1','','','2026-09-07 08:01:54','2026-09-07 08:01:54','',20,'http://localhost:8000/?p=32',0,'revision','',0),
@@ -632,7 +665,18 @@ INSERT INTO `wp_posts` VALUES
 (52,0,'2026-09-07 10:25:46','2026-09-07 10:25:46','<!-- wp:group {\"align\":\"full\",\"className\":\"hero-section\"} -->\n<div class=\"wp-block-group alignfull hero-section\">\n<h1 class=\"has-text-align-center has-text-color\" style=\"color:#d4af37;\">SIKÇA SORULAN SORULAR</h1>\n<div class=\"gold-line\"></div>\n</div>\n<!-- /wp:group -->\n<div style=\"height:60px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<h4 style=\"color:#D4AF37;\">Mobil hizmet nasıl çalışıyor?</h4>\n<p>Siz WhatsApp üzerinden randevu oluşturduğunuzda, belirlediğiniz gün ve saatte donanımlı aracımızla belirttiğiniz adrese geliyoruz. Gerekli tüm ekipman (su, elektrik kaynakları dahil) aracımızda mevcuttur.</p>\n<h4 style=\"color:#D4AF37;margin-top:30px;\">Boyasız göçük düzeltme (PDR) aracımın orijinalliğini bozar mı?</h4>\n<p>Hayır, aksine PDR işlemi aracınızın orijinal boyasına dokunmadan gerçekleştirildiği için aracınızın değerini korur ve Tramer kaydı oluşmasını engeller.</p>\n<h4 style=\"color:#D4AF37;margin-top:30px;\">Pasta cila ne kadar sürede bir yapılmalıdır?</h4>\n<p>Aracınızın kullanım koşullarına bağlı olmakla birlikte, maksimum parlaklık ve koruma için yılda 1 kez profesyonel pasta cila yapılması önerilir.</p>\n<h4 style=\"color:#D4AF37;margin-top:30px;\">Randevu iptal veya değişikliklerini nasıl yapabilirim?</h4>\n<p>Planlanmış randevunuzdan en az 24 saat önce WhatsApp hattımız üzerinden bizimle iletişime geçerek değişiklik yapabilirsiniz.</p>\n<div style=\"height:60px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n','SSS','','publish','closed','closed','','sss','','','2026-09-07 10:25:46','2026-09-07 10:25:46','',0,'http://localhost:8000/?page_id=52',0,'page','',0),
 (53,0,'2026-09-07 10:25:46','2026-09-07 10:25:46','Pasta cila işlemi, aracınızın dış görünümünü korumak ve ilk günkü parlaklığını sağlamak için hayati önem taşır. Ancak sık sık yapılması boyayı inceltebileceği için uzman kontrolünde yılda 1 veya 2 kez yapılması tavsiye edilir...','Pasta Cila Kaç Ayda Bir Yapılmalı?','','publish','open','open','','pasta-cila-kac-ayda-bir-yapilmali','','','2026-09-07 10:25:46','2026-09-07 10:25:46','',0,'http://localhost:8000/?p=53',0,'post','',0),
 (54,0,'2026-09-07 10:25:47','2026-09-07 10:25:47','Güneşin UV ışınları, kalitesiz yıkama köpükleri ve çevresel faktörler zamanla polikarbonat far camlarının sararmasına neden olur. Gece görüşünüzü %50\'ye kadar düşüren bu durum, far temizliği uygulamamızla kalıcı olarak giderilir...','Far Sararması Neden Olur ve Nasıl Giderilir?','','publish','open','open','','far-sararmasi-neden-olur-ve-nasil-giderilir','','','2026-09-07 10:25:47','2026-09-07 10:25:47','',0,'http://localhost:8000/?p=54',0,'post','',0),
-(55,0,'2026-09-07 10:25:48','2026-09-07 10:25:48','PDR (Paintless Dent Repair), aracınızın kaportasında oluşan ufak ve orta ölçekli göçüklerin, özel el aletleriyle dışarıdan çekilerek veya içeriden masaj yapılarak boyaya zarar vermeden düzeltilmesi işlemidir...','Boyasız Göçük Düzeltme (PDR) Nedir?','','publish','open','open','','boyasiz-gocuk-duzeltme-pdr-nedir','','','2026-09-07 10:25:48','2026-09-07 10:25:48','',0,'http://localhost:8000/?p=55',0,'post','',0);
+(55,0,'2026-09-07 10:25:48','2026-09-07 10:25:48','PDR (Paintless Dent Repair), aracınızın kaportasında oluşan ufak ve orta ölçekli göçüklerin, özel el aletleriyle dışarıdan çekilerek veya içeriden masaj yapılarak boyaya zarar vermeden düzeltilmesi işlemidir...','Boyasız Göçük Düzeltme (PDR) Nedir?','','publish','open','open','','boyasiz-gocuk-duzeltme-pdr-nedir','','','2026-09-07 10:25:48','2026-09-07 10:25:48','',0,'http://localhost:8000/?p=55',0,'post','',0),
+(56,0,'2026-09-07 10:31:37','2026-09-07 10:31:37',' ','','','publish','closed','closed','','56','','','2026-09-07 10:31:37','2026-09-07 10:31:37','',0,'http://localhost:8000/56/',0,'nav_menu_item','',0),
+(57,0,'2026-09-07 10:31:38','2026-09-07 10:31:38',' ','','','publish','closed','closed','','57','','','2026-09-07 10:31:38','2026-09-07 10:31:38','',0,'http://localhost:8000/57/',2,'nav_menu_item','',0),
+(58,0,'2026-09-07 10:31:39','2026-09-07 10:31:39',' ','','','publish','closed','closed','','58','','','2026-09-07 10:31:39','2026-09-07 10:31:39','',0,'http://localhost:8000/58/',3,'nav_menu_item','',0),
+(59,0,'2026-09-07 10:31:39','2026-09-07 10:31:39',' ','','','publish','closed','closed','','59','','','2026-09-07 10:31:39','2026-09-07 10:31:39','',0,'http://localhost:8000/59/',4,'nav_menu_item','',0),
+(60,0,'2026-09-07 10:31:40','2026-09-07 10:31:40',' ','','','publish','closed','closed','','60','','','2026-09-07 10:31:40','2026-09-07 10:31:40','',0,'http://localhost:8000/60/',5,'nav_menu_item','',0),
+(61,0,'2026-09-07 10:31:40','2026-09-07 10:31:40',' ','','','publish','closed','closed','','61','','','2026-09-07 10:31:40','2026-09-07 10:31:40','',0,'http://localhost:8000/61/',6,'nav_menu_item','',0),
+(62,0,'2026-09-07 10:31:41','2026-09-07 10:31:41',' ','','','publish','closed','closed','','62','','','2026-09-07 10:31:41','2026-09-07 10:31:41','',0,'http://localhost:8000/62/',7,'nav_menu_item','',0),
+(63,0,'2026-09-07 10:31:41','2026-09-07 10:31:41',' ','','','publish','closed','closed','','63','','','2026-09-07 10:31:41','2026-09-07 10:31:41','',0,'http://localhost:8000/63/',8,'nav_menu_item','',0),
+(64,0,'2026-09-07 10:31:42','2026-09-07 10:31:42','','Galeri','','publish','closed','closed','','galeri','','','2026-09-07 10:31:42','2026-09-07 10:31:42','',0,'http://localhost:8000/galeri/',9,'nav_menu_item','',0),
+(65,0,'2026-09-07 10:31:43','2026-09-07 10:31:43',' ','','','publish','closed','closed','','65','','','2026-09-07 10:31:43','2026-09-07 10:31:43','',0,'http://localhost:8000/65/',10,'nav_menu_item','',0),
+(66,0,'2026-09-07 10:31:43','2026-09-07 10:31:43',' ','','','publish','closed','closed','','66','','','2026-09-07 10:31:43','2026-09-07 10:31:43','',0,'http://localhost:8000/66/',11,'nav_menu_item','',0);
 /*!40000 ALTER TABLE `wp_posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -660,15 +704,20 @@ LOCK TABLES `wp_term_relationships` WRITE;
 /*!40000 ALTER TABLE `wp_term_relationships` DISABLE KEYS */;
 INSERT INTO `wp_term_relationships` VALUES
 (1,1,0),
-(24,2,0),
-(25,2,0),
-(26,2,0),
-(27,2,0),
-(28,2,0),
-(29,2,0),
 (53,1,0),
 (54,1,0),
-(55,1,0);
+(55,1,0),
+(56,2,0),
+(57,2,0),
+(58,2,0),
+(59,2,0),
+(60,2,0),
+(61,2,0),
+(62,2,0),
+(63,2,0),
+(64,2,0),
+(65,2,0),
+(66,2,0);
 /*!40000 ALTER TABLE `wp_term_relationships` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -700,7 +749,7 @@ LOCK TABLES `wp_term_taxonomy` WRITE;
 /*!40000 ALTER TABLE `wp_term_taxonomy` DISABLE KEYS */;
 INSERT INTO `wp_term_taxonomy` VALUES
 (1,1,'category','',0,4),
-(2,2,'nav_menu','',0,6);
+(2,2,'nav_menu','',0,11);
 /*!40000 ALTER TABLE `wp_term_taxonomy` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1372,4 +1421,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-07 10:27:47
+-- Dump completed on 2026-09-07 10:31:51
