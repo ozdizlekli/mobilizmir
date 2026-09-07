@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <header class="site">
   <div class="wrap">
-    <div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/mobilizmir-logo-new.jpg" alt="Mobilİzmir" style="height: 75px; width: auto; mix-blend-mode: lighten;"></a></div>
+    <div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/mobilizmir-logo-new.jpg" alt="Mobilİzmir" style="height: 95px; width: auto; mix-blend-mode: lighten;"></a></div>
     <nav class="primary">
       <div class="has-dropdown">
         <a href="/#hizmetler">Hizmetler <svg viewBox="0 0 12 12" width="10" height="10" style="margin-left:4px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;transform:translateY(1px);"><path d="M3 4.5L6 7.5L9 4.5"></path></svg></a>

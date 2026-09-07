@@ -265,7 +265,7 @@ CREATE TABLE `wp_options` (
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`),
   KEY `autoload` (`autoload`)
-) ENGINE=InnoDB AUTO_INCREMENT=413 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=417 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -402,7 +402,7 @@ INSERT INTO `wp_options` VALUES
 (131,'current_theme','Astra Child - Mobilİzmir','auto'),
 (132,'theme_mods_spectra-one','a:4:{s:19:\"wp_classic_sidebars\";a:0:{}s:18:\"nav_menu_locations\";a:0:{}s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1788767568;s:4:\"data\";a:1:{s:19:\"wp_inactive_widgets\";a:5:{i:0;s:7:\"block-2\";i:1;s:7:\"block-3\";i:2;s:7:\"block-4\";i:3;s:7:\"block-5\";i:4;s:7:\"block-6\";}}}s:18:\"custom_css_post_id\";i:-1;}','off'),
 (133,'theme_switched','','auto'),
-(134,'_transient_doing_cron','1788788209.9603381156921386718750','on'),
+(134,'_transient_doing_cron','1788788303.3346090316772460937500','on'),
 (139,'theme_mods_mobilizmir-theme','a:4:{s:19:\"wp_classic_sidebars\";a:0:{}s:18:\"nav_menu_locations\";a:0:{}s:18:\"custom_css_post_id\";i:-1;s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1788767395;s:4:\"data\";a:1:{s:19:\"wp_inactive_widgets\";a:5:{i:0;s:7:\"block-2\";i:1;s:7:\"block-3\";i:2;s:7:\"block-4\";i:3;s:7:\"block-5\";i:4;s:7:\"block-6\";}}}}','off'),
 (145,'_transient_wp_styles_for_blocks','a:2:{s:4:\"hash\";s:32:\"ae05831c832f0193d08556eb63905e59\";s:6:\"blocks\";a:9:{s:32:\"832dc2d864d79097d8b8b493ad93453b\";s:0:\"\";s:32:\"45d3e0c4afcbd8cf25cb1ba51abfb3d7\";s:46:\":root :where(.wp-block-icon svg){width: 24px;}\";s:32:\"feca6e996f694be2d29599793228e0d7\";s:0:\"\";s:32:\"5eef131663eddaf830554df656fc2968\";s:0:\"\";s:32:\"c99c05932c6685777ec5b856698fcc7d\";s:0:\"\";s:32:\"dec8d648f30b13caec8e61374591787d\";s:0:\"\";s:32:\"6c35533f7a92cce94808323603db9fc8\";s:0:\"\";s:32:\"6a0505cd5c78a87ed77570cda43c1132\";s:0:\"\";s:32:\"25a66f156386551185570f72a9f7d44e\";s:69:\":root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}\";}}','on'),
 (155,'bsf_usage_migrated','1','off'),
@@ -503,15 +503,15 @@ INSERT INTO `wp_options` VALUES
 (371,'wpsupercache_count','0','auto'),
 (375,'supercache_stats','a:3:{s:9:\"generated\";i:1788781016;s:10:\"supercache\";a:5:{s:7:\"expired\";i:0;s:6:\"cached\";i:0;s:5:\"fsize\";i:0;s:11:\"cached_list\";a:0:{}s:12:\"expired_list\";a:0:{}}s:7:\"wpcache\";a:5:{s:7:\"expired\";i:0;s:6:\"cached\";i:0;s:5:\"fsize\";i:0;s:11:\"cached_list\";a:0:{}s:12:\"expired_list\";a:0:{}}}','auto'),
 (389,'recently_activated','a:2:{s:27:\"wp-super-cache/wp-cache.php\";i:1788781590;i:0;b:0;}','auto'),
-(404,'_transient_timeout_astra-theme-cron-test-ok','1788788320','off'),
-(405,'_transient_astra-theme-cron-test-ok','1','off'),
 (406,'_transient_is_multi_author','1','on'),
-(407,'_site_transient_timeout_wp_theme_files_patterns-bcf70849d4b9b932360d3029c53c6af3','1788788325','off'),
-(408,'_site_transient_wp_theme_files_patterns-bcf70849d4b9b932360d3029c53c6af3','a:2:{s:7:\"version\";s:7:\"4.13.10\";s:8:\"patterns\";a:0:{}}','off'),
 (409,'_site_transient_timeout_theme_roots','1788789063','off'),
 (410,'_site_transient_theme_roots','a:6:{s:11:\"astra-child\";s:7:\"/themes\";s:5:\"astra\";s:7:\"/themes\";s:11:\"spectra-one\";s:7:\"/themes\";s:16:\"twentytwentyfive\";s:7:\"/themes\";s:16:\"twentytwentyfour\";s:7:\"/themes\";s:17:\"twentytwentythree\";s:7:\"/themes\";}','off'),
 (411,'_site_transient_timeout_wp_theme_files_patterns-b8dd53f6077c3b24f37ecc01bdc58b07','1788789349','off'),
-(412,'_site_transient_wp_theme_files_patterns-b8dd53f6077c3b24f37ecc01bdc58b07','a:2:{s:7:\"version\";s:0:\"\";s:8:\"patterns\";a:0:{}}','off');
+(412,'_site_transient_wp_theme_files_patterns-b8dd53f6077c3b24f37ecc01bdc58b07','a:2:{s:7:\"version\";s:0:\"\";s:8:\"patterns\";a:0:{}}','off'),
+(413,'_site_transient_timeout_wp_theme_files_patterns-bcf70849d4b9b932360d3029c53c6af3','1788790133','off'),
+(414,'_site_transient_wp_theme_files_patterns-bcf70849d4b9b932360d3029c53c6af3','a:2:{s:7:\"version\";s:7:\"4.13.10\";s:8:\"patterns\";a:0:{}}','off'),
+(415,'_transient_timeout_astra-theme-cron-test-ok','1788791933','off'),
+(416,'_transient_astra-theme-cron-test-ok','1','off');
 /*!40000 ALTER TABLE `wp_options` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1553,4 +1553,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-07 13:38:14
+-- Dump completed on 2026-09-07 13:38:58
