@@ -4,42 +4,6 @@
  */
 get_header(); ?>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-copy">
-      <div class="kicker">İzmir'in yerinde araç bakım servisi</div>
-      <h1 class="serif">Aracınız neredeyse, ekibimiz oraya gelir.</h1>
-      <p class="lede">Evinizde ya da iş yerinizde; koltuk yıkamadan boyasız göçük düzeltmeye kadar, tam donanımlı mobil ekibimizle showroom kalitesinde bakım.</p>
-      <div class="hero-actions">
-        <a href="https://wa.me/905401872003" class="btn solid">Randevu Talep Et</a>
-        <a href="#hizmetler" class="btn">Hizmetleri Gör</a>
-      </div>
-      <div class="hero-stats">
-        <div><b><span class="counter-val" data-target="500">0</span>+</b><span class="lbl">Memnun Müşteri</span></div>
-        <div><b><span class="counter-val" data-target="5">0</span></b><span class="lbl">Yıllık Tecrübe</span></div>
-        <div><b><span class="counter-val" data-target="12">0</span></b><span class="lbl">İlçede Hizmet</span></div>
-        <div><b>%<span class="counter-val" data-target="98">0</span></b><span class="lbl">Memnuniyet</span></div>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="ph" data-label="ARAÇ BAKIM UYGULAMASI — FOTOĞRAF"></div>
-      <div class="hero-card">
-        <div class="stars">★★★★★</div>
-        <p>"Aracımı evime kadar gelip pasta cila yaptılar, sonuç showroom gibiydi."</p>
-        <small>Elif K. — Karşıyaka</small>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="area-strip">
-  <div class="area-track">
-    <span><b>Bornova</b></span><span><b>Karşıyaka</b></span><span><b>Alsancak</b></span><span><b>Bayraklı</b></span><span><b>Buca</b></span><span><b>Çeşme</b></span><span><b>Karabağlar</b></span><span><b>Gaziemir</b></span>
-    <span><b>Bornova</b></span><span><b>Karşıyaka</b></span><span><b>Alsancak</b></span><span><b>Bayraklı</b></span><span><b>Buca</b></span><span><b>Çeşme</b></span><span><b>Karabağlar</b></span><span><b>Gaziemir</b></span>
-  </div>
-</div>
-
 <!-- ============ HİZMETLER ============ -->
 <section id="hizmetler">
   <div class="wrap">
@@ -73,22 +37,10 @@ get_header(); ?>
   </div>
 </section>
 
-<!-- ============ SÜREÇ ============ -->
-<section class="alt">
-  <div class="wrap">
-    <div class="folio"><span class="num">02</span><div class="rule"></div><h2 class="serif">Nasıl çalışıyoruz</h2></div>
-    <div class="process">
-      <div><div class="step-num serif">1</div><h4>WhatsApp'tan yazın</h4><p>Aracınızın modelini ve talebiniz olan hizmeti iletin, size uygun paketi ve fiyatı anında öğrenin.</p></div>
-      <div><div class="step-num serif">2</div><h4>Adres ve saat belirleyin</h4><p>Ev, iş yeri veya dilediğiniz nokta — size en uygun gün ve saati birlikte planlayalım.</p></div>
-      <div><div class="step-num serif">3</div><h4>Ekibimiz gelsin</h4><p>Tam donanımlı aracımızla adresinize gelir, işlemi tamamlar ve öncesi/sonrası fotoğraflayıp size göndeririz.</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ GALERİ ============ -->
 <section id="galeri">
   <div class="wrap">
-    <div class="folio"><span class="num">03</span><div class="rule"></div><h2 class="serif">Öncesi &amp; sonrası</h2><p>Son uygulamalarımızdan gerçek örnekler — tüm galeri için ayrı sayfamıza bakın.</p></div>
+    <div class="folio"><span class="num">02</span><div class="rule"></div><h2 class="serif">Öncesi &amp; sonrası</h2><p>Son uygulamalarımızdan gerçek örnekler — tüm galeri için ayrı sayfamıza bakın.</p></div>
     <div class="gallery-grid">
       
       <div class="g-item wide tall">
@@ -111,10 +63,22 @@ get_header(); ?>
   </div>
 </section>
 
+<!-- ============ SÜREÇ ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="folio"><span class="num">03</span><div class="rule"></div><h2 class="serif">Nasıl çalışıyoruz</h2></div>
+    <div class="process">
+      <div><div class="step-num serif">1</div><h4>WhatsApp'tan yazın</h4><p>Aracınızın modelini ve talebiniz olan hizmeti iletin, size uygun paketi ve fiyatı anında öğrenin.</p></div>
+      <div><div class="step-num serif">2</div><h4>Adres ve saat belirleyin</h4><p>Ev, iş yeri veya dilediğiniz nokta — size en uygun gün ve saati birlikte planlayalım.</p></div>
+      <div><div class="step-num serif">3</div><h4>Ekibimiz gelsin</h4><p>Tam donanımlı aracımızla adresinize gelir, işlemi tamamlar ve öncesi/sonrası fotoğraflayıp size göndeririz.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ FİYATLANDIRMA ============ -->
 <section class="alt" id="fiyat">
   <div class="wrap">
-    <div class="folio"><span class="num">04</span><div class="rule"></div><h2 class="serif">Paketler</h2><p>Tüm paketler yerinde, adresinize gelinerek uygulanır. Araç tipine göre fiyat değişebilir.</p></div>
+    <div class="folio"><span class="num">04</span><div class="rule"></div><h2 class="serif">Paketler</h2><p>Tüm paketler yerinde, adresinize gelinerek uygulanır. Hizmetleri tekil ya da paket olarak alabilirsiniz. Araç tipine göre fiyat değişebilir.</p></div>
     <div class="price-table">
       <div class="price-head">
         <span></span><span>Standart</span><span class="col-mid">Premium</span><span>VIP Detaylı</span>
@@ -175,7 +139,7 @@ get_header(); ?>
     <div>
       <div class="folio" style="margin-bottom:22px;"><span class="num">07</span><div class="rule"></div></div>
       <h2 class="serif">İzmir'de araç sahiplerinin zamanına değer veriyoruz</h2>
-      <p>2021'den bu yana sanayi ve serviste bekleme derdine son veriyoruz. Tam donanımlı mobil ekibimiz, evinize veya iş yerinize gelerek premium kalitede bakım sunuyor. Bugüne kadar 500'den fazla araca hizmet verdik.</p>
+      <p>2018'den bu yana sanayi ve serviste bekleme derdine son veriyoruz. Tam donanımlı mobil ekibimiz, evinize veya iş yerinize gelerek premium kalitede bakım sunuyor. Bugüne kadar 500'den fazla araca hizmet verdik.</p>
       <a href="/hakkimizda/" class="btn">Hikayemizi okuyun</a>
     </div>
   </div>
@@ -207,3 +171,39 @@ get_header(); ?>
 </section>
 
 <?php get_footer(); ?>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="kicker">İzmir'in yerinde araç bakım servisi</div>
+      <h1 class="serif">Aracınız neredeyse, ekibimiz oraya gelir.</h1>
+      <p class="lede">Evinizde ya da iş yerinizde; koltuk yıkamadan boyasız göçük düzeltmeye kadar, tam donanımlı mobil ekibimizle showroom kalitesinde bakım.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/905401872003" class="btn solid">Randevu Talep Et</a>
+        <a href="#hizmetler" class="btn">Hizmetleri Gör</a>
+      </div>
+      <div class="hero-stats">
+        <div><b><span class="counter-val" data-target="500">0</span>+</b><span class="lbl">Memnun Müşteri</span></div>
+        <div><b><span class="counter-val" data-target="5">0</span></b><span class="lbl">Yıllık Tecrübe</span></div>
+        <div><b><span class="counter-val" data-target="12">0</span></b><span class="lbl">İlçede Hizmet</span></div>
+        <div><b>%<span class="counter-val" data-target="98">0</span></b><span class="lbl">Memnuniyet</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="ph" data-label="ARAÇ BAKIM UYGULAMASI — FOTOĞRAF"></div>
+      <div class="hero-card">
+        <div class="stars">★★★★★</div>
+        <p>"Aracımı evime kadar gelip pasta cila yaptılar, sonuç showroom gibiydi."</p>
+        <small>Elif K. — Karşıyaka</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="area-strip">
+  <div class="area-track">
+    <span><b>Bornova</b></span><span><b>Karşıyaka</b></span><span><b>Alsancak</b></span><span><b>Bayraklı</b></span><span><b>Buca</b></span><span><b>Çeşme</b></span><span><b>Karabağlar</b></span><span><b>Gaziemir</b></span>
+    <span><b>Bornova</b></span><span><b>Karşıyaka</b></span><span><b>Alsancak</b></span><span><b>Bayraklı</b></span><span><b>Buca</b></span><span><b>Çeşme</b></span><span><b>Karabağlar</b></span><span><b>Gaziemir</b></span>
+  </div>
+</div>
+

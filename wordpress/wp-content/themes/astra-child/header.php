@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <span>Pzt–Cmt 09:00–19:00</span>
       <span>İzmir geneli adrese teslim</span>
     </div>
-    <div>Google'da 4.9 ★ — 500+ değerlendirme</div>
+    <div>%100 Müşteri Memnuniyeti — 500+ Mutlu Müşteri</div>
   </div>
 </div>
 
@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <a href="/periyodik-bakim/">Periyodik Bakım</a>
         </div>
       </div>
-      <a href="/#galeri">Galeri</a>
+      <a href="/uygulamalarimiz-galeri/">Galeri</a>
       <a href="/#fiyat">Fiyatlandırma</a>
       <a href="/#hakkimizda">Hakkımızda</a>
       <a href="/sss/">SSS</a>

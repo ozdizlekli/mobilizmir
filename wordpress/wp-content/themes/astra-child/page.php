@@ -14,7 +14,8 @@ get_header(); ?>
 <section class="page-body">
   <div class="wrap" style="max-width:820px;">
     <?php while (have_posts()): the_post(); ?>
-      <div class="entry-content styled-content">
+      <?php $extra_class = is_page(3) ? "light-card" : ""; ?>
+      <div class="entry-content styled-content <?php echo $extra_class; ?>">
         <?php the_content(); ?>
       </div>
     <?php endwhile; ?>

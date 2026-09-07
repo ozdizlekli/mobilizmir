@@ -12,5 +12,5 @@
   - Boyasız Göçük Düzeltme
   - Periyodik Bakım
 - **Etkileşim:** Doğrudan WhatsApp (0540 187 20 03) hızlı randevu ve iletişim yönlendirmeleri, yapışkan WhatsApp butonu.
-- **Tipografi & Düzen:** Playfair Display & Inter fontları, özel responsive flex header ve kart tasarımları.
+- **Tipografi & Düzen:** Fraunces & Inter fontları, özel responsive flex header ve kart tasarımları.
 

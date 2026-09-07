@@ -514,3 +514,29 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
   color: var(--stone); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.05em;
   text-align: center; margin-top: 10px; background: none;
 }
+
+/* ==========================================
+   CLAUDE TWEAKS (Light Card & Mobile CTA)
+   ========================================== */
+.styled-content.light-card {
+  background: var(--cream);
+  color: var(--ink);
+  border-radius: var(--radius);
+  padding: 40px;
+}
+.styled-content.light-card p, .styled-content.light-card li {
+  color: var(--ink-2);
+}
+.styled-content.light-card h1, .styled-content.light-card h2, .styled-content.light-card h3 {
+  color: var(--ink);
+}
+
+@media (max-width: 920px) {
+  /* Make sure primary CTA is visible in mobile menu */
+  nav.primary .btn {
+    display: inline-flex !important;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+}

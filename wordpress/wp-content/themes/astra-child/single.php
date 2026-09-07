@@ -19,7 +19,7 @@ get_header(); ?>
           <?php the_post_thumbnail('large', ['style' => 'width:100%;height:100%;object-fit:cover;']); ?>
         </div>
       <?php endif; ?>
-      <div class="entry-content styled-content">
+      <div class="entry-content styled-content light-card">
         <?php the_content(); ?>
       </div>
     <?php endwhile; ?>
