@@ -338,8 +338,8 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
     box-shadow:-10px 0 30px rgba(0,0,0,0.5);
   }
   nav.primary.open{transform:translateX(0);}
-  header.site .wrap .btn.solid{display:none;}
-  header.site .wrap .btn.form-btn{display:none;}
+  header.site .wrap .btn.solid{padding: 8px 16px; font-size: 11px;}
+  /* /* btn.form-btn removed */ */
 }
 
 /* Alt Sayfa Şablonu */
@@ -539,4 +539,63 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
     width: 100%;
     justify-content: center;
   }
+}
+
+/* ==========================================
+   LEGACY / ALTERNATİF HİZMET TASARIMI (.price-box vs)
+   ========================================== */
+.service-hero h1 { color: var(--gold); }
+.service-hero p { color: var(--stone); font-size: 1.1rem; font-style: italic; }
+.text-gold { color: var(--gold) !important; }
+.text-gray { color: #bbbbbb !important; }
+.price-box {
+  background-color: var(--ink-2);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 30px;
+}
+.price-box h3 { color: var(--gold); text-align: center; }
+.price-box p { text-align: center; color: #ccc; }
+
+/* ==========================================
+   AÇIK KART VARYANTI (OKUNABİLİRLİK İÇİN)
+   ========================================== */
+.styled-content.light-panel {
+  background: var(--cream);
+  color: var(--ink);
+  padding: 40px;
+  border-radius: var(--radius);
+}
+.styled-content.light-panel h1, 
+.styled-content.light-panel h2, 
+.styled-content.light-panel h3, 
+.styled-content.light-panel h4 {
+  color: var(--ink-2);
+}
+.styled-content.light-panel p,
+.styled-content.light-panel li {
+  color: var(--ink-3);
+  font-weight: 500;
+}
+.styled-content.light-panel .rule {
+  background: var(--stone);
+}
+@media(max-width: 600px) {
+  .styled-content.light-panel { padding: 24px; }
+}
+/* Görsel eklendiğinde ph yerine kullanılacak varsayılan img stilleri */
+.gallery-grid .g-item img,
+.mini-gallery img,
+.about-split img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+/* Görsel varsa placeholder gizlensin (aynı kaba konulduklarında) */
+.g-item img + .ph,
+.mini-gallery img + .ph,
+.about-split img + .ph {
+  display: none !important;
 }
