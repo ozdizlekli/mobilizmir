@@ -445,3 +445,52 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
   .hero-stats { flex-wrap: wrap; }
   .hero-stats > div { flex: 0 0 50%; padding: 16px 0; }
 }
+
+/* ==========================================
+   HİZMET SAYFALARI — İÇERİK BİLEŞENLERİ
+   (page.php / .styled-content içine gömülen
+   hizmet sayfası bölümleri için)
+   ========================================== */
+
+/* İçerik alanı içinde .folio, .process, .why-list, .faq-item
+   ana sayfadakiyle birebir aynı görünsün diye .styled-content
+   içindeki eşdeğer p/h2 kurallarını üzerine yazıyoruz. */
+.styled-content .folio{margin:64px 0 36px;}
+.styled-content .folio:first-child{margin-top:0;}
+.styled-content .folio h2{margin:0;}
+.styled-content .folio p{color:var(--stone);font-size:15px;line-height:1.55;margin:10px 0 0;max-width:520px;}
+.styled-content .process{margin-top:0;}
+.styled-content .process p{color:var(--stone);font-size:14px;line-height:1.55;}
+.styled-content .why-list p{color:var(--stone);font-size:13.5px;line-height:1.55;}
+.styled-content .faq-a p{color:var(--stone);font-size:14px;line-height:1.55;}
+.styled-content .service-lede{color:#c4beac;font-size:17px;line-height:1.75;max-width:64ch;margin:0 0 8px;}
+.styled-content .service-lede strong{color:var(--gold-bright);}
+
+/* Hizmete özel mini paket kartları (3'lü fiyat kartı grubu) */
+.styled-content .mini-price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px;}
+.styled-content .mini-price-card{border:1px solid var(--line);padding:28px 24px;text-align:center;background:var(--ink-2);border-radius:var(--radius);}
+.styled-content .mini-price-card .tag{font-size:11px;letter-spacing:.06em;color:var(--stone-dim);text-transform:uppercase;margin-bottom:12px;}
+.styled-content .mini-price-card h4{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:500;margin:0 0 16px;color:var(--cream);}
+.styled-content .mini-price-card .amt{font-family:'Fraunces',serif;font-size:1.9rem;color:var(--gold-bright);margin-bottom:6px;}
+.styled-content .mini-price-card .amt small{display:block;font-size:11px;color:var(--stone);font-family:'Inter',sans-serif;font-weight:400;margin-top:6px;}
+.styled-content .mini-price-card p{color:var(--stone);font-size:13px;line-height:1.6;margin:16px 0 20px;min-height:60px;}
+.styled-content .mini-price-card .btn{width:100%;justify-content:center;font-size:12.5px;}
+.styled-content .mini-price-card.featured{border-color:var(--gold);background:rgba(185,146,76,0.07);position:relative;}
+.styled-content .mini-price-card.featured .tag{color:var(--gold-bright);}
+@media(max-width:760px){.styled-content .mini-price-grid{grid-template-columns:1fr;}}
+
+/* Hizmete özel mini öncesi/sonrası galerisi */
+.styled-content .mini-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px;}
+.styled-content .mini-gallery .ph{aspect-ratio:4/3;border-radius:var(--radius);}
+.styled-content .mini-gallery .ba-slider{grid-column:span 3;aspect-ratio:16/7;}
+@media(max-width:700px){
+  .styled-content .mini-gallery{grid-template-columns:1fr 1fr;}
+  .styled-content .mini-gallery .ba-slider{grid-column:span 2;aspect-ratio:4/3;}
+}
+
+/* Hizmet sayfalarında ikonlu mini rozet (ana sayfadaki hero-card diline yakın) */
+.styled-content .trust-line{
+  display:flex;align-items:center;gap:10px;margin:0 0 26px;
+  font-size:13px;color:var(--gold-bright);
+}
+.styled-content .trust-line svg{width:18px;height:18px;fill:var(--gold-bright);flex-shrink:0;}
