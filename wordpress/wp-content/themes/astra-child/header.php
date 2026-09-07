@@ -30,7 +30,16 @@ if ( ! defined( 'ABSPATH' ) ) {
   <div class="wrap">
     <div class="logo"><a href="<?php echo home_url(); ?>">Mobil<em>İzmir</em></a></div>
     <nav class="primary">
-      <a href="/#hizmetler">Hizmetler</a>
+      <div class="has-dropdown">
+        <a href="/#hizmetler">Hizmetler <svg viewBox="0 0 12 12" width="10" height="10" style="margin-left:4px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;transform:translateY(1px);"><path d="M3 4.5L6 7.5L9 4.5"></path></svg></a>
+        <div class="dropdown">
+          <a href="/koltuk-yikama/">Koltuk Yıkama</a>
+          <a href="/pasta-cila/">Pasta Cila</a>
+          <a href="/far-temizligi/">Far Temizliği</a>
+          <a href="/boyasiz-gocuk-duzeltme/">Boyasız Göçük Düzeltme (PDR)</a>
+          <a href="/periyodik-bakim/">Periyodik Bakım</a>
+        </div>
+      </div>
       <a href="/#galeri">Galeri</a>
       <a href="/#fiyat">Fiyatlandırma</a>
       <a href="/#hakkimizda">Hakkımızda</a>
