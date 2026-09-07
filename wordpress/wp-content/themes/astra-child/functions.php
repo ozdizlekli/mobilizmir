@@ -42,3 +42,50 @@ add_action('wp_footer', function() {
     ];
     echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
 });
+
+add_action('wp_footer', function() {
+    ?>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Scroll Reveal Animation
+        var reveals = document.querySelectorAll(".reveal");
+        var revealObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(function(reveal) {
+            revealObserver.observe(reveal);
+        });
+
+        // Counter Animation
+        var counters = document.querySelectorAll(".counter-value");
+        var counterObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if(entry.isIntersecting) {
+                    var target = parseInt(entry.target.getAttribute("data-target"));
+                    var current = 0;
+                    var increment = target / 50;
+                    var updateCounter = setInterval(function() {
+                        current += increment;
+                        if(current >= target) {
+                            entry.target.innerText = target;
+                            clearInterval(updateCounter);
+                        } else {
+                            entry.target.innerText = Math.ceil(current);
+                        }
+                    }, 30);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(function(counter) {
+            counterObserver.observe(counter);
+        });
+    });
+    </script>
+    <?php
+});

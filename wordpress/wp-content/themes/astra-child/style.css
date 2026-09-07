@@ -181,3 +181,52 @@ strong { color: #D4AF37 !important; }
     .ast-mobile-header-wrap .ast-mobile-header-content { background: #0a0a0a !important; border-top: 1px solid #1a1a1a !important; }
     .ast-mobile-header-wrap .main-header-menu { display: block !important; }
 }
+
+/* MOBİLİZMİR ÇİFT YAZI GİZLEME */
+.ast-site-identity .site-title { display: none !important; }
+
+/* BEYAZ KURUMSAL NAVBAR */
+.site-header, .ast-primary-header-bar, header.site-header {
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: 1px solid #eeeeee !important;
+    box-shadow: 0 1px 12px rgba(0,0,0,0.08) !important;
+}
+.main-header-menu a, .ast-builder-menu-1 a {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+.main-header-menu a:hover, .ast-builder-menu-1 a:hover {
+    color: #D4AF37 !important;
+}
+.ast-mobile-menu-buttons .menu-toggle { color: #333333 !important; }
+.ast-mobile-menu-buttons .menu-toggle .menu-toggle-icon { fill: #333333 !important; }
+.ast-mobile-header-wrap .ast-mobile-header-content { background: #ffffff !important; border-top: 1px solid #eeeeee !important; }
+
+/* ANİMASYONLAR VE GÖRSEL RİTİM (DARK/DARKER) */
+.section-dark { background-color: #0a0a0a !important; }
+.section-darker { background-color: #0f0f0f !important; }
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.trust-badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: rgba(212,175,55,0.1); color: #D4AF37;
+    padding: 8px 16px; border-radius: 30px; font-weight: 600; font-size: 0.9rem;
+    border: 1px solid rgba(212,175,55,0.3); margin-bottom: 20px;
+}
+.trust-badge svg { width: 18px; height: 18px; fill: #D4AF37; margin-right: 8px; }
+
+/* İkonlu özellik listeleri */
+.feature-list { list-style: none; padding: 0; margin: 0; }
+.feature-list li { display: flex; align-items: flex-start; margin-bottom: 15px; }
+.feature-list svg { width: 24px; height: 24px; fill: #D4AF37; margin-right: 12px; flex-shrink: 0; }
