@@ -2,57 +2,80 @@
 /**
  * The template for displaying the footer.
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
-
 ?>
-            </div> <!-- ast-container -->
-        </div><!-- #content -->
+</div><!-- #content -->
 
-        <footer class="site-footer">
-          <div class="mi-footer-grid">
-            <div>
-              <span class="site-title" style="font-size:1.2rem;">MOBİLİZMİR</span>
-              <p style="margin-top:14px;font-size:.9rem;color:#8d8d94;">İzmir genelinde adrese teslim premium mobil araç bakım hizmeti.</p>
-              <div class="mi-social-row">
-                <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm5.75-.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg></a>
-                <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13 22v-9h3l1-4h-4V6c0-1.1.3-2 2-2h2V0h-3c-3 0-5 1.8-5 5v4H6v4h3v9h4z"/></svg></a>
-              </div>
-            </div>
-            <div>
-              <h4>Hizmetler</h4>
-              <ul>
-                <li><a href="/koltuk-yikama/">Koltuk Yıkama</a></li>
-                <li><a href="/pasta-cila/">Pasta Cila</a></li>
-                <li><a href="/far-temizligi/">Far Temizliği</a></li>
-                <li><a href="/boyasiz-gocuk-duzeltme/">PDR (Göçük Düzeltme)</a></li>
-                <li><a href="/periyodik-bakim/">Periyodik Bakım</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4>Kurumsal</h4>
-              <ul>
-                <li><a href="/hakkimizda/">Hakkımızda</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/sss/">SSS</a></li>
-                <li><a href="/uygulamalarimiz-galeri/">Galeri</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4>İletişim</h4>
-              <ul>
-                <li><a href="https://wa.me/<?php echo esc_attr(MI_WHATSAPP_NUMBER); ?>">0540 187 20 03</a></li>
-                <li><a href="mailto:iletisim@mobilizmir.com">iletisim@mobilizmir.com</a></li>
-                <li><a href="/iletisim/">İzmir, Türkiye</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="mi-footer-bottom">&copy; <?php echo date('Y'); ?> MOBİLİZMİR — Tüm hakları saklıdır.</div>
-        </footer><!-- #colophon -->
-    </div><!-- #page -->
+<!-- ============ SON CTA ============ -->
+<div class="cta-band" id="iletisim">
+  <div class="wrap">
+    <h2 class="serif">Aracınız için randevu almaya hazır mısınız?</h2>
+    <div>
+      <div class="tel-big serif">0540 187 20 03</div>
+      <div style="margin-top:14px;"><a href="https://wa.me/905401872003" class="btn solid">WhatsApp'tan Yazın</a></div>
+    </div>
+  </div>
+</div>
 
-    <?php wp_footer(); ?>
-    </body>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="margin-bottom:14px;">Mobil<em>İzmir</em></div>
+        <p style="color:var(--stone);font-size:13px;max-width:32ch;">İzmir genelinde adrese teslim premium mobil araç bakım hizmeti.</p>
+      </div>
+      <div>
+        <h5>HİZMETLER</h5>
+        <ul>
+          <li><a href="/koltuk-yikama/">Koltuk Yıkama</a></li>
+          <li><a href="/pasta-cila/">Pasta Cila</a></li>
+          <li><a href="/far-temizligi/">Far Temizliği</a></li>
+          <li><a href="/boyasiz-gocuk-duzeltme/">PDR</a></li>
+          <li><a href="/periyodik-bakim/">Periyodik Bakım</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>KURUMSAL</h5>
+        <ul>
+          <li><a href="/hakkimizda/">Hakkımızda</a></li>
+          <li><a href="/uygulamalarimiz-galeri/">Galeri</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="#">Hizmet Bölgeleri</a></li>
+          <li><a href="/sss/">SSS</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>İLETİŞİM</h5>
+        <ul>
+          <li><a href="tel:+905401872003">0540 187 20 03</a></li>
+          <li><a href="mailto:iletisim@mobilizmir.com">iletisim@mobilizmir.com</a></li>
+          <li><a href="/iletisim/">İzmir, Türkiye</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <?php echo date('Y'); ?> Mobilİzmir — Tüm hakları saklıdır.</span>
+      <span>Gizlilik Politikası · KVKK</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/905401872003" class="wa-fab" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.132 6.744 3.054 9.378L1.054 31.28l6.156-1.97C9.776 30.962 12.766 32 16.004 32 24.826 32 32 24.826 32 16.004 32 7.176 24.826 0 16.004 0zm9.084 22.618c-.378 1.064-2.202 1.98-3.038 2.1-.836.12-1.91.17-3.08-.194-.708-.222-1.616-.516-2.78-1.014-4.882-2.088-8.066-7.024-8.31-7.352-.244-.328-1.996-2.654-1.996-5.062 0-2.408 1.264-3.594 1.712-4.084.45-.49 .978-.612 1.302-.612.328 0 .652.004.938.016.302.014.706-.114 1.104.842.408.978 1.386 3.386 1.508 3.63.12.244.202.53.04.856-.162.328-.244.53-.49.816-.244.286-.514.64-.734.858-.244.244-.498.508-.214.998.284.49 1.264 2.084 2.714 3.376 1.866 1.662 3.436 2.176 3.926 2.42.49.244.776.204 1.062-.122.284-.328 1.224-1.428 1.55-1.918.326-.49.652-.408 1.1-.244.45.162 2.854 1.346 3.344 1.59.49.244.816.368.936.57.122.204.122 1.164-.256 2.228z"/></svg>
+</a>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var item = btn.closest('.faq-item');
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+<?php wp_footer(); ?>
+</body>
 </html>
