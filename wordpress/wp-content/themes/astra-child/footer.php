@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="logo" style="margin-bottom:14px;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/mobilizmir-logo-new.jpg" alt="Mobilİzmir" style="height: 65px; width: auto; mix-blend-mode: lighten;"></div>
+        <div class="logo" style="margin-bottom:14px;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/mobilizmir-logo-new.jpg" alt="Mobilİzmir" style="height: 95px; width: auto; mix-blend-mode: lighten;"></div>
         <p style="color:var(--stone);font-size:13px;max-width:32ch;">İzmir genelinde adrese teslim premium mobil araç bakım hizmeti.</p>
       </div>
       <div>
