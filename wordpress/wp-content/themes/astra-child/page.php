@@ -234,6 +234,43 @@ get_header(); ?>
         }, {passive: true});
     });
   </script>
+<?php elseif ( is_page('periyodik-bakim') ) : ?>
+  <!-- PERİYODİK BAKIM ASMR CİNEMAGRAPH HERO -->
+  <section class="asmr-hero" id="asmrHero">
+    <div class="asmr-bg"></div>
+    <div class="asmr-glow"></div>
+    <div class="asmr-particles" id="asmrParticles"></div>
+    
+    <div class="asmr-content">
+        <h1 class="serif"><?php the_title(); ?></h1>
+        <p>Motor ömrünüzü uzatan mühendislik dokunuşları. İsviçre saati hassasiyetinde, en kaliteli bileşenlerle yapılan kusursuz bakım ritüeli.</p>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const container = document.getElementById('asmrParticles');
+        if(!container) return;
+        
+        // Create 30 golden floating particles
+        for(let i=0; i<30; i++) {
+            let p = document.createElement('div');
+            p.className = 'asmr-particle';
+            p.style.left = Math.random() * 100 + '%';
+            p.style.animationDuration = (Math.random() * 15 + 10) + 's'; // 10s to 25s very slow
+            p.style.animationDelay = (Math.random() * -30) + 's'; // Start at random times
+            
+            let opacity = Math.random() * 0.6 + 0.2;
+            p.style.setProperty('--po', opacity); // Particle opacity
+            
+            let size = Math.random() * 4 + 1; // 1px to 5px
+            p.style.width = size + 'px';
+            p.style.height = size + 'px';
+            
+            container.appendChild(p);
+        }
+    });
+  </script>
 <?php else : ?>
   <!-- NORMAL PAGE HERO -->
   <section class="page-hero">
