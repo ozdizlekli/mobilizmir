@@ -29,7 +29,7 @@ $new_css = <<<CSS
   transform-origin: center center;
 }
 .layer-ext-dirty {
-  background-image: url('https://images.unsplash.com/photo-1614200187524-dc4b892acf16?q=80&w=1920&auto=format&fit=crop');
+  background-image: url('https://www.carscoops.com/2022/05/this-161-mile-2017-laferrari-aperta-looks-set-to-sell-for-over-5-million/');
   filter: grayscale(60%) brightness(0.4) contrast(0.9);
   z-index: 1;
 }
