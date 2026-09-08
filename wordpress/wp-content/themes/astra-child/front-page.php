@@ -42,6 +42,32 @@ get_header(); ?>
 
 
 
+<!-- ============ SCROLL STORY (APPLE STYLE) ============ -->
+<section class="scroll-story-wrap" id="scroll-story">
+  <div class="scroll-story-sticky">
+    
+    <div class="story-layer layer-exterior-dirty"></div>
+    <div class="story-layer layer-exterior-clean"></div>
+    <div class="story-layer layer-interior"></div>
+
+    <div class="story-ui">
+      <div class="story-step" data-step="1">
+        <h3 class="serif">Aracınız zamanla yorulur.</h3>
+        <p>Güneş yanıkları, matlaşmış farlar, kaportaya işleyen reçineler ve kılcal çizikler...</p>
+      </div>
+      <div class="story-step" data-step="2">
+        <h3 class="serif">Fabrika ayarlarına dönüş.</h3>
+        <p>Mobilİzmir'in profesyonel pasta cila ve boya koruma teknolojisiyle ilk günkü kusursuz parlaklık.</p>
+      </div>
+      <div class="story-step" data-step="3">
+        <h3 class="serif">Şimdi içeri giriyoruz.</h3>
+        <p>Vakumlu ekstraksiyon teknolojisi ile koltuklarınızdaki tüm kir, bakteri ve kokular kapınızda yok edilir.</p>
+      </div>
+    </div>
+    
+    <div class="story-progress-bar"><div class="story-progress-fill"></div></div>
+  </div>
+</section>
 <!-- ============ HİZMETLER ============ -->
 <section id="hizmetler">
   <div class="wrap">

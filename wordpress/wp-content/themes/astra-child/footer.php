@@ -121,5 +121,68 @@ counters.forEach(c => observer.observe(c));
 
 </script>
 <?php wp_footer(); ?>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const wrap = document.querySelector('.scroll-story-wrap');
+  if(!wrap) return;
+
+  const dirty = document.querySelector('.layer-exterior-dirty');
+  const clean = document.querySelector('.layer-exterior-clean');
+  const interior = document.querySelector('.layer-interior');
+  const steps = document.querySelectorAll('.story-step');
+  const fill = document.querySelector('.story-progress-fill');
+
+  window.addEventListener('scroll', () => {
+    const rect = wrap.getBoundingClientRect();
+    const maxScroll = rect.height - window.innerHeight;
+    let progress = -rect.top / maxScroll;
+    
+    if (progress < 0) progress = 0;
+    if (progress > 1) progress = 1;
+
+    fill.style.width = (progress * 100) + '%';
+
+    // Base zoom for parallax feel
+    const baseZoom = 1 + (progress * 0.4);
+    dirty.style.transform = `scale(${baseZoom})`;
+
+    if (progress < 0.3) {
+      // 0 - 30%: Only dirty is visible
+      clean.style.clipPath = `circle(0% at 50% 50%)`;
+      clean.style.opacity = 0;
+      interior.style.opacity = 0;
+      
+      steps.forEach(s => s.classList.remove('active'));
+      if(progress > 0.02) steps[0].classList.add('active');
+
+    } else if (progress >= 0.3 && progress < 0.65) {
+      // 30 - 65%: Wipe transition to clean exterior
+      let cleanProg = (progress - 0.3) / 0.35; 
+      clean.style.opacity = 1;
+      clean.style.clipPath = `circle(${cleanProg * 150}% at 50% 50%)`;
+      clean.style.transform = `scale(${baseZoom})`;
+      interior.style.opacity = 0;
+
+      steps.forEach(s => s.classList.remove('active'));
+      steps[1].classList.add('active');
+
+    } else if (progress >= 0.65) {
+      // 65 - 100%: Massive zoom into window and crossfade to interior
+      let intProg = (progress - 0.65) / 0.35; 
+      clean.style.clipPath = `circle(150% at 50% 50%)`;
+      
+      // Dramatic zoom into the car window
+      clean.style.transform = `scale(${baseZoom + (intProg * 4)})`;
+      
+      interior.style.opacity = intProg;
+      // Slight zoom out on interior to counter-balance the intense zoom-in
+      interior.style.transform = `scale(${1.3 - (intProg * 0.3)})`;
+
+      steps.forEach(s => s.classList.remove('active'));
+      steps[2].classList.add('active');
+    }
+  });
+});
+</script>
 </body>
 </html>
