@@ -112,6 +112,91 @@ get_header(); ?>
       }, 300); // Sayfa açıldıktan kısa süre sonra başla
     });
   </script>
+<?php elseif ( is_page('koltuk-yikama') || is_page('detayli-ic-kuafor') ) : ?>
+  <!-- İÇ KUAFÖR ANATOMİ HERO -->
+  <section class="anatomy-hero" id="anatomyHero">
+    <div class="anatomy-sticky">
+        <div class="anat-layer anat-clean"></div>
+        <div class="anat-layer anat-steam" id="anatSteam"></div>
+        <div class="anat-layer anat-dirt" id="anatDirt"></div>
+
+        <div class="anat-step step-1 active" id="step1">
+            <h2 class="serif">1. Yüzeydeki Gizli Tehditler</h2>
+            <p>Zamanla perfore (delikli) deriye işleyen ter, toz ve bakteriler yüzeyi matlaştırır ve dokuyu sertleştirir.</p>
+        </div>
+        <div class="anat-step step-2" id="step2">
+            <h2 class="serif">2. Anti-Bakteriyel Buhar Şoku</h2>
+            <p>150 derece kuru buhar ve özel solüsyonlarla gözeneklerdeki kirler sıvılaştırılarak yüzeye kusulur.</p>
+        </div>
+        <div class="anat-step step-3" id="step3">
+            <h2 class="serif">3. Fabrika Çıkışı Matlık</h2>
+            <p>Vakumla çekilen kirlerin ardından, derinin nefes almasını sağlayan o ilk günkü kusursuz mat ve temiz doku ortaya çıkar.</p>
+        </div>
+        
+        <div class="anat-scroll-hint">
+            <div class="icon">▼</div>
+            Katmanları Keşfetmek İçin Kaydırın
+        </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hero = document.getElementById('anatomyHero');
+        if(!hero) return;
+
+        const lDirt = document.getElementById('anatDirt');
+        const lSteam = document.getElementById('anatSteam');
+        const s1 = document.getElementById('step1');
+        const s2 = document.getElementById('step2');
+        const s3 = document.getElementById('step3');
+
+        window.addEventListener('scroll', () => {
+            const rect = hero.getBoundingClientRect();
+            const totalScroll = rect.height - window.innerHeight;
+            let progress = -rect.top / totalScroll;
+            
+            if (progress < 0) progress = 0;
+            if (progress > 1) progress = 1;
+
+            const scale = 1 + (progress * 0.15); // Hafif zoom efekti
+            document.querySelectorAll('.anat-layer').forEach(l => {
+                l.style.transform = `scale(${scale})`;
+            });
+
+            // Asama 1: Kirli -> Buhar
+            if (progress < 0.33) {
+                let local = progress / 0.33;
+                lDirt.style.opacity = 1 - local;
+                lSteam.style.opacity = local;
+                
+                s1.classList.add('active');
+                s2.classList.remove('active');
+                s3.classList.remove('active');
+            }
+            // Asama 2: Buhar (Zirve)
+            else if (progress < 0.66) {
+                let local = (progress - 0.33) / 0.33;
+                lDirt.style.opacity = 0;
+                lSteam.style.opacity = 1; 
+                
+                s1.classList.remove('active');
+                s2.classList.add('active');
+                s3.classList.remove('active');
+            }
+            // Asama 3: Buhar -> Tertemiz
+            else {
+                let local = (progress - 0.66) / 0.34;
+                lDirt.style.opacity = 0;
+                lSteam.style.opacity = 1 - local; 
+                
+                s1.classList.remove('active');
+                s2.classList.remove('active');
+                s3.classList.add('active');
+            }
+        });
+    });
+  </script>
 <?php else : ?>
   <!-- NORMAL PAGE HERO -->
   <section class="page-hero">
