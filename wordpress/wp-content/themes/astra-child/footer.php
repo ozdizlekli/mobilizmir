@@ -211,6 +211,27 @@ document.addEventListener('DOMContentLoaded', () => {
       updateMask(e.touches[0].clientX, e.touches[0].clientY);
     }, {passive: true});
   }
+  // X-RAY HOTSPOTS JS
+  const hotspots = document.querySelectorAll('.hotspot');
+  const xrayInfo = document.querySelector('.xray-info');
+  const xrayTitle = document.getElementById('xray-title');
+  const xrayDesc = document.getElementById('xray-desc');
+
+  if (hotspots.length > 0) {
+    // Show first one by default on mobile, or just let them click
+    hotspots.forEach(spot => {
+      const showInfo = () => {
+        hotspots.forEach(s => s.classList.remove('active'));
+        spot.classList.add('active');
+        xrayTitle.textContent = spot.getAttribute('data-title');
+        xrayDesc.textContent = spot.getAttribute('data-desc');
+        xrayInfo.classList.add('active');
+      };
+      
+      spot.addEventListener('click', showInfo);
+      spot.addEventListener('mouseenter', showInfo);
+    });
+  }
 });
 </script>
 </body>

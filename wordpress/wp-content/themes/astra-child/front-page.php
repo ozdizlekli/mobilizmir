@@ -126,6 +126,45 @@ get_header(); ?>
   </div>
 </section>
 
+<!-- ============ X-RAY ARAÇ İNCELEMESİ ============ -->
+<section class="xray-section">
+  <div class="wrap">
+    <h2 class="serif">Aracınızı Santim Santim Tanıyoruz</h2>
+    <p>Hangi bölgede hangi teknolojik uygulamayı yaptığımızı keşfetmek için parlayan noktalara dokunun.</p>
+    
+    <div class="xray-container">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/xray-car.jpg" alt="X-Ray Car" class="xray-img">
+      
+      <!-- Hotspots based on wireframe visual coordinates -->
+      <div class="hotspot" style="top: 48%; left: 18%;" data-title="Far Temizliği" data-desc="Zamanla sararan far yüzeylerini mikron düzeyinde temizliyor, gece sürüş güvenliğinizi fabrikasyon seviyesine çıkarıyoruz.">
+        <div class="core"></div><div class="pulse"></div>
+      </div>
+
+      <div class="hotspot" style="top: 35%; left: 32%;" data-title="Pasta Cila & Seramik" data-desc="Kaportadaki kılcal çizikleri yok ediyor, boyanızı dış etkenlere karşı kalkan gibi koruyan seramik kaplama uyguluyoruz.">
+        <div class="core"></div><div class="pulse"></div>
+      </div>
+
+      <div class="hotspot" style="top: 50%; left: 55%;" data-title="Boyasız Göçük Düzeltme" data-desc="Kapı ve çamurluklardaki göçükleri, aracın orijinal boyasına milimetre bile zarar vermeden vakum ve özel çubuklarla düzeltiyoruz.">
+        <div class="core"></div><div class="pulse"></div>
+      </div>
+
+      <div class="hotspot" style="top: 38%; left: 62%;" data-title="Detaylı İç Kuaför" data-desc="Koltuk, tavan ve taban döşemelerindeki en inatçı lekeleri buharlı yıkama ve anti-bakteriyel solüsyonlarla arındırıyoruz.">
+        <div class="core"></div><div class="pulse"></div>
+      </div>
+
+      <div class="hotspot" style="top: 55%; left: 82%;" data-title="Periyodik Bakım" data-desc="Motor ömrünü uzatan profesyonel mekanik bakım hizmeti. Kapınıza kadar gelip tüm ağır kontrolleri yerinde sağlıyoruz.">
+        <div class="core"></div><div class="pulse"></div>
+      </div>
+      
+      <!-- Info Panel -->
+      <div class="xray-info">
+        <h3 id="xray-title">Bölge Seçin</h3>
+        <p id="xray-desc">Detayları görmek için araç üzerindeki altın noktalara tıklayabilir veya farenizi üzerlerinde gezdirebilirsiniz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ GALERİ ============ -->
 <section id="galeri">
   <div class="wrap">
