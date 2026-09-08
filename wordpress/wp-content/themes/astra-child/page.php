@@ -177,6 +177,70 @@ get_header(); ?>
     });
   </script>
 
+  <!-- GALERİ: ÖNCESİ VE SONRASI -->
+  <section class="gallery-section">
+    <div class="wrap">
+      <div class="gallery-header">
+        <span class="gallery-num">04</span>
+        <h2 class="serif">Öncesi & sonrası</h2>
+      </div>
+
+      <div class="gallery-main" id="gallerySlider">
+        <div class="g-layer g-dirty" id="gDirty" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-kumas.jpg')"></div>
+        <div class="g-layer g-clean" id="gClean" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-kumas.jpg')"></div>
+        <div class="g-handle" id="gHandle"><span>&lt;&gt;</span></div>
+        <div class="g-label">ÖNCESİ (Lekeli)</div>
+      </div>
+
+      <div class="gallery-thumbs">
+        <div class="g-thumb active" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-kumas.jpg"><span>KUMAŞ DÖŞEME</span></div>
+        <div class="g-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-deri.jpg"><span>DERİ DÖŞEME</span></div>
+        <div class="g-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-tavan.jpg"><span>TAVAN DÖŞEMESİ</span></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slider = document.getElementById('gallerySlider');
+        if (slider) {
+            let isDragging = false;
+            const updateSlider = (e) => {
+                const rect = slider.getBoundingClientRect();
+                let clientX = e.clientX;
+                if (e.touches && e.touches.length > 0) clientX = e.touches[0].clientX;
+                if (clientX === undefined) return;
+                
+                let x = clientX - rect.left;
+                let percent = Math.max(0, Math.min(100, (x / rect.width) * 100));
+                slider.style.setProperty('--pos', percent + '%');
+            };
+            
+            slider.addEventListener('mousedown', (e) => { isDragging = true; updateSlider(e); });
+            window.addEventListener('mouseup', () => isDragging = false);
+            window.addEventListener('mousemove', (e) => { if(isDragging) updateSlider(e); });
+            
+            slider.addEventListener('touchstart', (e) => { isDragging = true; updateSlider(e); }, {passive: true});
+            window.addEventListener('touchend', () => isDragging = false);
+            window.addEventListener('touchmove', (e) => { if(isDragging) updateSlider(e); }, {passive: true});
+            
+            // Thumbnails
+            const thumbs = document.querySelectorAll('.g-thumb');
+            const gDirty = document.getElementById('gDirty');
+            const gClean = document.getElementById('gClean');
+            
+            thumbs.forEach(t => {
+                t.addEventListener('click', () => {
+                    thumbs.forEach(th => th.classList.remove('active'));
+                    t.classList.add('active');
+                    const imgUrl = t.getAttribute('data-img');
+                    gDirty.style.backgroundImage = `url('${imgUrl}')`;
+                    gClean.style.backgroundImage = `url('${imgUrl}')`;
+                });
+            });
+        }
+    });
+  </script>
 <?php elseif ( is_page('periyodik-bakim') ) : ?>
   <!-- PERİYODİK BAKIM ASMR CİNEMAGRAPH HERO -->
   <section class="asmr-hero" id="asmrHero">
