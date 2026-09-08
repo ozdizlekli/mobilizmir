@@ -131,8 +131,8 @@ get_header(); ?>
   <div class="wrap">
     <h2 class="serif">Aracınızı Santim Santim Tanıyoruz</h2>
     <p>Hangi bölgede hangi teknolojik uygulamayı yaptığımızı keşfetmek için parlayan noktalara dokunun.</p>
-    
-    <div class="xray-container">
+  </div>
+  <div class="xray-container">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/xray-car.jpg" alt="X-Ray Car" class="xray-img">
       
       <!-- Hotspots based on wireframe visual coordinates -->
@@ -161,8 +161,7 @@ get_header(); ?>
         <h3 id="xray-title">Bölge Seçin</h3>
         <p id="xray-desc">Detayları görmek için araç üzerindeki altın noktalara tıklayabilir veya farenizi üzerlerinde gezdirebilirsiniz.</p>
       </div>
-    </div>
-  </div>
+      </div>
 </section>
 
 <!-- ============ GALERİ ============ -->
