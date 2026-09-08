@@ -339,7 +339,7 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
   }
   nav.primary.open{transform:translateX(0);}
   header.site .wrap .btn.solid{padding: 8px 16px; font-size: 11px;}
-  /* /* btn.form-btn removed */ */
+  /* btn.form-btn removed */
 }
 
 /* Alt Sayfa Şablonu */
