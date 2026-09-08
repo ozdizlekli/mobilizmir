@@ -46,28 +46,38 @@ get_header(); ?>
 <section class="scroll-story-wrap" id="scroll-story">
   <div class="scroll-story-sticky">
     
-    <div class="story-layer layer-exterior-dirty"></div>
-    <div class="story-layer layer-exterior-clean"></div>
-    <div class="story-layer layer-interior"></div>
+    <div class="story-layer layer-ext-dirty"></div>
+    <div class="story-layer layer-ext-clean"></div>
+    <div class="story-layer layer-int"></div>
+    <div class="story-layer layer-eng"></div>
 
     <div class="story-ui">
       <div class="story-step" data-step="1">
-        <h3 class="serif">Aracınız zamanla yorulur.</h3>
-        <p>Güneş yanıkları, matlaşmış farlar, kaportaya işleyen reçineler ve kılcal çizikler...</p>
+        <h3 class="serif">Gözleriniz yollarda.</h3>
+        <p>Zamanla sararan ve görüşü düşüren farlar... <strong>Far Temizliği</strong> ile gece sürüşünde ilk günkü netlik ve güvenliğe dönün.</p>
       </div>
       <div class="story-step" data-step="2">
-        <h3 class="serif">Fabrika ayarlarına dönüş.</h3>
-        <p>Mobilİzmir'in profesyonel pasta cila ve boya koruma teknolojisiyle ilk günkü kusursuz parlaklık.</p>
+        <h3 class="serif">Kusursuz parlaklık.</h3>
+        <p>Güneş yanıkları, matlaşma ve kılcal çizikler tarihe karışıyor. <strong>Pasta Cila</strong> ile showroom parlaklığına kavuşun.</p>
       </div>
       <div class="story-step" data-step="3">
+        <h3 class="serif">Orijinalliğe dokunmadan.</h3>
+        <p>Dolu hasarı veya park ezikleri canınızı sıkmasın. <strong>Boyasız Göçük Düzeltme (PDR)</strong> ile aracınızın değeri korunur.</p>
+      </div>
+      <div class="story-step" data-step="4">
         <h3 class="serif">Şimdi içeri giriyoruz.</h3>
-        <p>Vakumlu ekstraksiyon teknolojisi ile koltuklarınızdaki tüm kir, bakteri ve kokular kapınızda yok edilir.</p>
+        <p>Vakumlu ekstraksiyon teknolojisi ile <strong>Koltuk Yıkama</strong>. Aracınızın içindeki tüm kir, bakteri ve kokular kapınızda yok edilir.</p>
+      </div>
+      <div class="story-step" data-step="5">
+        <h3 class="serif">Motorunuz bize emanet.</h3>
+        <p>Sadece görünüm değil, performans da önemli. Filtre, yağ ve sıvı değişimlerini içeren <strong>Periyodik Bakım</strong> yerinde yapılır.</p>
       </div>
     </div>
     
     <div class="story-progress-bar"><div class="story-progress-fill"></div></div>
   </div>
 </section>
+
 <!-- ============ HİZMETLER ============ -->
 <section id="hizmetler">
   <div class="wrap">

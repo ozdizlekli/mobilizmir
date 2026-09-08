@@ -126,11 +126,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const wrap = document.querySelector('.scroll-story-wrap');
   if(!wrap) return;
 
-  const dirty = document.querySelector('.layer-exterior-dirty');
-  const clean = document.querySelector('.layer-exterior-clean');
-  const interior = document.querySelector('.layer-interior');
+  const dirty = document.querySelector('.layer-ext-dirty');
+  const clean = document.querySelector('.layer-ext-clean');
+  const interior = document.querySelector('.layer-int');
+  const engine = document.querySelector('.layer-eng');
   const steps = document.querySelectorAll('.story-step');
   const fill = document.querySelector('.story-progress-fill');
+
+  function mapRange(val, inMin, inMax, outMin, outMax) {
+    let res = (val - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+    if (outMin < outMax) return Math.max(outMin, Math.min(res, outMax));
+    return Math.max(outMax, Math.min(res, outMin));
+  }
 
   window.addEventListener('scroll', () => {
     const rect = wrap.getBoundingClientRect();
@@ -142,56 +149,79 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fill.style.width = (progress * 100) + '%';
 
-    // TEXT LOGIC: Text switches precisely when the visual transition completes.
-    steps.forEach(s => s.classList.remove('active'));
-    if (progress < 0.35) {
-      if(progress > 0.02) steps[0].classList.add('active');
-    } else if (progress >= 0.35 && progress < 0.75) {
-      steps[1].classList.add('active');
-    } else if (progress >= 0.75) {
-      steps[2].classList.add('active');
+    let tfDirty = "";
+    let tfClean = "";
+    let cpClean = "circle(0% at 50% 50%)";
+    let opInt = 0;
+    let tfInt = "scale(1)";
+    let opEng = 0;
+    let tfEng = "scale(1)";
+
+    if (progress < 0.2) {
+      // 1. Far Temizligi
+      let local = mapRange(progress, 0, 0.2, 0, 1);
+      tfDirty = `scale(${1.2 + local*0.1}) translate(8%, 5%)`; // Farlara dogru zoom
+      tfClean = tfDirty;
+      cpClean = `circle(${local * 25}% at 30% 65%)`; // Far kisminda parlatma aciliyor
+      
+      steps.forEach((s,i) => s.classList.toggle('active', i===0));
+
+    } else if (progress < 0.4) {
+      // 2. Pasta Cila
+      let local = mapRange(progress, 0.2, 0.4, 0, 1);
+      tfDirty = `scale(${1.3 - local*0.3}) translate(${8 - local*8}%, ${5 - local*5}%)`; // Arabanin geneline inme
+      tfClean = tfDirty;
+      cpClean = `circle(${25 + local * 130}% at 30% 65%)`; // Butun arabaya cila yayiliyor
+      
+      steps.forEach((s,i) => s.classList.toggle('active', i===1));
+
+    } else if (progress < 0.6) {
+      // 3. Boyasiz Gocuk (PDR)
+      let local = mapRange(progress, 0.4, 0.6, 0, 1);
+      tfDirty = `scale(${1.0 + local*0.3}) translate(${-local*10}%, 0%)`; // Kaporta yanina dogru pan
+      tfClean = tfDirty;
+      cpClean = `circle(150% at 50% 50%)`; // Full parlak
+      
+      steps.forEach((s,i) => s.classList.toggle('active', i===2));
+
+    } else if (progress < 0.8) {
+      // 4. Koltuk Yikama (Iceri giriyoruz)
+      let local = mapRange(progress, 0.6, 0.8, 0, 1);
+      tfDirty = `scale(${1.3 + local*4}) translate(-10%, 0%)`; // Cama devasa zoom
+      tfClean = tfDirty;
+      cpClean = `circle(150% at 50% 50%)`;
+      
+      opInt = local;
+      tfInt = `scale(${1.3 - local*0.3})`;
+      
+      steps.forEach((s,i) => s.classList.toggle('active', i===3));
+
+    } else {
+      // 5. Periyodik Bakim
+      let local = mapRange(progress, 0.8, 1.0, 0, 1);
+      // Koltuk fotosu sabit kalip kaybolur
+      tfDirty = `scale(5.3) translate(-10%, 0%)`;
+      tfClean = tfDirty;
+      cpClean = `circle(150% at 50% 50%)`;
+      
+      opInt = 1 - local; 
+      tfInt = `scale(1)`;
+      
+      opEng = local;
+      tfEng = `scale(${1.2 - local*0.2})`;
+      
+      steps.forEach((s,i) => s.classList.toggle('active', i===4));
     }
 
-    // VISUAL LOGIC:
-    // 1. Wipe Effect (Dirty -> Clean): Happens between 0.15 and 0.35
-    if (progress < 0.15) {
-       clean.style.clipPath = `circle(0% at 50% 50%)`;
-       clean.style.opacity = 0;
-    } else if (progress >= 0.15 && progress < 0.35) {
-       let cleanProg = (progress - 0.15) / 0.20;
-       clean.style.opacity = 1;
-       clean.style.clipPath = `circle(${cleanProg * 150}% at 50% 50%)`;
-    } else {
-       clean.style.opacity = 1;
-       clean.style.clipPath = `circle(150% at 50% 50%)`;
-    }
-
-    // 2. Zoom Effect (Clean -> Interior): Happens between 0.55 and 0.75
-    if (progress < 0.55) {
-       let baseZoom = 1 + (progress * 0.3);
-       clean.style.transform = `scale(${baseZoom})`;
-       dirty.style.transform = `scale(${baseZoom})`;
-       
-       interior.style.opacity = 0;
-    } else if (progress >= 0.55 && progress < 0.75) {
-       let intProg = (progress - 0.55) / 0.20; 
-       
-       let zoom = 1 + (0.55 * 0.3) + (intProg * 3);
-       clean.style.transform = `scale(${zoom})`;
-       dirty.style.transform = `scale(${zoom})`;
-       
-       clean.style.opacity = 1 - intProg;
-       dirty.style.opacity = 1 - intProg;
-       
-       interior.style.opacity = intProg;
-       interior.style.transform = `scale(${1.2 - (intProg * 0.2)})`;
-    } else {
-       // progress >= 0.75 : Transition completely finished. Only interior is visible.
-       clean.style.opacity = 0;
-       dirty.style.opacity = 0;
-       interior.style.opacity = 1;
-       interior.style.transform = `scale(1.0)`;
-    }
+    dirty.style.transform = tfDirty;
+    clean.style.transform = tfClean;
+    clean.style.clipPath = cpClean;
+    
+    interior.style.opacity = opInt;
+    interior.style.transform = tfInt;
+    
+    engine.style.opacity = opEng;
+    engine.style.transform = tfEng;
   });
 });
 </script>
