@@ -155,9 +155,9 @@ document.addEventListener('DOMContentLoaded', () => {
       steps.forEach(s => s.classList.remove('active'));
       if(progress > 0.02) steps[0].classList.add('active');
 
-    } else if (progress >= 0.3 && progress < 0.65) {
+    } else if (progress >= 0.3 && progress < 0.60) {
       // 30 - 65%: Wipe transition to clean exterior
-      let cleanProg = (progress - 0.3) / 0.35; 
+      let cleanProg = (progress - 0.3) / 0.30; 
       clean.style.opacity = 1;
       clean.style.clipPath = `circle(${cleanProg * 150}% at 50% 50%)`;
       clean.style.transform = `scale(${baseZoom})`;
@@ -166,17 +166,25 @@ document.addEventListener('DOMContentLoaded', () => {
       steps.forEach(s => s.classList.remove('active'));
       steps[1].classList.add('active');
 
-    } else if (progress >= 0.65) {
-      // 65 - 100%: Massive zoom into window and crossfade to interior
-      let intProg = (progress - 0.65) / 0.35; 
-      clean.style.clipPath = `circle(150% at 50% 50%)`;
+    } else if (progress >= 0.60) {
+      // Start the interior transition a bit earlier and make it snappier
+      let intProg = (progress - 0.60) / 0.40; 
       
-      // Dramatic zoom into the car window
-      clean.style.transform = `scale(${baseZoom + (intProg * 4)})`;
+      // Accelerate the visual transition so it matches the text immediately
+      let quickProg = Math.min(intProg * 2.5, 1); 
       
-      interior.style.opacity = intProg;
-      // Slight zoom out on interior to counter-balance the intense zoom-in
-      interior.style.transform = `scale(${1.3 - (intProg * 0.3)})`;
+      clean.style.clipPath = 'none';
+      
+      // Dramatic zoom into the windshield area
+      clean.style.transform = `scale(${baseZoom + (quickProg * 4)})`;
+      dirty.style.transform = `scale(${baseZoom + (quickProg * 4)})`;
+      
+      // Fade out the exterior completely to reveal interior
+      clean.style.opacity = 1 - quickProg;
+      dirty.style.opacity = 1 - quickProg;
+      
+      interior.style.opacity = quickProg;
+      interior.style.transform = `scale(${1.15 - (quickProg * 0.15)})`;
 
       steps.forEach(s => s.classList.remove('active'));
       steps[2].classList.add('active');
