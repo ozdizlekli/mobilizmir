@@ -155,25 +155,22 @@ get_header(); ?>
 <!-- ============ GALERİ ============ -->
 <section id="galeri">
   <div class="wrap">
-    <div class="folio"><span class="num">02</span><div class="rule"></div><h2 class="serif">Öncesi &amp; sonrası</h2><p>Son uygulamalarımızdan gerçek örnekler — tüm galeri için ayrı sayfamıza bakın.</p></div>
-    <div class="gallery-grid">
-      
-      <div class="g-item wide tall">
-        <div class="ba-slider" style="--pos:50%">
-          <!-- YER TUTUCU: Gerçek fotoğrafları buraya ekleyin -->
-          <div class="ph" data-label="SONRASI (Temiz)"></div>
-          <div class="ba-before-wrap"><div class="ph" data-label="ÖNCESİ (Kirli/Çizik)" style="background:linear-gradient(160deg,#141310 0%,#0b0b0a 60%);"></div></div>
-          <input type="range" min="0" max="100" value="50" class="ba-range" aria-label="Öncesi ve Sonrası Karşılaştırma">
-          <div class="ba-slider-handle"></div>
-        </div>
-      </div>
+            <div class="gallery-header" style="display:flex; align-items:center; margin-bottom:40px; max-width:1000px; margin-left:auto; margin-right:auto;">
+        <span class="gallery-num" style="font-family:'Courier New', monospace; color:var(--gold-dark); font-size:1.2rem; margin-right:20px;">02</span>
+        <h2 class="serif" style="color:#fff; font-size:clamp(1.8rem, 4vw, 2.5rem); flex-grow:1; border-left:1px solid rgba(255,255,255,0.1); padding-left:20px; margin:0;">Öncesi & sonrası</h2>
+    </div>
 
-      <div class="g-item"><div class="ph" data-label="KOLTUK YIKAMA"></div></div>
-      <div class="g-item"><div class="ph" data-label="FAR TEMİZLİĞİ"></div></div>
-      <div class="g-item wide"><div class="ph" data-label="PDR ÖNCESİ / SONRASI"></div><span class="after-tag">Sonrası</span></div>
-      <div class="g-item"><div class="ph" data-label="İÇ DETAYLI TEMİZLİK"></div></div>
-      <div class="g-item"><div class="ph" data-label="SERAMİK KAPLAMA"></div></div>
-      <div class="g-item wide"><div class="ph" data-label="MOTOR TEMİZLİĞİ"></div></div>
+    <div class="gallery-main" id="gallerySlider">
+      <div class="g-layer g-dirty" id="gDirty" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-kumas.jpg')"></div>
+      <div class="g-layer g-clean" id="gClean" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-kumas.jpg')"></div>
+      <div class="g-handle" id="gHandle"><span>&lt;&gt;</span></div>
+      <div class="g-label">ÖNCESİ (Lekeli)</div>
+    </div>
+
+    <div class="gallery-thumbs">
+      <div class="g-thumb active" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-kumas.jpg"><span>KUMAŞ DÖŞEME</span></div>
+      <div class="g-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-deri.jpg"><span>DERİ DÖŞEME</span></div>
+      <div class="g-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-tavan.jpg"><span>TAVAN DÖŞEMESİ</span></div>
     </div>
   </div>
 </section>

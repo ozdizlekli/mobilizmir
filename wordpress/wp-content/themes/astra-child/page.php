@@ -177,28 +177,7 @@ get_header(); ?>
     });
   </script>
 
-  <!-- GALERİ: ÖNCESİ VE SONRASI -->
-  <section class="gallery-section">
-    <div class="wrap">
-      <div class="gallery-header">
-        <span class="gallery-num">04</span>
-        <h2 class="serif">Öncesi & sonrası</h2>
-      </div>
-
-      <div class="gallery-main" id="gallerySlider">
-        <div class="g-layer g-dirty" id="gDirty" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-kumas.jpg')"></div>
-        <div class="g-layer g-clean" id="gClean" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-kumas.jpg')"></div>
-        <div class="g-handle" id="gHandle"><span>&lt;&gt;</span></div>
-        <div class="g-label">ÖNCESİ (Lekeli)</div>
-      </div>
-
-      <div class="gallery-thumbs">
-        <div class="g-thumb active" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-kumas.jpg"><span>KUMAŞ DÖŞEME</span></div>
-        <div class="g-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-deri.jpg"><span>DERİ DÖŞEME</span></div>
-        <div class="g-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-tavan.jpg"><span>TAVAN DÖŞEMESİ</span></div>
-      </div>
-    </div>
-  </section>
+  
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {

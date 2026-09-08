@@ -195,6 +195,45 @@ document.addEventListener('DOMContentLoaded', () => {
       steps.forEach((s,i) => s.classList.toggle('active', i===4));
     }
   });
+    // GALLERY SLIDER
+  const gallerySlider = document.getElementById('gallerySlider');
+  if (gallerySlider) {
+      let isDragging = false;
+      const updateSlider = (e) => {
+          const rect = gallerySlider.getBoundingClientRect();
+          let clientX = e.clientX;
+          if (e.touches && e.touches.length > 0) clientX = e.touches[0].clientX;
+          if (clientX === undefined) return;
+          
+          let x = clientX - rect.left;
+          let percent = Math.max(0, Math.min(100, (x / rect.width) * 100));
+          gallerySlider.style.setProperty('--pos', percent + '%');
+      };
+      
+      gallerySlider.addEventListener('mousedown', (e) => { isDragging = true; updateSlider(e); });
+      window.addEventListener('mouseup', () => isDragging = false);
+      window.addEventListener('mousemove', (e) => { if(isDragging) updateSlider(e); });
+      
+      gallerySlider.addEventListener('touchstart', (e) => { isDragging = true; updateSlider(e); }, {passive: true});
+      window.addEventListener('touchend', () => isDragging = false);
+      window.addEventListener('touchmove', (e) => { if(isDragging) updateSlider(e); }, {passive: true});
+      
+      // Thumbnails
+      const thumbs = document.querySelectorAll('.g-thumb');
+      const gDirty = document.getElementById('gDirty');
+      const gClean = document.getElementById('gClean');
+      
+      thumbs.forEach(t => {
+          t.addEventListener('click', () => {
+              thumbs.forEach(th => th.classList.remove('active'));
+              t.classList.add('active');
+              const imgUrl = t.getAttribute('data-img');
+              gDirty.style.backgroundImage = `url('${imgUrl}')`;
+              gClean.style.backgroundImage = `url('${imgUrl}')`;
+          });
+      });
+  }
+
   // X-RAY HOTSPOTS JS
   const hotspots = document.querySelectorAll('.hotspot');
   const xrayInfo = document.querySelector('.xray-info');
