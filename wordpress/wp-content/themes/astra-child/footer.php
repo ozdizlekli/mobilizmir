@@ -126,10 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const wrap = document.querySelector('.scroll-story-wrap');
   if(!wrap) return;
 
-  const dirty = document.querySelector('.layer-ext-dirty');
-  const clean = document.querySelector('.layer-ext-clean');
-  const interior = document.querySelector('.layer-int');
-  const engine = document.querySelector('.layer-eng');
+  const l1 = document.querySelector('.layer-1');
+  const l2 = document.querySelector('.layer-2');
+  const l3 = document.querySelector('.layer-3');
+  const l4 = document.querySelector('.layer-4');
+  const l5 = document.querySelector('.layer-5');
   const steps = document.querySelectorAll('.story-step');
   const fill = document.querySelector('.story-progress-fill');
 
@@ -149,83 +150,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fill.style.width = (progress * 100) + '%';
 
-    let tfDirty = "";
-    let tfClean = "";
-    let cpClean = "circle(0% at 50% 50%)";
-    let opInt = 0;
-    let tfInt = "scale(1)";
-    let opEng = 0;
-    let tfEng = "scale(1)";
+    // Sabit hafif zoom (parallax)
+    const baseScale = 1 + (progress * 0.1);
+    const transformStr = `scale(${baseScale})`;
+    
+    l1.style.transform = transformStr;
+    l2.style.transform = transformStr;
+    l3.style.transform = transformStr;
+    l4.style.transform = transformStr;
+    l5.style.transform = transformStr;
 
     if (progress < 0.2) {
-      // 1. Far Temizligi
-      let local = mapRange(progress, 0, 0.2, 0, 1);
-      tfDirty = `scale(${1.2 + local*0.1}) translate(8%, 5%)`; // Farlara dogru zoom
-      tfClean = tfDirty;
-      cpClean = `circle(${local * 25}% at 30% 65%)`; // Far kisminda parlatma aciliyor
-      
+      l1.style.opacity = 1;
+      l2.style.opacity = mapRange(progress, 0.15, 0.2, 0, 1);
+      l3.style.opacity = 0; l4.style.opacity = 0; l5.style.opacity = 0;
       steps.forEach((s,i) => s.classList.toggle('active', i===0));
-
-    } else if (progress < 0.4) {
-      // 2. Pasta Cila
-      let local = mapRange(progress, 0.2, 0.4, 0, 1);
-      tfDirty = `scale(${1.3 - local*0.3}) translate(${8 - local*8}%, ${5 - local*5}%)`; // Arabanin geneline inme
-      tfClean = tfDirty;
-      cpClean = `circle(${25 + local * 130}% at 30% 65%)`; // Butun arabaya cila yayiliyor
-      
+    } 
+    else if (progress < 0.4) {
+      l1.style.opacity = mapRange(progress, 0.2, 0.25, 1, 0);
+      l2.style.opacity = 1;
+      l3.style.opacity = mapRange(progress, 0.35, 0.4, 0, 1);
+      l4.style.opacity = 0; l5.style.opacity = 0;
       steps.forEach((s,i) => s.classList.toggle('active', i===1));
-
-    } else if (progress < 0.6) {
-      // 3. Boyasiz Gocuk (PDR)
-      let local = mapRange(progress, 0.4, 0.6, 0, 1);
-      tfDirty = `scale(${1.0 + local*0.3}) translate(${-local*10}%, 0%)`; // Kaporta yanina dogru pan
-      tfClean = tfDirty;
-      cpClean = `circle(150% at 50% 50%)`; // Full parlak
-      
+    } 
+    else if (progress < 0.6) {
+      l1.style.opacity = 0;
+      l2.style.opacity = mapRange(progress, 0.4, 0.45, 1, 0);
+      l3.style.opacity = 1;
+      l4.style.opacity = mapRange(progress, 0.55, 0.6, 0, 1);
+      l5.style.opacity = 0;
       steps.forEach((s,i) => s.classList.toggle('active', i===2));
-
-    } else if (progress < 0.8) {
-      // 4. Koltuk Yikama (Iceri giriyoruz)
-      let local = mapRange(progress, 0.6, 0.8, 0, 1);
-      
-      // HIZLI ZOOM: 0 ile 0.3 arasinda zoom ve fade bitsin ki yaziyla ayni anda gorunsun.
-      let fastLocal = mapRange(local, 0, 0.25, 0, 1);
-      
-      tfDirty = `scale(${1.3 + fastLocal*5}) translate(-10%, 0%)`; 
-      tfClean = tfDirty;
-      cpClean = `circle(150% at 50% 50%)`;
-      
-      opInt = fastLocal;
-      tfInt = `scale(${1.3 - fastLocal*0.3})`;
-      
+    } 
+    else if (progress < 0.8) {
+      l1.style.opacity = 0; l2.style.opacity = 0;
+      l3.style.opacity = mapRange(progress, 0.6, 0.65, 1, 0);
+      l4.style.opacity = 1;
+      l5.style.opacity = mapRange(progress, 0.75, 0.8, 0, 1);
       steps.forEach((s,i) => s.classList.toggle('active', i===3));
-
-    } else {
-      // 5. Periyodik Bakim
-      let local = mapRange(progress, 0.8, 1.0, 0, 1);
-      // Koltuk fotosu sabit kalip kaybolur
-      tfDirty = `scale(5.3) translate(-10%, 0%)`;
-      tfClean = tfDirty;
-      cpClean = `circle(150% at 50% 50%)`;
-      
-      opInt = 1 - local; 
-      tfInt = `scale(1)`;
-      
-      opEng = local;
-      tfEng = `scale(${1.2 - local*0.2})`;
-      
+    } 
+    else {
+      l1.style.opacity = 0; l2.style.opacity = 0; l3.style.opacity = 0;
+      l4.style.opacity = mapRange(progress, 0.8, 0.85, 1, 0);
+      l5.style.opacity = 1;
       steps.forEach((s,i) => s.classList.toggle('active', i===4));
     }
-
-    dirty.style.transform = tfDirty;
-    clean.style.transform = tfClean;
-    clean.style.clipPath = cpClean;
-    
-    interior.style.opacity = opInt;
-    interior.style.transform = tfInt;
-    
-    engine.style.opacity = opEng;
-    engine.style.transform = tfEng;
   });
 });
 </script>

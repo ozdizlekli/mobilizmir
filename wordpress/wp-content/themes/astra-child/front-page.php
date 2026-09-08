@@ -46,10 +46,11 @@ get_header(); ?>
 <section class="scroll-story-wrap" id="scroll-story">
   <div class="scroll-story-sticky">
     
-    <div class="story-layer layer-ext-dirty"></div>
-    <div class="story-layer layer-ext-clean"></div>
-    <div class="story-layer layer-int"></div>
-    <div class="story-layer layer-eng"></div>
+    <div class="story-layer layer-1"></div>
+    <div class="story-layer layer-2"></div>
+    <div class="story-layer layer-3"></div>
+    <div class="story-layer layer-4"></div>
+    <div class="story-layer layer-5"></div>
 
     <div class="story-ui">
       <div class="story-step" data-step="1">

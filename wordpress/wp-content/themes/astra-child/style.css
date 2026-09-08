@@ -569,7 +569,7 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 
 /* ============ APPLE TARZI SCROLL STORY ============ */
 .scroll-story-wrap {
-  height: 600vh; /* 5 hizmet icin ekstra alan */
+  height: 600vh;
   background: var(--ink);
   position: relative;
 }
@@ -587,31 +587,29 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
   top: 0; left: 0; width: 100%; height: 100%;
   background-size: cover;
   background-position: center;
-  background-color: var(--ink-2); /* Fallback */
-  will-change: transform, opacity, clip-path;
+  background-color: var(--ink-2);
+  will-change: transform, opacity;
   transform-origin: center center;
 }
-.layer-ext-dirty {
-  background-image: url('https://www.carscoops.com/wp-content/uploads/2022/05/LaFerrari-Aperta-2a.jpg');
-  filter: grayscale(60%) brightness(0.4) contrast(0.9);
+.layer-1 {
+  background-image: url('assets/images/scroll-story/step1-far.jpg');
   z-index: 1;
 }
-.layer-ext-clean {
-  background-image: url('https://www.carscoops.com/wp-content/uploads/2022/05/LaFerrari-Aperta-2a.jpg');
-  filter: brightness(1.1) contrast(1.2) saturate(1.3);
-  z-index: 2;
-  opacity: 1; /* Maske (clip-path) ile gorunecek */
-  clip-path: circle(0% at 50% 50%);
+.layer-2 {
+  background-image: url('assets/images/scroll-story/step2-pasta.jpg');
+  z-index: 2; opacity: 0;
 }
-.layer-int {
-  background-image: url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=1920');
-  z-index: 3;
-  opacity: 0;
+.layer-3 {
+  background-image: url('assets/images/scroll-story/step3-pdr.jpg');
+  z-index: 3; opacity: 0;
 }
-.layer-eng {
-  background-image: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1920&auto=format&fit=crop');
-  z-index: 4;
-  opacity: 0;
+.layer-4 {
+  background-image: url('assets/images/scroll-story/step4-koltuk.jpg');
+  z-index: 4; opacity: 0;
+}
+.layer-5 {
+  background-image: url('assets/images/scroll-story/step5-motor.jpg');
+  z-index: 5; opacity: 0;
 }
 .story-ui {
   position: relative;
