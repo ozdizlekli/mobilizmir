@@ -142,52 +142,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fill.style.width = (progress * 100) + '%';
 
-    // Base zoom for parallax feel
-    const baseZoom = 1 + (progress * 0.4);
-    dirty.style.transform = `scale(${baseZoom})`;
-
-    if (progress < 0.3) {
-      // 0 - 30%: Only dirty is visible
-      clean.style.clipPath = `circle(0% at 50% 50%)`;
-      clean.style.opacity = 0;
-      interior.style.opacity = 0;
-      
-      steps.forEach(s => s.classList.remove('active'));
+    // TEXT LOGIC: Text switches precisely when the visual transition completes.
+    steps.forEach(s => s.classList.remove('active'));
+    if (progress < 0.35) {
       if(progress > 0.02) steps[0].classList.add('active');
-
-    } else if (progress >= 0.3 && progress < 0.60) {
-      // 30 - 65%: Wipe transition to clean exterior
-      let cleanProg = (progress - 0.3) / 0.30; 
-      clean.style.opacity = 1;
-      clean.style.clipPath = `circle(${cleanProg * 150}% at 50% 50%)`;
-      clean.style.transform = `scale(${baseZoom})`;
-      interior.style.opacity = 0;
-
-      steps.forEach(s => s.classList.remove('active'));
+    } else if (progress >= 0.35 && progress < 0.75) {
       steps[1].classList.add('active');
-
-    } else if (progress >= 0.60) {
-      // Start the interior transition a bit earlier and make it snappier
-      let intProg = (progress - 0.60) / 0.40; 
-      
-      // Accelerate the visual transition so it matches the text immediately
-      let quickProg = Math.min(intProg * 2.5, 1); 
-      
-      clean.style.clipPath = 'none';
-      
-      // Dramatic zoom into the windshield area
-      clean.style.transform = `scale(${baseZoom + (quickProg * 4)})`;
-      dirty.style.transform = `scale(${baseZoom + (quickProg * 4)})`;
-      
-      // Fade out the exterior completely to reveal interior
-      clean.style.opacity = 1 - quickProg;
-      dirty.style.opacity = 1 - quickProg;
-      
-      interior.style.opacity = quickProg;
-      interior.style.transform = `scale(${1.15 - (quickProg * 0.15)})`;
-
-      steps.forEach(s => s.classList.remove('active'));
+    } else if (progress >= 0.75) {
       steps[2].classList.add('active');
+    }
+
+    // VISUAL LOGIC:
+    // 1. Wipe Effect (Dirty -> Clean): Happens between 0.15 and 0.35
+    if (progress < 0.15) {
+       clean.style.clipPath = `circle(0% at 50% 50%)`;
+       clean.style.opacity = 0;
+    } else if (progress >= 0.15 && progress < 0.35) {
+       let cleanProg = (progress - 0.15) / 0.20;
+       clean.style.opacity = 1;
+       clean.style.clipPath = `circle(${cleanProg * 150}% at 50% 50%)`;
+    } else {
+       clean.style.opacity = 1;
+       clean.style.clipPath = `circle(150% at 50% 50%)`;
+    }
+
+    // 2. Zoom Effect (Clean -> Interior): Happens between 0.55 and 0.75
+    if (progress < 0.55) {
+       let baseZoom = 1 + (progress * 0.3);
+       clean.style.transform = `scale(${baseZoom})`;
+       dirty.style.transform = `scale(${baseZoom})`;
+       
+       interior.style.opacity = 0;
+    } else if (progress >= 0.55 && progress < 0.75) {
+       let intProg = (progress - 0.55) / 0.20; 
+       
+       let zoom = 1 + (0.55 * 0.3) + (intProg * 3);
+       clean.style.transform = `scale(${zoom})`;
+       dirty.style.transform = `scale(${zoom})`;
+       
+       clean.style.opacity = 1 - intProg;
+       dirty.style.opacity = 1 - intProg;
+       
+       interior.style.opacity = intProg;
+       interior.style.transform = `scale(${1.2 - (intProg * 0.2)})`;
+    } else {
+       // progress >= 0.75 : Transition completely finished. Only interior is visible.
+       clean.style.opacity = 0;
+       dirty.style.opacity = 0;
+       interior.style.opacity = 1;
+       interior.style.transform = `scale(1.0)`;
     }
   });
 });
