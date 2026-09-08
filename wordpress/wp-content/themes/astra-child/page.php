@@ -197,43 +197,7 @@ get_header(); ?>
         });
     });
   </script>
-<?php elseif ( is_page('pasta-cila') ) : ?>
-  <!-- PASTA CİLA İNTERAKTİF PARLAKLIK TESTİ -->
-  <section class="gloss-hero" id="glossHero">
-    <div class="gloss-bg"></div>
-    <div class="gloss-light" id="glossLight"></div>
-    <div class="gloss-hud" id="glossHud">HARE/ÇİZİK TESPİTİ: %0<br>KUSURSUZ YANSIMA</div>
-    
-    <div class="gloss-content">
-        <h1 class="serif"><?php the_title(); ?></h1>
-        <p>Boyadaki kılcal çizikleri ve hareleri yok ediyor, seramik kaplamayla "sıvı cam" görünümü kazandırıyoruz. Kusursuz yansımayı test etmek için inceleme ışığını kaportada gezdirin.</p>
-    </div>
-  </section>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const hero = document.getElementById('glossHero');
-        if(!hero) return;
 
-        const updateLight = (clientX, clientY) => {
-            const rect = hero.getBoundingClientRect();
-            let x = clientX - rect.left;
-            let y = clientY - rect.top;
-            hero.style.setProperty('--x', x + 'px');
-            hero.style.setProperty('--y', y + 'px');
-        };
-
-        // Center default
-        const rect = hero.getBoundingClientRect();
-        hero.style.setProperty('--x', (rect.width/2) + 'px');
-        hero.style.setProperty('--y', (rect.height/2) + 'px');
-
-        hero.addEventListener('mousemove', (e) => updateLight(e.clientX, e.clientY));
-        hero.addEventListener('touchmove', (e) => {
-            updateLight(e.touches[0].clientX, e.touches[0].clientY);
-        }, {passive: true});
-    });
-  </script>
 <?php elseif ( is_page('periyodik-bakim') ) : ?>
   <!-- PERİYODİK BAKIM ASMR CİNEMAGRAPH HERO -->
   <section class="asmr-hero" id="asmrHero">
@@ -269,6 +233,46 @@ get_header(); ?>
             
             container.appendChild(p);
         }
+    });
+  </script>
+<?php elseif ( is_page('pasta-cila') ) : ?>
+  <!-- PASTA CİLA SIVI CAM (LIQUID GLASS) HERO -->
+  <section class="liquid-hero" id="liquidHero">
+    <div class="liquid-bg liquid-dirty"></div>
+    <div class="liquid-bg liquid-clean" id="liquidClean"></div>
+    <div class="liquid-wave" id="liquidWave"></div>
+    
+    <div class="liquid-content">
+        <h1 class="serif"><?php the_title(); ?></h1>
+        <p>Boyadaki matlığı ve kılcal çizikleri tamamen siliyoruz. "Sıvı Cam" efekti yaratan 9H seramik kalkanı sayesinde aracınız aylarca ilk günkü ıslak parlaklığında kalır.</p>
+        <button class="btn solid liquid-btn" id="btnPour">Seramik Uygula</button>
+    </div>
+  </section>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('btnPour');
+        const clean = document.getElementById('liquidClean');
+        const wave = document.getElementById('liquidWave');
+        
+        if(!btn) return;
+        
+        btn.addEventListener('click', () => {
+            btn.style.opacity = '0';
+            setTimeout(() => { btn.style.display = 'none'; }, 300);
+            
+            // Start animation (flowing down from top to bottom)
+            clean.style.transition = 'clip-path 3s cubic-bezier(0.4, 0, 0.2, 1)';
+            clean.style.clipPath = 'inset(0 0 0% 0)';
+            
+            wave.style.transition = 'top 3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s';
+            wave.style.opacity = '1';
+            wave.style.top = '100%';
+            
+            setTimeout(() => {
+                wave.style.opacity = '0'; // Hide the wave line when done
+            }, 3000);
+        });
     });
   </script>
 <?php else : ?>
