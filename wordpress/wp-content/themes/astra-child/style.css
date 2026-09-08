@@ -892,38 +892,40 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
   z-index: 1;
 }
 .split-clean {
-  /* Kusursuz, kristal parlakliginda yeni nesil isik */
   z-index: 2;
-  clip-path: polygon(var(--pos) 0, 100% 0, 100% 100%, var(--pos) 100%);
-  -webkit-clip-path: polygon(var(--pos) 0, 100% 0, 100% 100%, var(--pos) 100%);
   filter: contrast(1.1) brightness(1.2) saturate(1.1);
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  animation: far-reveal 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.8s;
+}
+@keyframes far-reveal {
+  0% { clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); }
+  100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
 }
 .split-divider {
   position: absolute;
   top: 0; bottom: 0;
-  left: var(--pos);
   width: 2px;
   background: var(--gold-bright);
   z-index: 3;
   transform: translateX(-50%);
   box-shadow: 0 0 20px var(--gold-bright), 0 0 40px var(--gold-bright);
   pointer-events: none;
+  left: 100%;
+  opacity: 0;
+  animation: far-line 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.8s;
 }
-.split-handle {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 48px; height: 48px;
-  background: var(--gold-bright);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  color: var(--ink);
-  font-weight: bold;
-  box-shadow: 0 0 20px rgba(0,0,0,0.8);
-  font-size: 14px;
+@keyframes far-line {
+  0% { left: 100%; opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { left: 0%; opacity: 0; }
 }
-.split-handle::before { content: '◀'; margin-right: 3px; }
-.split-handle::after { content: '▶'; margin-left: 3px; }
+
+
+
 
 .split-content {
   position: absolute;
@@ -1342,16 +1344,8 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
   text-shadow: 0 2px 15px rgba(0,0,0,1);
   line-height: 1.6;
 }
-.liquid-btn {
-  background: var(--gold-bright); color: var(--ink);
-  padding: 15px 30px; font-size: 1.1rem; font-weight: bold;
-  border-radius: var(--radius); cursor: pointer; border: none;
-  box-shadow: 0 10px 20px rgba(212,175,55,0.4);
-  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-}
-.liquid-btn:hover {
-  transform: translateY(-3px); box-shadow: 0 15px 30px rgba(212,175,55,0.6);
-}
+
+
 
 @media(max-width: 768px) {
   .liquid-hero { height: 60vh; }

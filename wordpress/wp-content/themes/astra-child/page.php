@@ -5,37 +5,16 @@
 get_header(); ?>
 
 <?php if ( is_page('far-temizligi') ) : ?>
-  <!-- FAR TEMİZLİĞİ ÖZEL AÇILIŞ (SPLIT SCREEN) -->
+  <!-- FAR TEMİZLİĞİ ÖZEL AÇILIŞ (OTOMATİK GEÇİŞ) -->
   <section class="split-hero" id="splitHero">
     <div class="split-layer split-dirty"></div>
     <div class="split-layer split-clean"></div>
-    <div class="split-divider">
-      <div class="split-handle"></div>
-    </div>
+    <div class="split-divider"></div>
     <div class="split-content">
       <h1 class="serif"><?php the_title(); ?></h1>
-      <p>Lazer berraklığına kendi ellerinizle tanık olun. Aydınlığı sağa sola kaydırarak geceyi nasıl gündüze çevirdiğimizi keşfedin.</p>
+      <p>Lazer berraklığına tanık olun. Geceyi gündüze çeviren teknolojik temizlik işlemi.</p>
     </div>
   </section>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const hero = document.getElementById('splitHero');
-      if(!hero) return;
-      
-      const updateSplit = (clientX) => {
-        const rect = hero.getBoundingClientRect();
-        let x = clientX - rect.left;
-        let percent = (x / rect.width) * 100;
-        if(percent < 0) percent = 0;
-        if(percent > 100) percent = 100;
-        hero.style.setProperty('--pos', percent + '%');
-      };
-
-      hero.addEventListener('mousemove', (e) => updateSplit(e.clientX));
-      hero.addEventListener('touchmove', (e) => updateSplit(e.touches[0].clientX), {passive: true});
-    });
-  </script>
 <?php elseif ( is_page('boyasiz-gocuk-duzeltme') ) : ?>
   <!-- PDR HOLOGRAFİK HUD HERO -->
   <section class="hud-hero" id="hudHero">
