@@ -112,17 +112,7 @@ get_header(); ?>
   </div>
 </section>
 
-<!-- ============ SİHİRLİ LAZER ============ -->
-<section class="magic-section">
-  <div class="wrap">
-    
-    <div class="magic-wrap">
-      <div class="magic-dirty"></div>
-      <div class="magic-clean"></div>
-      <div class="magic-ring"></div>
-    </div>
-  </div>
-</section>
+
 
 <!-- ============ X-RAY ARAÇ İNCELEMESİ ============ -->
 <section class="xray-section">
