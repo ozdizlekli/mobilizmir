@@ -187,12 +187,16 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (progress < 0.8) {
       // 4. Koltuk Yikama (Iceri giriyoruz)
       let local = mapRange(progress, 0.6, 0.8, 0, 1);
-      tfDirty = `scale(${1.3 + local*4}) translate(-10%, 0%)`; // Cama devasa zoom
+      
+      // HIZLI ZOOM: 0 ile 0.3 arasinda zoom ve fade bitsin ki yaziyla ayni anda gorunsun.
+      let fastLocal = mapRange(local, 0, 0.25, 0, 1);
+      
+      tfDirty = `scale(${1.3 + fastLocal*5}) translate(-10%, 0%)`; 
       tfClean = tfDirty;
       cpClean = `circle(150% at 50% 50%)`;
       
-      opInt = local;
-      tfInt = `scale(${1.3 - local*0.3})`;
+      opInt = fastLocal;
+      tfInt = `scale(${1.3 - fastLocal*0.3})`;
       
       steps.forEach((s,i) => s.classList.toggle('active', i===3));
 
