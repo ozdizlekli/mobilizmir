@@ -197,6 +197,43 @@ get_header(); ?>
         });
     });
   </script>
+<?php elseif ( is_page('pasta-cila') ) : ?>
+  <!-- PASTA CİLA İNTERAKTİF PARLAKLIK TESTİ -->
+  <section class="gloss-hero" id="glossHero">
+    <div class="gloss-bg"></div>
+    <div class="gloss-light" id="glossLight"></div>
+    <div class="gloss-hud" id="glossHud">HARE/ÇİZİK TESPİTİ: %0<br>KUSURSUZ YANSIMA</div>
+    
+    <div class="gloss-content">
+        <h1 class="serif"><?php the_title(); ?></h1>
+        <p>Boyadaki kılcal çizikleri ve hareleri yok ediyor, seramik kaplamayla "sıvı cam" görünümü kazandırıyoruz. Kusursuz yansımayı test etmek için inceleme ışığını kaportada gezdirin.</p>
+    </div>
+  </section>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hero = document.getElementById('glossHero');
+        if(!hero) return;
+
+        const updateLight = (clientX, clientY) => {
+            const rect = hero.getBoundingClientRect();
+            let x = clientX - rect.left;
+            let y = clientY - rect.top;
+            hero.style.setProperty('--x', x + 'px');
+            hero.style.setProperty('--y', y + 'px');
+        };
+
+        // Center default
+        const rect = hero.getBoundingClientRect();
+        hero.style.setProperty('--x', (rect.width/2) + 'px');
+        hero.style.setProperty('--y', (rect.height/2) + 'px');
+
+        hero.addEventListener('mousemove', (e) => updateLight(e.clientX, e.clientY));
+        hero.addEventListener('touchmove', (e) => {
+            updateLight(e.touches[0].clientX, e.touches[0].clientY);
+        }, {passive: true});
+    });
+  </script>
 <?php else : ?>
   <!-- NORMAL PAGE HERO -->
   <section class="page-hero">
