@@ -195,6 +195,22 @@ document.addEventListener('DOMContentLoaded', () => {
       steps.forEach((s,i) => s.classList.toggle('active', i===4));
     }
   });
+  // MAGIC LASER JS
+  const magicWrap = document.querySelector('.magic-wrap');
+  if (magicWrap) {
+    const updateMask = (clientX, clientY) => {
+      const rect = magicWrap.getBoundingClientRect();
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
+      magicWrap.style.setProperty('--x', `${x}px`);
+      magicWrap.style.setProperty('--y', `${y}px`);
+    };
+
+    magicWrap.addEventListener('mousemove', (e) => updateMask(e.clientX, e.clientY));
+    magicWrap.addEventListener('touchmove', (e) => {
+      updateMask(e.touches[0].clientX, e.touches[0].clientY);
+    }, {passive: true});
+  }
 });
 </script>
 </body>

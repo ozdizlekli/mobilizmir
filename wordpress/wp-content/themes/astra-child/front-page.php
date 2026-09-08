@@ -112,6 +112,20 @@ get_header(); ?>
   </div>
 </section>
 
+<!-- ============ SİHİRLİ LAZER ============ -->
+<section class="magic-section">
+  <div class="wrap">
+    <h2 class="serif">Farkı Kendi Ellerinizle Hissedin</h2>
+    <p>Fare imlecini veya parmağınızı aracın üzerinde gezdirerek kusursuz değişimi keşfedin.</p>
+    
+    <div class="magic-wrap">
+      <div class="magic-dirty"></div>
+      <div class="magic-clean"></div>
+      <div class="magic-ring"></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ GALERİ ============ -->
 <section id="galeri">
   <div class="wrap">

@@ -665,3 +665,82 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
   .story-step h3 { font-size: 2rem; }
   .story-step p { font-size: 1rem; }
 }
+
+
+/* ============ SİHİRLİ LAZER (MAGIC MASK) ============ */
+.magic-section {
+  padding: 80px 20px;
+  background: var(--ink);
+  text-align: center;
+}
+.magic-section h2 {
+  color: var(--gold-bright);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 15px;
+}
+.magic-section p {
+  color: var(--cream);
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+.magic-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 16/9;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: crosshair;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  border: 1px solid var(--line);
+  /* Default center position before mousemove */
+  --x: 50%;
+  --y: 50%;
+}
+.magic-dirty, .magic-clean {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url('assets/images/magic-car.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.magic-dirty {
+  /* Araci kodla daha da kirli ve soluk yapiyoruz */
+  filter: grayscale(30%) sepia(40%) blur(1px) contrast(0.8) brightness(0.7);
+  z-index: 1;
+}
+.magic-clean {
+  /* Ayni gorseli kodla cilalanmis ve parliyor yapiyoruz */
+  filter: contrast(1.2) saturate(1.4) brightness(1.2);
+  z-index: 2;
+  /* Fare imlecinin oldugu yeri (yaricap 150px) gosteren maske */
+  -webkit-mask-image: radial-gradient(circle 180px at var(--x) var(--y), black 0%, rgba(0,0,0,0.8) 40%, transparent 100%);
+  mask-image: radial-gradient(circle 180px at var(--x) var(--y), black 0%, rgba(0,0,0,0.8) 40%, transparent 100%);
+}
+.magic-ring {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  width: 360px; height: 360px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid rgba(212,175,55,0.3);
+  box-shadow: 0 0 30px rgba(212,175,55,0.4), inset 0 0 30px rgba(212,175,55,0.2);
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.magic-wrap:hover .magic-ring {
+  opacity: 1;
+}
+
+@media(max-width: 768px) {
+  .magic-wrap { aspect-ratio: 4/3; }
+  .magic-clean {
+    -webkit-mask-image: radial-gradient(circle 100px at var(--x) var(--y), black 0%, transparent 100%);
+    mask-image: radial-gradient(circle 100px at var(--x) var(--y), black 0%, transparent 100%);
+  }
+  .magic-ring { width: 200px; height: 200px; }
+}
