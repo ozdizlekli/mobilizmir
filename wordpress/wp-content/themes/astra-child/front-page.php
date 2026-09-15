@@ -5,133 +5,24 @@
 get_header(); ?>
 
 <!-- ============ HERO ============ -->
-<section class="hero" style="position: relative; background: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero-main.jpg') center/cover; padding: 60px 0 80px 0; display: flex; align-items: center;">
-  
-  <!-- Koyu katman (Yazıların okunması için) -->
-  <div style="position: absolute; inset: 0; background: rgba(11,11,10,0.75); z-index: 1;"></div>
-
-  <div class="wrap" style="position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: flex-start; width: 100%; gap: 40px; margin-top: 10px; padding-top: 0;">
-    
-    <!-- SOL TARAF: Mevcut Karşılama Ekranı (Yazılar) -->
-    <div class="hero-copy" style="flex: 1 1 50%; max-width: 600px; padding-top: 0; margin-top: 0;">
-      <div class="kicker" style="color: var(--gold-bright); font-size: 11.5px; margin-bottom: 12px; letter-spacing: 1px;">İzmir'in yerinde araç bakım servisi</div>
-      <h1 class="serif" style="color: #fff; margin-bottom: 10px; font-size: clamp(1.8rem, 3vw, 2.8rem);">Aracınız neredeyse, ekibimiz oraya gelir.</h1>
-      <p class="lede" style="color: #ccc; margin-bottom: 20px; font-size: 13.5px; max-width: 50ch; line-height: 1.5;">Evinizde ya da iş yerinizde; koltuk yıkamadan boyasız göçük düzeltmeye kadar, tam donanımlı mobil ekibimizle showroom kalitesinde bakım.</p>
-      <div class="hero-actions" style="margin-bottom: 20px;">
-        <a href="https://wa.me/905533459073?text=Merhaba%2C%20anasayfan%C4%B1z%20%C3%BCzerinden%20ula%C5%9F%C4%B1yorum.%20Arac%C4%B1m%20i%C3%A7in%20genel%20bir%20randevu%20talep%20etmek%20istiyorum." class="btn solid">Randevu Talep Et</a>
-        <a href="#hizmetler" class="btn">Hizmetleri Gör</a>
-      </div>
-      <style>
-/* Proportional scale down for the Hero Configurator */
-.hero-configurator { margin-top: -35px !important; }
-.hero-configurator h2.serif { font-size: 1.3rem !important; }
-.hero-configurator p { font-size: 0.75rem !important; }
-.hero-configurator h3 { font-size: 0.8rem !important; margin-bottom: 8px !important; }
-.hero-configurator .car-type-btn { flex: 0 0 70px !important; height: 55px !important; padding: 6px !important; }
-.hero-configurator .car-type-btn svg { transform: scale(0.8); margin-bottom: 2px !important; }
-.hero-configurator .car-type-btn span { font-size: 0.65rem !important; }
-.hero-configurator .issue-btn { padding: 8px 6px !important; font-size: 0.7rem !important; }
-#hero-whatsapp-btn { padding: 10px 0 !important; font-size: 13px !important; }
-</style>
-<style>.hero-stats b { font-size: 1.6rem !important; } .hero-stats span.lbl { font-size: 9px !important; letter-spacing: 0.5px !important; margin-top: 5px !important; } .hero-actions .btn { font-size: 12.5px !important; padding: 10px 20px !important; }</style>
-      <div class="hero-stats">
-        <div><b><span class="counter-val" data-target="500">0</span>+</b><span class="lbl">Memnun Müşteri</span></div>
-        <div><b><span class="counter-val" data-target="5">0</span></b><span class="lbl">Yıllık Tecrübe</span></div>
-        <div><b><span class="counter-val" data-target="12">0</span></b><span class="lbl">İlçede Hizmet</span></div>
-        <div><b>%<span class="counter-val" data-target="98">0</span></b><span class="lbl">Memnuniyet</span></div>
-      </div>
-    
-<div class="area-strip" style="margin-top: 25px; position: absolute; left: calc(50% - 50vw); width: 100vw; z-index: 0; background: rgba(11,11,10,0.5); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border-top: 1px solid rgba(212,175,55,0.2); border-bottom: 1px solid rgba(212,175,55,0.2); padding: 6px 0; overflow: hidden;">
-  <style>
-/* Proportional scale down for the Hero Configurator */
-.hero-configurator { margin-top: -35px !important; }
-.hero-configurator h2.serif { font-size: 1.3rem !important; }
-.hero-configurator p { font-size: 0.75rem !important; }
-.hero-configurator h3 { font-size: 0.8rem !important; margin-bottom: 8px !important; }
-.hero-configurator .car-type-btn { flex: 0 0 70px !important; height: 55px !important; padding: 6px !important; }
-.hero-configurator .car-type-btn svg { transform: scale(0.8); margin-bottom: 2px !important; }
-.hero-configurator .car-type-btn span { font-size: 0.65rem !important; }
-.hero-configurator .issue-btn { padding: 8px 6px !important; font-size: 0.7rem !important; }
-#hero-whatsapp-btn { padding: 10px 0 !important; font-size: 13px !important; }
-</style>
-<style>.area-track span { font-size: 10px !important; padding: 0 18px !important; text-transform: uppercase; letter-spacing: 1px; }</style>
-  <div class="area-track">
-    <span><b>Bornova</b></span><span><b>Karşıyaka</b></span><span><b>Alsancak</b></span><span><b>Bayraklı</b></span><span><b>Buca</b></span><span><b>Çeşme</b></span><span><b>Karabağlar</b></span><span><b>Gaziemir</b></span>
-    <span><b>Bornova</b></span><span><b>Karşıyaka</b></span><span><b>Alsancak</b></span><span><b>Bayraklı</b></span><span><b>Buca</b></span><span><b>Çeşme</b></span><span><b>Karabağlar</b></span><span><b>Gaziemir</b></span>
+<section class="home-hero-wrap">
+  <div class="home-hero-bg">
+    <video autoplay loop muted playsinline poster="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero-main.jpg">
+      <source src="https://videos.pexels.com/video-files/5208643/5208643-uhd_2560_1440_30fps.mp4" type="video/mp4">
+    </video>
   </div>
-</div>
-</div>
-
-    <!-- SAĞ TARAF: Konfigüratör -->
-    <div class="hero-configurator-container" style="flex: 1 1 50%; display: flex; justify-content: flex-end;">
-      <div class="hero-configurator" style="background: rgba(18,18,18,0.6); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 20px; border-radius: 12px; border: 1px solid rgba(212,175,55,0.3); box-shadow: 0 20px 50px rgba(0,0,0,0.7); width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 12px;">
-        
-        <div>
-          <h2 class="serif" style="color: var(--gold-bright); font-size: 1.6rem; margin-bottom: 5px;">Paketinizi Oluşturun</h2>
-          <p style="color: var(--stone); font-size: 0.9rem; line-height: 1.4; margin: 0;">Araç tipini ve ihtiyacınız olan hizmetleri seçerek hızlıca fiyat teklifi alın.</p>
-        </div>
-
-        <div>
-          <h3 style="color: var(--cream); font-family: 'Montserrat', sans-serif; font-size: 0.95rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">1. Araç Tipi</h3>
-          <div class="conf-group car-type-group" style="display: flex; overflow-x: auto; gap: 10px; padding-bottom: 10px; scrollbar-width: none;">
-            
-            <div class="conf-btn car-type-btn" data-name="Motosiklet" style="flex: 0 0 90px; padding: 10px; height: 65px;">
-              <svg width="40" height="20" viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom: 5px;"><circle cx="25" cy="35" r="9"></circle><circle cx="75" cy="35" r="9"></circle><path d="M 25,35 L 40,15 L 60,15 L 75,35 M 40,15 L 35,5 L 45,5 M 60,15 L 70,10"></path></svg>
-              <span style="font-size: 0.75rem;">Motosiklet</span>
-            </div>
-
-            <div class="conf-btn car-type-btn" data-name="Hatchback" style="flex: 0 0 90px; padding: 10px; height: 65px;">
-              <svg width="40" height="20" viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom: 5px;"><path d="M 10,40 L 10,25 L 30,15 L 70,15 L 90,25 L 90,40 Z"></path><circle cx="25" cy="40" r="8"></circle><circle cx="75" cy="40" r="8"></circle></svg>
-              <span style="font-size: 0.75rem;">Hatchback</span>
-            </div>
-
-            <div class="conf-btn car-type-btn" data-name="Spor / Coupe" style="flex: 0 0 90px; padding: 10px; height: 65px;">
-              <svg width="40" height="20" viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom: 5px;"><path d="M 5,40 L 15,25 L 45,15 L 75,15 L 95,30 L 95,40 Z"></path><circle cx="25" cy="40" r="8"></circle><circle cx="75" cy="40" r="8"></circle></svg>
-              <span style="font-size: 0.75rem;">Coupe</span>
-            </div>
-
-            <div class="conf-btn car-type-btn" data-name="Sedan" style="flex: 0 0 90px; padding: 10px; height: 65px;">
-              <svg width="40" height="20" viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom: 5px;"><path d="M 5,40 L 5,25 L 25,25 L 45,10 L 75,10 L 95,25 L 95,40 Z"></path><circle cx="20" cy="40" r="8"></circle><circle cx="80" cy="40" r="8"></circle></svg>
-              <span style="font-size: 0.75rem;">Sedan</span>
-            </div>
-
-            <div class="conf-btn car-type-btn" data-name="SUV / Arazi" style="flex: 0 0 90px; padding: 10px; height: 65px;">
-              <svg width="40" height="20" viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom: 5px;"><path d="M 5,40 L 5,20 L 25,20 L 40,5 L 85,5 L 95,20 L 95,40 Z"></path><circle cx="20" cy="40" r="8"></circle><circle cx="80" cy="40" r="8"></circle></svg>
-              <span style="font-size: 0.75rem;">SUV</span>
-            </div>
-
-            <div class="conf-btn car-type-btn" data-name="Pick-up" style="flex: 0 0 90px; padding: 10px; height: 65px;">
-              <svg width="40" height="20" viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom: 5px;"><path d="M 5,40 L 5,25 L 25,25 L 35,10 L 60,10 L 60,25 L 95,25 L 95,40 Z"></path><circle cx="20" cy="40" r="8"></circle><circle cx="80" cy="40" r="8"></circle></svg>
-              <span style="font-size: 0.75rem;">Pick-up</span>
-            </div>
-
-            <div class="conf-btn car-type-btn" data-name="VIP Minibüs" style="flex: 0 0 90px; padding: 10px; height: 65px;">
-              <svg width="40" height="20" viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom: 5px;"><path d="M 5,40 L 5,15 L 25,5 L 95,5 L 95,40 Z"></path><circle cx="25" cy="40" r="8"></circle><circle cx="75" cy="40" r="8"></circle></svg>
-              <span style="font-size: 0.75rem;">Minibüs</span>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h3 style="color: var(--cream); font-family: 'Montserrat', sans-serif; font-size: 0.95rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">2. Hizmetler</h3>
-          <div class="conf-group issues-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-            <div class="conf-btn issue-btn" data-name="Koltuk Yıkama & İç Detay" style="padding: 12px 10px; font-size: 0.8rem; height: auto;">Koltuk & İç Detay</div>
-            <div class="conf-btn issue-btn" data-name="Pasta Cila & Boya Koruma" style="padding: 12px 10px; font-size: 0.8rem; height: auto;">Pasta Cila & Boya</div>
-            <div class="conf-btn issue-btn" data-name="Far Temizliği" style="padding: 12px 10px; font-size: 0.8rem; height: auto;">Far Temizliği</div>
-            <div class="conf-btn issue-btn" data-name="Boyasız Göçük Düzeltme" style="padding: 12px 10px; font-size: 0.8rem; height: auto;">Göçük Düzeltme</div>
-            <div class="conf-btn issue-btn" data-name="Periyodik Bakım" style="padding: 12px 10px; font-size: 0.8rem; height: auto; grid-column: span 2;">Periyodik Bakım</div>
-          </div>
-        </div>
-
-        <div style="margin-top: 5px;">
-          <a href="#" id="hero-whatsapp-btn" class="btn" style="width: 100%; display: flex; align-items: center; justify-content: center; text-align: center; background: #25D366; color: #fff; border-color: #25D366; font-weight: bold; pointer-events: none; opacity: 0.5; padding: 15px 0;">WhatsApp'tan Teklif Al</a>
-        </div>
-
-      </div>
+  <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(11,11,10,0.5) 0%, rgba(11,11,10,0.9) 100%);"></div>
+  <div class="wrap" style="position:relative; z-index:2; text-align:center; padding-top: 15vh;">
+    <h1 style="color:#fff; font-size: clamp(3rem, 6vw, 5rem); text-shadow: 0 5px 20px rgba(0,0,0,0.8); margin-bottom:0;">Mobilİzmir</h1>
+    <div class="cursive-subtitle reveal">Premium Mobil Bakım</div>
+    <div class="hero-buttons reveal">
+        <a href="https://wa.me/905533459073?text=Merhaba,%20randevu%20almak%20istiyorum." class="btn primary" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Bizi Arayın
+        </a>
+        <a href="#hizmetler" class="btn secondary">Hizmetleri Görün</a>
     </div>
   </div>
-
-
 </section>
 
 <style>
@@ -232,23 +123,23 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="story-ui">
       <div class="story-step" data-step="1">
         <h3 class="serif">Gözleriniz yollarda.</h3>
-        <p>Zamanla sararan ve görüşü düşüren farlar... <strong>Far Temizliği</strong> ile gece sürüşünde ilk günkü netlik ve güvenliğe dönün.</p>
+        <p class="reveal">Zamanla sararan ve görüşü düşüren farlar... <strong>Far Temizliği</strong> ile gece sürüşünde ilk günkü netlik ve güvenliğe dönün.</p>
       </div>
       <div class="story-step" data-step="2">
         <h3 class="serif">Kusursuz parlaklık.</h3>
-        <p>Güneş yanıkları, matlaşma ve kılcal çizikler tarihe karışıyor. <strong>Pasta Cila</strong> ile showroom parlaklığına kavuşun.</p>
+        <p class="reveal">Güneş yanıkları, matlaşma ve kılcal çizikler tarihe karışıyor. <strong>Pasta Cila</strong> ile showroom parlaklığına kavuşun.</p>
       </div>
       <div class="story-step" data-step="3">
         <h3 class="serif">Orijinalliğe dokunmadan.</h3>
-        <p>Dolu hasarı veya park ezikleri canınızı sıkmasın. <strong>Boyasız Göçük Düzeltme (PDR)</strong> ile aracınızın değeri korunur.</p>
+        <p class="reveal">Dolu hasarı veya park ezikleri canınızı sıkmasın. <strong>Boyasız Göçük Düzeltme (PDR)</strong> ile aracınızın değeri korunur.</p>
       </div>
       <div class="story-step" data-step="4">
         <h3 class="serif">Şimdi içeri giriyoruz.</h3>
-        <p>Vakumlu ekstraksiyon teknolojisi ile <strong>Koltuk Yıkama</strong>. Aracınızın içindeki tüm kir, bakteri ve kokular kapınızda yok edilir.</p>
+        <p class="reveal">Vakumlu ekstraksiyon teknolojisi ile <strong>Koltuk Yıkama</strong>. Aracınızın içindeki tüm kir, bakteri ve kokular kapınızda yok edilir.</p>
       </div>
       <div class="story-step" data-step="5">
         <h3 class="serif">Motorunuz bize emanet.</h3>
-        <p>Sadece görünüm değil, performans da önemli. Filtre, yağ ve sıvı değişimlerini içeren <strong>Periyodik Bakım</strong> yerinde yapılır.</p>
+        <p class="reveal">Sadece görünüm değil, performans da önemli. Filtre, yağ ve sıvı değişimlerini içeren <strong>Periyodik Bakım</strong> yerinde yapılır.</p>
       </div>
     </div>
     
@@ -259,31 +150,31 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- ============ HİZMETLER ============ -->
 <section id="hizmetler">
   <div class="wrap">
-    <div class="folio"><span class="num">01</span><div class="rule"></div><h2 class="serif">Hizmetlerimiz</h2></div>
+    <div class="folio reveal"><span class="num">01</span><div class="rule"></div><h2 class="serif">Hizmetlerimiz</h2></div>
 
     <div class="service-row">
       <span class="idx">01</span>
-      <div class="service-main"><h3 class="serif">Koltuk Yıkama</h3><p>Vakumlu ekipmanla derinlemesine leke ve koku giderme; kumaş, deri ve alcantara döşemeye uygun.</p></div>
+      <div class="service-main"><h3 class="serif">Koltuk Yıkama</h3><p class="reveal">Vakumlu ekipmanla derinlemesine leke ve koku giderme; kumaş, deri ve alcantara döşemeye uygun.</p></div>
       <div class="service-price"><div class="from">başlangıç</div><div class="amt serif">750 ₺</div><a href="/koltuk-yikama/">Detaylı bilgi</a></div>
     </div>
     <div class="service-row">
       <span class="idx">02</span>
-      <div class="service-main"><h3 class="serif">Pasta Cila</h3><p>Kılcal çizik giderme, boya koruma ve showroom parlaklığı — tek/çift/üç aşamalı seçenekler.</p></div>
+      <div class="service-main"><h3 class="serif">Pasta Cila</h3><p class="reveal">Kılcal çizik giderme, boya koruma ve showroom parlaklığı — tek/çift/üç aşamalı seçenekler.</p></div>
       <div class="service-price"><div class="from">başlangıç</div><div class="amt serif">1.800 ₺</div><a href="/pasta-cila/">Detaylı bilgi</a></div>
     </div>
     <div class="service-row">
       <span class="idx">03</span>
-      <div class="service-main"><h3 class="serif">Far Temizliği</h3><p>Sararmış farları saydamlaştırma, UV koruma kaplaması ve gece görüşünü artırma.</p></div>
+      <div class="service-main"><h3 class="serif">Far Temizliği</h3><p class="reveal">Sararmış farları saydamlaştırma, UV koruma kaplaması ve gece görüşünü artırma.</p></div>
       <div class="service-price"><div class="from">başlangıç</div><div class="amt serif">450 ₺</div><a href="/far-temizligi/">Detaylı bilgi</a></div>
     </div>
     <div class="service-row">
       <span class="idx">04</span>
-      <div class="service-main"><h3 class="serif">Boyasız Göçük Düzeltme (PDR)</h3><p>Orijinal boyaya dokunmadan göçük onarımı; aracın değerini ve garantisini korur.</p></div>
+      <div class="service-main"><h3 class="serif">Boyasız Göçük Düzeltme (PDR)</h3><p class="reveal">Orijinal boyaya dokunmadan göçük onarımı; aracın değerini ve garantisini korur.</p></div>
       <div class="service-price"><div class="from">başlangıç</div><div class="amt serif">1.200 ₺</div><a href="/boyasiz-gocuk-duzeltme/">Detaylı bilgi</a></div>
     </div>
     <div class="service-row">
       <span class="idx">05</span>
-      <div class="service-main"><h3 class="serif">Periyodik Bakım</h3><p>Sıvı, filtre ve rutin kontrol paketleri — servise gitmeden yerinizde.</p></div>
+      <div class="service-main"><h3 class="serif">Periyodik Bakım</h3><p class="reveal">Sıvı, filtre ve rutin kontrol paketleri — servise gitmeden yerinizde.</p></div>
       <div class="service-price"><div class="from">başlangıç</div><div class="amt serif">900 ₺</div><a href="/periyodik-bakim/">Detaylı bilgi</a></div>
     </div>
   </div>
@@ -320,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <section class="xray-section" style="padding: 0; background: var(--ink); overflow: hidden; position: relative;">
   
   <div style="position: relative; width: 100%; text-align: center; padding-top: 60px; padding-bottom: 20px; z-index: 10; background: var(--ink);">
-    <div class="folio" style="margin-bottom: 0 !important; gap: 10px !important;"><span class="num">02</span><h2 class="serif">Aracınızı Santim Santim Tanıyoruz</h2><p>Hangi bölgede hangi teknolojik uygulamayı yaptığımızı keşfetmek için parlayan noktalara dokunun.</p></div>
+    <div class="folio reveal" style="margin-bottom: 0 !important; gap: 10px !important;"><span class="num">03</span><h2 class="serif">Aracınızı Santim Santim Tanıyoruz</h2><p class="reveal">Hangi bölgede hangi teknolojik uygulamayı yaptığımızı keşfetmek için parlayan noktalara dokunun.</p></div>
   </div>
 
   <div class="xray-crop-wrapper">
@@ -361,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- ============ GALERİ ============ -->
 <section id="galeri" style="padding-top: 100px;">
   <div class="wrap" style="max-width: 1000px; margin: 0 auto;">
-    <div class="folio"><span class="num">03</span><div class="rule"></div><h2 class="serif">Uygulama Galerisi</h2><p>Hizmet kalitemizi, hiçbir filtre olmadan saf ve şeffaf karelerle keşfedin.</p></div>
+    <div class="folio reveal"><span class="num">03</span><div class="rule"></div><h2 class="serif">Uygulama Galerisi</h2><p class="reveal">Hizmet kalitemizi, hiçbir filtre olmadan saf ve şeffaf karelerle keşfedin.</p></div>
     
     <?php 
     $images = [
@@ -419,11 +310,11 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- ============ SÜREÇ ============ -->
 <section class="alt">
   <div class="wrap">
-    <div class="folio"><span class="num">04</span><div class="rule"></div><h2 class="serif">Nasıl çalışıyoruz</h2></div>
+    <div class="folio reveal"><span class="num">04</span><div class="rule"></div><h2 class="serif">Nasıl çalışıyoruz</h2></div>
     <div class="process">
-      <div><div class="step-num serif">1</div><h4>WhatsApp'tan yazın</h4><p>Aracınızın modelini ve talebiniz olan hizmeti iletin, size uygun paketi ve fiyatı anında öğrenin.</p></div>
-      <div><div class="step-num serif">2</div><h4>Adres ve saat belirleyin</h4><p>Ev, iş yeri veya dilediğiniz nokta — size en uygun gün ve saati birlikte planlayalım.</p></div>
-      <div><div class="step-num serif">3</div><h4>Ekibimiz gelsin</h4><p>Tam donanımlı aracımızla adresinize gelir, işlemi tamamlar ve öncesi/sonrası fotoğraflayıp size göndeririz.</p></div>
+      <div><div class="step-num serif">1</div><h4>WhatsApp'tan yazın</h4><p class="reveal">Aracınızın modelini ve talebiniz olan hizmeti iletin, size uygun paketi ve fiyatı anında öğrenin.</p></div>
+      <div><div class="step-num serif">2</div><h4>Adres ve saat belirleyin</h4><p class="reveal">Ev, iş yeri veya dilediğiniz nokta — size en uygun gün ve saati birlikte planlayalım.</p></div>
+      <div><div class="step-num serif">3</div><h4>Ekibimiz gelsin</h4><p class="reveal">Tam donanımlı aracımızla adresinize gelir, işlemi tamamlar ve öncesi/sonrası fotoğraflayıp size göndeririz.</p></div>
     </div>
   </div>
 </section>
@@ -431,14 +322,14 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- ============ NEDEN BİZ ============ -->
 <section>
   <div class="wrap">
-    <div class="folio"><span class="num">05</span><div class="rule"></div><h2 class="serif">Neden Mobilİzmir</h2></div>
+    <div class="folio reveal"><span class="num">05</span><div class="rule"></div><h2 class="serif">Neden Mobilİzmir</h2></div>
     <div class="why-list">
-      <div><h4>Sigortalı hizmet</h4><p>Uygulama sırasında oluşabilecek olası hasarlara karşı sorumluluk sigortamız bulunur.</p></div>
-      <div><h4>Orijinal ürünler</h4><p>Menzerna, Koch Chemie, Gyeon ve 3M gibi sektörün önde gelen markalarını kullanıyoruz.</p></div>
-      <div><h4>Sertifikalı ekip</h4><p>Detailing ve PDR alanında eğitim almış, deneyimli teknisyenlerle çalışıyoruz.</p></div>
-      <div><h4>Şeffaf fiyatlandırma</h4><p>Randevudan önce net fiyat veriyoruz; sürpriz ek ücret uygulamıyoruz.</p></div>
-      <div><h4>Aynı gün randevu</h4><p>Uygunluk durumuna göre aynı gün veya ertesi gün hizmet verebiliyoruz.</p></div>
-      <div><h4>Memnuniyet garantisi</h4><p>Sonuçtan memnun kalmazsanız, ücretsiz olarak tekrar uygularız.</p></div>
+      <div><h4>Sigortalı hizmet</h4><p class="reveal">Uygulama sırasında oluşabilecek olası hasarlara karşı sorumluluk sigortamız bulunur.</p></div>
+      <div><h4>Orijinal ürünler</h4><p class="reveal">Menzerna, Koch Chemie, Gyeon ve 3M gibi sektörün önde gelen markalarını kullanıyoruz.</p></div>
+      <div><h4>Sertifikalı ekip</h4><p class="reveal">Detailing ve PDR alanında eğitim almış, deneyimli teknisyenlerle çalışıyoruz.</p></div>
+      <div><h4>Şeffaf fiyatlandırma</h4><p class="reveal">Randevudan önce net fiyat veriyoruz; sürpriz ek ücret uygulamıyoruz.</p></div>
+      <div><h4>Aynı gün randevu</h4><p class="reveal">Uygunluk durumuna göre aynı gün veya ertesi gün hizmet verebiliyoruz.</p></div>
+      <div><h4>Memnuniyet garantisi</h4><p class="reveal">Sonuçtan memnun kalmazsanız, ücretsiz olarak tekrar uygularız.</p></div>
     </div>
   </div>
 </section>
@@ -446,16 +337,16 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- ============ YORUMLAR ============ -->
 <section class="alt">
   <div class="wrap">
-    <div class="folio"><span class="num">06</span><div class="rule"></div><h2 class="serif">Müşterilerimiz anlatıyor</h2></div>
+    <div class="folio reveal"><span class="num">06</span><div class="rule"></div><h2 class="serif">Müşterilerimiz anlatıyor</h2></div>
     <div class="reviews">
       <div class="review-feat">
         <q class="serif">Aracımı evime kadar gelip yıkadılar, gerçekten çok memnun kaldım — zamanımı boşa harcamadım.</q>
         <cite>Ahmet Y. — Bornova, Google Yorumu</cite>
       </div>
       <div class="review-list">
-        <div><div><p>PDR işlemi kusursuzdu, boyaya dokunulmadı bile.</p><cite>Elif K. — Karşıyaka</cite></div><span class="stars">★★★★★</span></div>
-        <div><div><p>Pasta cila sonrası araç showroom gibi oldu.</p><cite>Mert D. — Alsancak</cite></div><span class="stars">★★★★★</span></div>
-        <div><div><p>Randevu saatine tam uydular, çok profesyoneller.</p><cite>Selin A. — Bayraklı</cite></div><span class="stars">★★★★★</span></div>
+        <div><div><p class="reveal">PDR işlemi kusursuzdu, boyaya dokunulmadı bile.</p><cite>Elif K. — Karşıyaka</cite></div><span class="stars">★★★★★</span></div>
+        <div><div><p class="reveal">Pasta cila sonrası araç showroom gibi oldu.</p><cite>Mert D. — Alsancak</cite></div><span class="stars">★★★★★</span></div>
+        <div><div><p class="reveal">Randevu saatine tam uydular, çok profesyoneller.</p><cite>Selin A. — Bayraklı</cite></div><span class="stars">★★★★★</span></div>
       </div>
     </div>
   </div>
@@ -464,10 +355,10 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- ============ HAKKIMIZDA ============ -->
 <section id="hakkimizda">
   <div class="wrap" style="max-width: 1000px; margin: 0 auto;">
-    <div class="folio">
+    <div class="folio reveal">
       <span class="num">07</span>
       <h2 class="serif">İzmir'de araç sahiplerinin zamanına değer veriyoruz</h2>
-      <p>2018'den bu yana sanayi ve serviste bekleme derdine son veriyoruz. Tam donanımlı mobil ekibimiz, evinize veya iş yerinize gelerek premium kalitede bakım sunuyor. Bugüne kadar 500'den fazla araca hizmet verdik.</p>
+      <p class="reveal">2018'den bu yana sanayi ve serviste bekleme derdine son veriyoruz. Tam donanımlı mobil ekibimiz, evinize veya iş yerinize gelerek premium kalitede bakım sunuyor. Bugüne kadar 500'den fazla araca hizmet verdik.</p>
     </div>
     <div style="text-align: center; margin-top: 20px;">
       <a href="/hakkimizda/" class="btn solid">Hikayemizi okuyun</a>
@@ -478,23 +369,23 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- ============ SSS ============ -->
 <section>
   <div class="wrap" style="max-width:760px;">
-    <div class="folio"><span class="num">08</span><div class="rule"></div><h2 class="serif">Sıkça sorulanlar</h2></div>
+    <div class="folio reveal"><span class="num">08</span><div class="rule"></div><h2 class="serif">Sıkça sorulanlar</h2></div>
     <div class="faq">
       <div class="faq-item open">
         <button class="faq-q">Mobil hizmet nasıl çalışıyor?<span class="mark">+</span></button>
-        <div class="faq-a"><p>WhatsApp üzerinden randevu oluşturduğunuzda, belirlediğiniz gün ve saatte donanımlı aracımızla adresinize geliyoruz.</p></div>
+        <div class="faq-a"><p class="reveal">WhatsApp üzerinden randevu oluşturduğunuzda, belirlediğiniz gün ve saatte donanımlı aracımızla adresinize geliyoruz.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">PDR aracımın orijinalliğini bozar mı?<span class="mark">+</span></button>
-        <div class="faq-a"><p>Hayır, PDR işlemi orijinal boyaya dokunmadan yapıldığı için aracınızın değerini korur.</p></div>
+        <div class="faq-a"><p class="reveal">Hayır, PDR işlemi orijinal boyaya dokunmadan yapıldığı için aracınızın değerini korur.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Randevumu nasıl değiştirebilirim?<span class="mark">+</span></button>
-        <div class="faq-a"><p>Randevunuzdan en az 24 saat önce WhatsApp hattımızdan bize ulaşarak değişiklik yapabilirsiniz.</p></div>
+        <div class="faq-a"><p class="reveal">Randevunuzdan en az 24 saat önce WhatsApp hattımızdan bize ulaşarak değişiklik yapabilirsiniz.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Ödemeyi nasıl yapabilirim?<span class="mark">+</span></button>
-        <div class="faq-a"><p>Nakit, kredi kartı (mobil POS) veya havale ile işlem sonunda ödeme alabilirsiniz.</p></div>
+        <div class="faq-a"><p class="reveal">Nakit, kredi kartı (mobil POS) veya havale ile işlem sonunda ödeme alabilirsiniz.</p></div>
       </div>
     </div>
   </div>

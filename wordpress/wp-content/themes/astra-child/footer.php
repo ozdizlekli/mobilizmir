@@ -16,51 +16,61 @@ if ( ! defined( 'ABSPATH' ) ) {
   </div>
 </div>
 
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <div class="logo" style="margin-bottom:14px;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/mobilizmir-logo-new.jpg" alt="Mobilİzmir" style="height: 125px; width: auto; mix-blend-mode: lighten;"></div>
-        <p style="color:var(--stone);font-size:13px;max-width:32ch;">İzmir genelinde adrese teslim premium mobil araç bakım hizmeti.</p>
-      </div>
-      <div>
-        <h5>HİZMETLER</h5>
-        <ul>
-          <li><a href="/koltuk-yikama/">Koltuk Yıkama</a></li>
-          <li><a href="/pasta-cila/">Pasta Cila</a></li>
-          <li><a href="/far-temizligi/">Far Temizliği</a></li>
-          <li><a href="/boyasiz-gocuk-duzeltme/">PDR</a></li>
-          <li><a href="/periyodik-bakim/">Periyodik Bakım</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>KURUMSAL</h5>
-        <ul>
-          <li><a href="/hakkimizda/">Hakkımızda</a></li>
-          <li><a href="/uygulamalarimiz-galeri/">Galeri</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/sss/">SSS</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>İLETİŞİM</h5>
-        <ul>
-          <li><a href="tel:+905533459073">0553 345 90 73</a></li>
-          <li><a href="mailto:iletisim@mobilizmir.com">iletisim@mobilizmir.com</a></li>
-          <li><a href="/iletisim/">İzmir, Türkiye</a></li>
-        </ul>
-        <h5 style="margin-top: 24px;">BİZİ TAKİP EDİN</h5>
-        <div style="display:flex; gap:12px; margin-top:8px;">
-          <a href="https://instagram.com" target="_blank" aria-label="Instagram" style="color:var(--gold);"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+<div class="site-footer-wrapper">
+    <div class="floating-footer">
+        <div class="ff-top">
+            <div class="ff-col">
+                <a href="/" style="display:inline-block; margin-bottom:15px;">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png" alt="Mobilİzmir Logo" style="height:40px; width:auto;">
+                </a>
+                <p>Mobilİzmir olarak İzmir'de PDR, pasta cila, seramik kaplama ve detaylı temizlik alanında profesyonel yerinde hizmet çözümleri sunuyoruz.</p>
+                <div class="ff-socials">
+                    <a href="#"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                </div>
+            </div>
+            <div class="ff-col">
+                <h4>Firma</h4>
+                <ul>
+                    <li><a href="/hakkimizda/">Hakkımızda</a></li>
+                    <li><a href="/uygulamalarimiz/">Uygulamalarımız</a></li>
+                    <li><a href="/iletisim/">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="ff-col">
+                <h4>Hizmetler</h4>
+                <ul>
+                    <li><a href="/hizmetlerimiz/koltuk-yikama/">Koltuk Yıkama</a></li>
+                    <li><a href="/hizmetlerimiz/pasta-cila/">Pasta Cila</a></li>
+                    <li><a href="/hizmetlerimiz/far-temizligi/">Far Temizliği</a></li>
+                    <li><a href="/hizmetlerimiz/gocuk-duzeltme/">Göçük Düzeltme</a></li>
+                    <li><a href="/hizmetlerimiz/periyodik-bakim/">Periyodik Bakım</a></li>
+                </ul>
+            </div>
+            <div class="ff-col">
+                <h4>İletişim</h4>
+                <p>İzmir / Türkiye<br><br>info@mobilizmir.com<br><br>+90 553 345 90 73</p>
+            </div>
         </div>
-      </div>
+        <div class="ff-bottom">
+            <div class="copyright">© 2026 Mobilİzmir. All rights reserved.</div>
+            <div class="agency">Designed with premium aesthetics.</div>
+        </div>
     </div>
-    <div class="foot-bottom">
-      <span>© <?php echo date('Y'); ?> Mobilİzmir — Tüm hakları saklıdır.</span>
-      <span><a href="/gizlilik-politikasi/" style="color:inherit;text-decoration:underline;">Gizlilik Politikası · KVKK</a></span>
-    </div>
-  </div>
-</footer>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+});
+</script>
 
 <a href="https://wa.me/905533459073?text=Merhaba%2C%20web%20siteniz%20%C3%BCzerinden%20ula%C5%9F%C4%B1yorum.%20H%C4%B1zl%C4%B1ca%20destek%20almak%20istiyorum." class="wa-fab" aria-label="WhatsApp">
   <svg viewBox="0 0 32 32"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.132 6.744 3.054 9.378L1.054 31.28l6.156-1.97C9.776 30.962 12.766 32 16.004 32 24.826 32 32 24.826 32 16.004 32 7.176 24.826 0 16.004 0zm9.084 22.618c-.378 1.064-2.202 1.98-3.038 2.1-.836.12-1.91.17-3.08-.194-.708-.222-1.616-.516-2.78-1.014-4.882-2.088-8.066-7.024-8.31-7.352-.244-.328-1.996-2.654-1.996-5.062 0-2.408 1.264-3.594 1.712-4.084.45-.49 .978-.612 1.302-.612.328 0 .652.004.938.016.302.014.706-.114 1.104.842.408.978 1.386 3.386 1.508 3.63.12.244.202.53.04.856-.162.328-.244.53-.49.816-.244.286-.514.64-.734.858-.244.244-.498.508-.214.998.284.49 1.264 2.084 2.714 3.376 1.866 1.662 3.436 2.176 3.926 2.42.49.244.776.204 1.062-.122.284-.328 1.224-1.428 1.55-1.918.326-.49.652-.408 1.1-.244.45.162 2.854 1.346 3.344 1.59.49.244.816.368.936.57.122.204.122 1.164-.256 2.228z"/></svg>
