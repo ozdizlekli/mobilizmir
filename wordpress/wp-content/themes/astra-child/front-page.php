@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </section>
 
 <!-- ============ NEDEN BİZ ============ -->
-<section>
+<section class="light">
   <div class="wrap">
     <div class="folio reveal"><span class="num">05</span><div class="rule"></div><h2 class="serif">Neden Mobilİzmir</h2></div>
     <div class="why-list">
@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </section>
 
 <!-- ============ HAKKIMIZDA ============ -->
-<section id="hakkimizda">
+<section id="hakkimizda" class="light">
   <div class="wrap" style="max-width: 1000px; margin: 0 auto;">
     <div class="folio reveal">
       <span class="num">07</span>
@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </section>
 
 <!-- ============ SSS ============ -->
-<section>
+<section class="dark">
   <div class="wrap" style="max-width:760px;">
     <div class="folio reveal"><span class="num">08</span><div class="rule"></div><h2 class="serif">Sıkça sorulanlar</h2></div>
     <div class="faq">

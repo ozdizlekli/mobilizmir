@@ -1957,3 +1957,60 @@ body.admin-bar #mobil-nav-master.bosso-header {
     transform: scale(1.1);
     background-color: #20b858;
 }
+
+
+/* ============ LIGHT SECTIONS ============ */
+section.light {
+    background: #ffffff !important;
+    color: var(--ink) !important;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+section.light h1, 
+section.light h2, 
+section.light h3, 
+section.light h4, 
+section.light h5, 
+section.light h6 {
+    color: var(--ink) !important;
+    text-shadow: none !important;
+}
+section.light .folio h2 {
+    color: var(--ink) !important;
+}
+section.light p, 
+section.light .folio p, 
+section.light .faq-a p,
+section.light .why-list p,
+section.light .process p {
+    color: var(--stone-dim) !important;
+}
+section.light .btn.secondary {
+    background: var(--ink) !important;
+    color: #fff !important;
+}
+section.light .btn.secondary:hover {
+    background: var(--gold) !important;
+    color: #fff !important;
+}
+section.light .num {
+    color: var(--gold-bright) !important;
+}
+section.light .rule {
+    background: var(--gold-bright) !important;
+}
+section.light .review-feat q,
+section.light .review-list cite {
+    color: var(--ink) !important;
+}
+section.light .review-feat cite {
+    color: var(--stone-dim) !important;
+}
+section.light .why-list h4,
+section.light .step-num {
+    color: var(--ink) !important;
+}
+section.light .h-thumb {
+    background-color: #f0f0f0;
+}
+section.light .btn.solid { background: var(--ink) !important; color: #ffffff !important; }
