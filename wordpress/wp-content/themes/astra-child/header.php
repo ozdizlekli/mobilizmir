@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="topbar">
   <div class="wrap">
     <div class="topbar-left">
-      <a href="tel:+905401872003" class="tel">0540 187 20 03</a>
+      <a href="tel:+905533459073" class="tel">0553 345 90 73</a>
       <span>Pzt–Cmt 09:00–19:00</span>
       <span>İzmir geneli adrese teslim</span>
     </div>
@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <header class="site">
   <div class="wrap">
-    <div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/mobilizmir-logo-new.jpg" alt="Mobilİzmir" style="height: 95px; width: auto; mix-blend-mode: lighten;"></a></div>
+    <div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/mobilizmir-logo-new.jpg" alt="Mobilİzmir" style="height: 95px; width: auto; mix-blend-mode: lighten; margin-top: -12px; margin-bottom: -12px;"></a></div>
     <nav class="primary">
       <div class="has-dropdown">
         <a href="/#hizmetler">Hizmetler <svg viewBox="0 0 12 12" width="10" height="10" style="margin-left:4px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;transform:translateY(1px);"><path d="M3 4.5L6 7.5L9 4.5"></path></svg></a>
@@ -41,14 +41,14 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
       </div>
       <a href="/uygulamalarimiz-galeri/">Galeri</a>
-      <a href="/#fiyat">Fiyatlandırma</a>
+      
       <a href="/#hakkimizda">Hakkımızda</a>
-      <a href="/sss/">SSS</a>
+      <a href="/sss/">Sık Sorulanlar</a>
       <a href="/blog/">Blog</a>
       <a href="/iletisim/">İletişim</a>
     </nav>
     <div style="display:flex; gap:10px; align-items:center;">
-      <a href="https://wa.me/905401872003" class="btn solid">WhatsApp'tan Randevu</a>
+      <a href="https://wa.me/905533459073?text=Merhaba%2C%20Mobil%C4%B0zmir%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Hizmetleriniz%20hakk%C4%B1nda%20bilgi%20veya%20randevu%20almak%20istiyorum." class="btn solid">Randevu Al</a>
       <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>

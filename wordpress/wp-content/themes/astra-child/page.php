@@ -6,17 +6,62 @@ get_header(); ?>
 
 <?php if ( is_page('far-temizligi') ) : ?>
   <!-- FAR TEMİZLİĞİ ÖZEL AÇILIŞ (OTOMATİK GEÇİŞ) -->
+  <section class="page-hero" style="padding: 15px 0 15px; border-bottom: none;">
+    <div class="wrap">
+      <h1 class="serif" style="font-size: 1.1rem; margin: 0; color: var(--gold-bright); letter-spacing: 0.5px; text-transform: uppercase;"><?php the_title(); ?></h1>
+    </div>
+  </section>
+
   <section class="split-hero" id="splitHero">
     <div class="split-layer split-dirty"></div>
     <div class="split-layer split-clean"></div>
     <div class="split-divider"></div>
-    <div class="split-content">
-      <h1 class="serif"><?php the_title(); ?></h1>
-      <p>Lazer berraklığına tanık olun. Geceyi gündüze çeviren teknolojik temizlik işlemi.</p>
+    
+  </section>
+  <!-- FAR TEMİZLİĞİ DETAY GALERİSİ -->
+  <section class="detail-gallery" style="padding: 100px 20px; background: var(--ink);">
+    <div class="wrap" style="max-width: 1000px; margin: 0 auto;">
+      <h2 class="serif" style="color: var(--gold-bright); text-align: center; margin-bottom: 40px; font-size: 2.5rem;">Kesintisiz Aydınlatma Detayları</h2>
+      
+      <div class="detail-main" id="farMain" style="width: 100%; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/far-kristal.jpg'); background-size: cover; background-position: center; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: background-image 0.4s ease;"></div>
+      
+      <div class="detail-thumbs" style="display: flex; gap: 15px;">
+        <div class="f-thumb active" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/far-kristal.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/far-kristal.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid var(--gold-bright); opacity: 1; transition: all 0.3s; position: relative; overflow: hidden;"><span style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 5px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; pointer-events: none;">Kristal Netlik</span></div>
+        
+        <div class="f-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/far-isik.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/far-isik.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.5; transition: all 0.3s; position: relative; overflow: hidden;"><span style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 5px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; pointer-events: none;">Güçlü Aydınlatma</span></div>
+        
+        <div class="f-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/far-yuzey.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/far-yuzey.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.5; transition: all 0.3s; position: relative; overflow: hidden;"><span style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 5px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; pointer-events: none;">Kusursuz Yüzey</span></div>
+      </div>
     </div>
   </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const fThumbs = document.querySelectorAll('.f-thumb');
+        const fMain = document.getElementById('farMain');
+        if(!fMain || fThumbs.length === 0) return;
+        
+        fThumbs.forEach(t => {
+            t.addEventListener('click', () => {
+                fThumbs.forEach(th => {
+                    th.style.borderColor = 'transparent';
+                    th.style.opacity = '0.5';
+                });
+                t.style.borderColor = 'var(--gold-bright)';
+                t.style.opacity = '1';
+                fMain.style.backgroundImage = `url('${t.getAttribute('data-img')}')`;
+            });
+        });
+    });
+  </script>
 <?php elseif ( is_page('boyasiz-gocuk-duzeltme') ) : ?>
   <!-- PDR HOLOGRAFİK HUD HERO -->
+  <section class="page-hero" style="padding: 15px 0 15px; border-bottom: none;">
+    <div class="wrap">
+      <h1 class="serif" style="font-size: 1.1rem; margin: 0; color: var(--gold-bright); letter-spacing: 0.5px; text-transform: uppercase;"><?php the_title(); ?></h1>
+    </div>
+  </section>
+
   <section class="hud-hero" id="hudHero">
     <div class="hud-bg"></div>
     <div class="hud-overlay"></div>
@@ -52,10 +97,7 @@ get_header(); ?>
         </div>
     </div>
 
-    <div class="hud-content">
-      <h1 class="serif"><?php the_title(); ?></h1>
-      <p>Orijinal boyaya milimetre bile zarar vermeden, mikron hassasiyetinde cerrahi müdahale.</p>
-    </div>
+    
   </section>
 
   <script>
@@ -91,7 +133,48 @@ get_header(); ?>
       }, 300); // Sayfa açıldıktan kısa süre sonra başla
     });
   </script>
+  <!-- PDR DETAY GALERİSİ -->
+  <section class="detail-gallery" style="padding: 100px 20px; background: var(--ink);">
+    <div class="wrap" style="max-width: 1000px; margin: 0 auto;">
+      <h2 class="serif" style="color: var(--gold-bright); text-align: center; margin-bottom: 40px; font-size: 2.5rem;">Cerrahi Müdahale Detayları</h2>
+      
+      <div class="detail-main" id="pdrMain" style="width: 100%; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pdr-orijinal.jpg'); background-size: cover; background-position: center; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: background-image 0.4s ease;"></div>
+      
+      <div class="detail-thumbs" style="display: flex; gap: 15px;">
+        <div class="pdr-thumb active" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pdr-orijinal.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pdr-orijinal.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid var(--gold-bright); opacity: 1; transition: all 0.3s; position: relative; overflow: hidden;"><span style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 5px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; pointer-events: none;">Orijinal Boya</span></div>
+        
+        <div class="pdr-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pdr-yansima.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pdr-yansima.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.5; transition: all 0.3s; position: relative; overflow: hidden;"><span style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 5px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; pointer-events: none;">Kusursuz Yansıma</span></div>
+        
+        <div class="pdr-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pdr-keskin.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pdr-keskin.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.5; transition: all 0.3s; position: relative; overflow: hidden;"><span style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 5px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; pointer-events: none;">Keskin Hatlar</span></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const pdrThumbs = document.querySelectorAll('.pdr-thumb');
+        const pdrMain = document.getElementById('pdrMain');
+        if(!pdrMain || pdrThumbs.length === 0) return;
+        
+        pdrThumbs.forEach(t => {
+            t.addEventListener('click', () => {
+                pdrThumbs.forEach(th => {
+                    th.style.borderColor = 'transparent';
+                    th.style.opacity = '0.5';
+                });
+                t.style.borderColor = 'var(--gold-bright)';
+                t.style.opacity = '1';
+                pdrMain.style.backgroundImage = `url('${t.getAttribute('data-img')}')`;
+            });
+        });
+    });
+  </script>
 <?php elseif ( is_page('koltuk-yikama') || is_page('detayli-ic-kuafor') ) : ?>
+    <section class="page-hero" style="padding: 15px 0 15px; border-bottom: none;">
+    <div class="wrap">
+      <h1 class="serif" style="font-size: 1.1rem; margin: 0; color: var(--gold-bright); letter-spacing: 0.5px; text-transform: uppercase;"><?php the_title(); ?></h1>
+    </div>
+  </section>
   <!-- İÇ KUAFÖR ANATOMİ HERO -->
   <section class="anatomy-hero" id="anatomyHero">
     <div class="anatomy-sticky">
@@ -185,9 +268,9 @@ get_header(); ?>
       <div class="detail-main" id="detailMain" style="width: 100%; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-kumas.jpg'); background-size: cover; background-position: center; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: background-image 0.4s ease;"></div>
       
       <div class="detail-thumbs" style="display: flex; gap: 15px;">
-        <div class="d-thumb active" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-kumas.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-kumas.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid var(--gold-bright); opacity: 1; transition: all 0.3s;"></div>
-        <div class="d-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-deri.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-deri.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.5; transition: all 0.3s;"></div>
-        <div class="d-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-tavan.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-tavan.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.5; transition: all 0.3s;"></div>
+        <div class="d-thumb active" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-kumas.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-kumas.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid var(--gold-bright); opacity: 1; transition: all 0.3s; position: relative; overflow: hidden;"><span style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 5px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; pointer-events: none;">Kumaş Detayı</span></div>
+        <div class="d-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-deri.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-deri.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.5; transition: all 0.3s; position: relative; overflow: hidden;"><span style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 5px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; pointer-events: none;">Deri Temizliği</span></div>
+        <div class="d-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-tavan.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gallery-tavan.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.5; transition: all 0.3s; position: relative; overflow: hidden;"><span style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 5px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; pointer-events: none;">Tavan Ferahlığı</span></div>
       </div>
     </div>
   </section>
@@ -257,15 +340,18 @@ get_header(); ?>
   </script>
 <?php elseif ( is_page('periyodik-bakim') ) : ?>
   <!-- PERİYODİK BAKIM ASMR CİNEMAGRAPH HERO -->
+  <section class="page-hero" style="padding: 15px 0 15px; border-bottom: none;">
+    <div class="wrap">
+      <h1 class="serif" style="font-size: 1.1rem; margin: 0; color: var(--gold-bright); letter-spacing: 0.5px; text-transform: uppercase;"><?php the_title(); ?></h1>
+    </div>
+  </section>
+
   <section class="asmr-hero" id="asmrHero">
     <div class="asmr-bg"></div>
     <div class="asmr-glow"></div>
     <div class="asmr-particles" id="asmrParticles"></div>
     
-    <div class="asmr-content">
-        <h1 class="serif"><?php the_title(); ?></h1>
-        <p>Motor ömrünüzü uzatan mühendislik dokunuşları. İsviçre saati hassasiyetinde, en kaliteli bileşenlerle yapılan kusursuz bakım ritüeli.</p>
-    </div>
+    
   </section>
 
   <script>
@@ -292,17 +378,56 @@ get_header(); ?>
         }
     });
   </script>
+  <!-- PERİYODİK BAKIM DETAY GALERİSİ -->
+  <section class="detail-gallery" style="padding: 100px 20px; background: var(--ink);">
+    <div class="wrap" style="max-width: 1000px; margin: 0 auto;">
+      <h2 class="serif" style="color: var(--gold-bright); text-align: center; margin-bottom: 40px; font-size: 2.5rem;">Uzmanlık ve Güven Detayları</h2>
+      
+      <div class="detail-main" id="bakimMain" style="width: 100%; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bakim-yag.jpg'); background-size: cover; background-position: center; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: background-image 0.4s ease;"></div>
+      
+      <div class="detail-thumbs" style="display: flex; gap: 15px;">
+        <div class="b-thumb active" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bakim-yag.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bakim-yag.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid var(--gold-bright); opacity: 1; transition: all 0.3s; position: relative; overflow: hidden;"><span style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 5px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; pointer-events: none;">Premium Sentetik Yağ</span></div>
+        
+        <div class="b-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bakim-parca.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bakim-parca.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.5; transition: all 0.3s; position: relative; overflow: hidden;"><span style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 5px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; pointer-events: none;">Orijinal Parça Kullanımı</span></div>
+        
+        <div class="b-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bakim-dijital.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bakim-dijital.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.5; transition: all 0.3s; position: relative; overflow: hidden;"><span style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 5px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; pointer-events: none;">Bilgisayarlı Arıza Tespiti</span></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const bThumbs = document.querySelectorAll('.b-thumb');
+        const bMain = document.getElementById('bakimMain');
+        if(!bMain || bThumbs.length === 0) return;
+        
+        bThumbs.forEach(t => {
+            t.addEventListener('click', () => {
+                bThumbs.forEach(th => {
+                    th.style.borderColor = 'transparent';
+                    th.style.opacity = '0.5';
+                });
+                t.style.borderColor = 'var(--gold-bright)';
+                t.style.opacity = '1';
+                bMain.style.backgroundImage = `url('${t.getAttribute('data-img')}')`;
+            });
+        });
+    });
+  </script>
 <?php elseif ( is_page('pasta-cila') ) : ?>
   <!-- PASTA CİLA SIVI CAM (OTOMATİK) HERO -->
+  <section class="page-hero" style="padding: 15px 0 15px; border-bottom: none;">
+    <div class="wrap">
+      <h1 class="serif" style="font-size: 1.1rem; margin: 0; color: var(--gold-bright); letter-spacing: 0.5px; text-transform: uppercase;"><?php the_title(); ?></h1>
+    </div>
+  </section>
+
   <section class="liquid-hero" id="liquidHero">
     <div class="liquid-bg liquid-dirty"></div>
     <div class="liquid-bg liquid-clean" id="liquidClean"></div>
     <div class="liquid-wave" id="liquidWave"></div>
     
-    <div class="liquid-content">
-        <h1 class="serif"><?php the_title(); ?></h1>
-        <p>Boyadaki matlığı ve kılcal çizikleri tamamen siliyoruz. "Sıvı Cam" efekti yaratan 9H seramik kalkanı sayesinde aracınız aylarca ilk günkü ıslak parlaklığında kalır.</p>
-    </div>
+    
   </section>
   
   <script>
@@ -327,11 +452,47 @@ get_header(); ?>
         }, 800); // Sayfa açıldıktan kısa bir süre sonra
     });
   </script>
+  <!-- PASTA CİLA DETAY GALERİSİ -->
+  <section class="detail-gallery" style="padding: 100px 20px; background: var(--ink);">
+    <div class="wrap" style="max-width: 1000px; margin: 0 auto;">
+      <h2 class="serif" style="color: var(--gold-bright); text-align: center; margin-bottom: 40px; font-size: 2.5rem;">Göz Alıcı Yansımalar</h2>
+      
+      <div class="detail-main" id="pastaMain" style="width: 100%; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pasta-ayna.jpg'); background-size: cover; background-position: center; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: background-image 0.4s ease;"></div>
+      
+      <div class="detail-thumbs" style="display: flex; gap: 15px;">
+        <div class="p-thumb active" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pasta-ayna.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pasta-ayna.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid var(--gold-bright); opacity: 1; transition: all 0.3s; position: relative; overflow: hidden;"><span style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 5px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; pointer-events: none;">Ayna Parlaklığı</span></div>
+        
+        <div class="p-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pasta-su.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pasta-su.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.5; transition: all 0.3s; position: relative; overflow: hidden;"><span style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 5px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; pointer-events: none;">Su İtici Etki</span></div>
+        
+        <div class="p-thumb" data-img="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pasta-metalik.jpg" style="flex: 1; aspect-ratio: 16/9; background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pasta-metalik.jpg'); background-size: cover; background-position: center; border-radius: 6px; cursor: pointer; border: 2px solid transparent; opacity: 0.5; transition: all 0.3s; position: relative; overflow: hidden;"><span style="position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 5px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; pointer-events: none;">Kusursuz Yansıma</span></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const pThumbs = document.querySelectorAll('.p-thumb');
+        const pMain = document.getElementById('pastaMain');
+        if(!pMain || pThumbs.length === 0) return;
+        
+        pThumbs.forEach(t => {
+            t.addEventListener('click', () => {
+                pThumbs.forEach(th => {
+                    th.style.borderColor = 'transparent';
+                    th.style.opacity = '0.5';
+                });
+                t.style.borderColor = 'var(--gold-bright)';
+                t.style.opacity = '1';
+                pMain.style.backgroundImage = `url('${t.getAttribute('data-img')}')`;
+            });
+        });
+    });
+  </script>
 <?php else : ?>
   <!-- NORMAL PAGE HERO -->
   <section class="page-hero">
     <div class="wrap">
-      <div class="folio" style="margin-bottom:12px;"><div class="rule"></div><span class="kicker">MOBİLİZMİR</span></div>
+      
       <h1 class="serif"><?php the_title(); ?></h1>
     </div>
   </section>
@@ -348,7 +509,7 @@ get_header(); ?>
 
     <div class="page-cta">
       <h3 class="serif" style="margin-bottom:20px;">Aracınız için randevu almaya hazır mısınız?</h3>
-      <a href="https://wa.me/905401872003" class="btn solid">WhatsApp'tan Randevu Al</a>
+      <a href="https://wa.me/905533459073?text=Merhaba,%20<?php echo rawurlencode(get_the_title()); ?>%20sayfanızı%20inceledim.%20Bu%20hizmetinizle%20ilgili%20randevu%20almak%20istiyorum." class="btn solid">Randevu Al</a>
     </div>
   </div>
 </section>

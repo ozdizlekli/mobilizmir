@@ -68,7 +68,7 @@ img { max-width: 100%; display: block; }
 }
 .topbar .wrap{
   display:flex; justify-content:space-between; align-items:center;
-  padding-top:9px; padding-bottom:9px; gap:20px; flex-wrap:wrap;
+  padding-top:5px; padding-bottom:5px; gap:20px; flex-wrap:wrap;
 }
 .topbar-left{display:flex;gap:22px;flex-wrap:wrap;}
 .topbar a.tel{color:var(--cream);}
@@ -83,7 +83,7 @@ header.site{
 }
 header.site .wrap{
   display:flex; align-items:center; justify-content:space-between;
-  padding-top:18px; padding-bottom:18px;
+  padding-top:4px; padding-bottom:4px;
 }
 .logo{
   font-family:'Montserrat', sans-serif; font-weight:600; font-size:1.28rem;
@@ -93,6 +93,7 @@ header.site .wrap{
 .logo em{font-style:normal; letter-spacing:-0.02em;color:var(--gold-bright);font-weight:600;}
 nav.primary{display:flex; align-items:center; gap:34px;}
 nav.primary a{
+  outline:none; -webkit-tap-highlight-color:transparent;
   font-size:14px; color:#c9c4b6; padding:4px 0; position:relative;
 }
 nav.primary a:hover{color:var(--cream);}
@@ -284,10 +285,20 @@ section.alt{background:var(--ink-2); border-top:1px solid var(--line-soft); bord
 /* ============ SSS ============ */
 .faq-item{border-bottom:1px solid var(--line);}
 .faq-q{
+  outline:none; -webkit-tap-highlight-color:transparent;
   width:100%; text-align:left; background:none; border:none; color:var(--cream);
   font-family:'Montserrat', sans-serif; font-size:1.05rem; font-weight:600; cursor:pointer;
   padding:22px 0; display:flex; justify-content:space-between; gap:20px;
 }
+.faq-q:hover { color: var(--gold-bright); }
+
+.faq-q, .faq-q:focus, .faq-q:active, .faq-q:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .faq-q .mark{color:var(--gold); font-family:'Inter',sans-serif; font-size:1.2rem;}
 .faq-a{max-height:0; overflow:hidden; transition:max-height .35s ease;}
 .faq-a p{font-size:14px; color:var(--stone); padding:0 0 22px; margin:0; max-width:60ch;}
@@ -343,9 +354,9 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 }
 
 /* Alt Sayfa Şablonu */
-.page-hero{padding:120px 0 60px;border-bottom:1px solid var(--line-soft);}
+.page-hero{padding:40px 0 30px;border-bottom:1px solid var(--line-soft);}
 .page-hero h1{font-size:clamp(2rem,4vw,3rem);margin:0;}
-.page-body{padding:70px 0;}
+.page-body{padding:30px 0;}
 
 .styled-content p, .styled-content li{color:#c4beac;font-size:16px;line-height:1.75;}
 .styled-content h2, .styled-content h3{font-family:'Montserrat', sans-serif;color:var(--cream);margin-top:46px;margin-bottom:16px;}
@@ -575,8 +586,8 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 }
 .scroll-story-sticky {
   position: sticky;
-  top: 0;
-  height: 100vh;
+  top: 100px;
+  height: calc(100vh - 100px);
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -585,7 +596,7 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 .story-layer {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background-size: cover;
+  background-size: contain; background-repeat: no-repeat;
   background-position: center;
   background-color: var(--ink-2);
   will-change: transform, opacity;
@@ -812,7 +823,7 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   background-image: url('assets/images/service-far.jpg');
-  background-size: cover;
+  background-size: contain; background-repeat: no-repeat;
   background-position: center;
 }
 .split-dirty {
@@ -890,7 +901,7 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 .hud-bg {
   position: absolute; top:0; left:0; width:100%; height:100%;
   background: url('assets/images/service-pdr.jpg') no-repeat center center;
-  background-size: cover;
+  background-size: contain; background-repeat: no-repeat;
   filter: contrast(1.2) brightness(0.9);
   z-index: 1;
 }
@@ -1010,7 +1021,7 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   background-image: url('assets/images/service-koltuk.jpg');
-  background-size: cover;
+  background-size: contain; background-repeat: no-repeat;
   background-position: center;
   will-change: opacity, transform;
   transform-origin: center center;
@@ -1170,7 +1181,7 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 .asmr-bg {
   position: absolute; top: 0; left: 0; width: 100%; height: 100%;
   background: url('assets/images/service-motor.jpg') no-repeat center center;
-  background-size: cover;
+  background-size: contain; background-repeat: no-repeat;
   filter: contrast(1.15) brightness(0.7);
   
   z-index: 1;
@@ -1237,7 +1248,7 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 .liquid-bg {
   position: absolute; top: 0; left: 0; width: 100%; height: 100%;
   background: url('assets/images/service-liquid.jpg') no-repeat center center;
-  background-size: cover;
+  background-size: contain; background-repeat: no-repeat;
 }
 .liquid-dirty {
   z-index: 1;
@@ -1303,7 +1314,7 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 }
 .g-layer {
   position: absolute; top:0; left:0; width:100%; height:100%;
-  background-size: cover; background-position: center;
+  background-size: contain; background-repeat: no-repeat; background-position: center;
   transition: background-image 0.4s ease;
 }
 .g-dirty {
@@ -1345,7 +1356,7 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 }
 .g-thumb::before {
   content: ''; position: absolute; top:0; left:0; width:100%; height:100%;
-  background-size: cover; background-position: center; opacity: 0.2; transition: opacity 0.3s;
+  background-size: contain; background-repeat: no-repeat; background-position: center; opacity: 0.2; transition: opacity 0.3s;
 }
 .g-thumb:nth-child(1)::before { background-image: url('/wp-content/themes/astra-child/assets/images/gallery-kumas.jpg'); }
 .g-thumb:nth-child(2)::before { background-image: url('/wp-content/themes/astra-child/assets/images/gallery-deri.jpg'); }
@@ -1358,4 +1369,117 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 @media(max-width: 768px) {
   .gallery-thumbs { flex-direction: column; }
   .g-thumb { aspect-ratio: auto; padding: 20px; }
+}
+
+/* ======== SERVICE HERO SIZES OVERRIDE ======== */
+.split-content, .hud-content, .gloss-content, .asmr-content, .liquid-content {
+    bottom: 30px !important;
+    left: 30px !important;
+}
+.split-content h1, .hud-content h1, .gloss-content h1, .asmr-content h1, .liquid-content h1 {
+    font-size: clamp(1.6rem, 3vw, 2.3rem) !important;
+    margin-bottom: 6px !important;
+}
+.split-content p, .hud-content p, .gloss-content p, .asmr-content p, .liquid-content p {
+    font-size: 0.95rem !important;
+    max-width: 480px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0 !important;
+}
+@media (max-width: 768px) {
+    .split-content, .hud-content, .gloss-content, .asmr-content, .liquid-content {
+        bottom: 20px !important;
+        left: 20px !important;
+    }
+    .split-content h1, .hud-content h1, .gloss-content h1, .asmr-content h1, .liquid-content h1 {
+        font-size: 1.4rem !important;
+    }
+    .split-content p, .hud-content p, .gloss-content p, .asmr-content p, .liquid-content p {
+        font-size: 0.85rem !important;
+    }
+}
+
+
+/* ======== HOMEPAGE COMPACT SERVICES ======== */
+#hizmetler {
+    padding: 30px 0 50px !important;
+    min-height: calc(100vh - 100px); /* try to make it take the full screen height if possible, so it frames perfectly */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#hizmetler .folio {
+    margin: 0 0 20px 0 !important;
+}
+#hizmetler .service-row {
+    padding: 12px 0 !important;
+}
+#hizmetler .service-row .idx {
+    font-size: 0.9rem !important;
+}
+#hizmetler .service-main h3 {
+    font-size: 1.15rem !important;
+    margin-bottom: 4px !important;
+}
+#hizmetler .service-main p {
+    font-size: 0.85rem !important;
+    max-width: 70ch !important;
+}
+#hizmetler .service-price .from {
+    font-size: 10px !important;
+}
+#hizmetler .service-price .amt {
+    font-size: 0.95rem !important;
+    margin-bottom: 2px !important;
+}
+#hizmetler .service-price a {
+    font-size: 11px !important;
+}
+
+
+/* ======== GLOBAL TITLE (FOLIO) REDESIGN ======== */
+.folio {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 0 auto 50px auto !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+.folio .num {
+    font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
+    color: var(--gold-bright) !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 300 !important;
+    opacity: 0.7 !important;
+    margin: 0 !important;
+}
+.folio .rule {
+    display: none !important;
+}
+.folio h2 {
+    color: var(--gold-bright) !important;
+    font-size: clamp(1.4rem, 2.8vw, 2.1rem) !important;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.8) !important;
+    margin: 0 !important;
+    max-width: none !important;
+    text-align: center !important;
+}
+.folio p {
+    flex-basis: 100% !important;
+    color: var(--stone) !important;
+    font-size: 0.95rem !important;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.8) !important;
+    margin: 5px auto 0 auto !important;
+    max-width: 600px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+}
+#hizmetler .folio {
+    margin: 0 auto 20px auto !important;
+}
+#hizmetler .folio h2 {
+    font-size: clamp(1.1rem, 2vw, 1.5rem) !important; /* Slightly smaller to ensure it doesn't push the services down too much */
 }

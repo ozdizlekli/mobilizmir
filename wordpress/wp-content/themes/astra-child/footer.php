@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
   <div class="wrap">
     <h2 class="serif">Aracınız için randevu almaya hazır mısınız?</h2>
     <div>
-      <div class="tel-big serif">0540 187 20 03</div>
-      <div style="margin-top:14px;"><a href="https://wa.me/905401872003" class="btn solid">WhatsApp'tan Yazın</a></div>
+      <div class="tel-big serif">0553 345 90 73</div>
+      <div style="margin-top:14px;"><a href="https://wa.me/905533459073?text=Merhaba%2C%20web%20sitenizin%20ileti%C5%9Fim%20b%C3%B6l%C3%BCm%C3%BCnden%20ula%C5%9F%C4%B1yorum.%20Size%20bir%20sorum%20olacakt%C4%B1." class="btn solid">WhatsApp'tan Yazın</a></div>
     </div>
   </div>
 </div>
@@ -45,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div>
         <h5>İLETİŞİM</h5>
         <ul>
-          <li><a href="tel:+905401872003">0540 187 20 03</a></li>
+          <li><a href="tel:+905533459073">0553 345 90 73</a></li>
           <li><a href="mailto:iletisim@mobilizmir.com">iletisim@mobilizmir.com</a></li>
           <li><a href="/iletisim/">İzmir, Türkiye</a></li>
         </ul>
@@ -62,7 +62,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   </div>
 </footer>
 
-<a href="https://wa.me/905401872003" class="wa-fab" aria-label="WhatsApp">
+<a href="https://wa.me/905533459073?text=Merhaba%2C%20web%20siteniz%20%C3%BCzerinden%20ula%C5%9F%C4%B1yorum.%20H%C4%B1zl%C4%B1ca%20destek%20almak%20istiyorum." class="wa-fab" aria-label="WhatsApp">
   <svg viewBox="0 0 32 32"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.132 6.744 3.054 9.378L1.054 31.28l6.156-1.97C9.776 30.962 12.766 32 16.004 32 24.826 32 32 24.826 32 16.004 32 7.176 24.826 0 16.004 0zm9.084 22.618c-.378 1.064-2.202 1.98-3.038 2.1-.836.12-1.91.17-3.08-.194-.708-.222-1.616-.516-2.78-1.014-4.882-2.088-8.066-7.024-8.31-7.352-.244-.328-1.996-2.654-1.996-5.062 0-2.408 1.264-3.594 1.712-4.084.45-.49 .978-.612 1.302-.612.328 0 .652.004.938.016.302.014.706-.114 1.104.842.408.978 1.386 3.386 1.508 3.63.12.244.202.53.04.856-.162.328-.244.53-.49.816-.244.286-.514.64-.734.858-.244.244-.498.508-.214.998.284.49 1.264 2.084 2.714 3.376 1.866 1.662 3.436 2.176 3.926 2.42.49.244.776.204 1.062-.122.284-.328 1.224-1.428 1.55-1.918.326-.49.652-.408 1.1-.244.45.162 2.854 1.346 3.344 1.59.49.244.816.368.936.57.122.204.122 1.164-.256 2.228z"/></svg>
 </a>
 

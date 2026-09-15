@@ -27,7 +27,7 @@ add_action('wp_footer', function() {
         "name"         => "Mobilİzmir - Mobil Oto Bakım Hizmetleri",
         "image"        => $site_icon ? $site_icon : (get_stylesheet_directory_uri() . '/assets/mobilizmir-logo-new.jpg'),
         "url"          => home_url('/'),
-        "telephone"    => "+905401872003",
+        "telephone"    => "+905533459073",
         "address"      => [
             "@type"           => "PostalAddress",
             "addressLocality" => "İzmir",

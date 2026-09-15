@@ -6,7 +6,7 @@ get_header(); ?>
 
 <section class="page-hero">
   <div class="wrap">
-    <div class="folio" style="margin-bottom:12px;"><div class="rule"></div><span class="kicker">İÇERİKLERİMİZ</span></div>
+    
     <h1 class="serif">Blog</h1>
   </div>
 </section>
