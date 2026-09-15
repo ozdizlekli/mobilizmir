@@ -12,8 +12,8 @@ get_header(); ?>
     </video>
   </div>
   <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(11,11,10,0.5) 0%, rgba(11,11,10,0.9) 100%);"></div>
-  <div class="wrap" style="position:relative; z-index:2; text-align:center; padding-top: 15vh;">
-    <h1 style="color:#fff; font-size: clamp(3rem, 6vw, 5rem); text-shadow: 0 5px 20px rgba(0,0,0,0.8); margin-bottom:0;">Mobilİzmir</h1>
+  <div class="wrap" style="position:relative; z-index:2; text-align:center; padding-top: 25vh;">
+    
     <div class="cursive-subtitle reveal">Premium Mobil Bakım</div>
     <div class="hero-buttons reveal">
         <a href="https://wa.me/905533459073?text=Merhaba,%20randevu%20almak%20istiyorum." class="btn primary" target="_blank">

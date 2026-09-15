@@ -530,9 +530,6 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
    CLAUDE TWEAKS (Light Card & Mobile CTA)
    ========================================== */
 
-
-
-
 @media (max-width: 920px) {
   /* Make sure primary CTA is visible in mobile menu */
   nav.primary .btn {
@@ -559,7 +556,6 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 .price-box h3 { color: var(--gold); text-align: center; }
 .price-box p { text-align: center; color: #ccc; }
 
-
 /* Görsel eklendiğinde ph yerine kullanılacak varsayılan img stilleri */
 .gallery-grid .g-item img,
 .mini-gallery img,
@@ -576,7 +572,6 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 .about-split img + .ph {
   display: none !important;
 }
-
 
 /* ============ APPLE TARZI SCROLL STORY ============ */
 .scroll-story-wrap {
@@ -676,8 +671,6 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
   .story-step h3 { font-size: 2rem; }
   .story-step p { font-size: 1rem; }
 }
-
-
 
 .magic-wrap:hover{
 
@@ -863,9 +856,6 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
   95% { opacity: 1; }
   100% { left: 0%; opacity: 0; }
 }
-
-
-
 
 .split-content {
   position: absolute;
@@ -1285,8 +1275,6 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
   line-height: 1.6;
 }
 
-
-
 @media(max-width: 768px) {
   .liquid-hero { height: 60vh; }
   .liquid-content { bottom: 20px; left: 20px; }
@@ -1399,7 +1387,6 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
     }
 }
 
-
 /* ======== HOMEPAGE COMPACT SERVICES ======== */
 #hizmetler {
     padding: 30px 0 50px !important;
@@ -1435,7 +1422,6 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 #hizmetler .service-price a {
     font-size: 11px !important;
 }
-
 
 /* ======== GLOBAL TITLE (FOLIO) REDESIGN ======== */
 .folio {
@@ -1484,7 +1470,6 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
     font-size: clamp(1.1rem, 2vw, 1.5rem) !important; /* Slightly smaller to ensure it doesn't push the services down too much */
 }
 
-
 /* ======== BOSSO GARAGE VIBE UPDATES ======== */
 
 /* Top Bar */
@@ -1498,7 +1483,7 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
     align-items: center;
     font-size: 0.8rem;
     color: var(--stone);
-    z-index: 1000;
+    z-index: 999999 !important;
     position: relative;
 }
 .top-bar .tb-left, .top-bar .tb-right {
@@ -1658,7 +1643,6 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
     .top-bar { display: none; }
 }
 
-
 /* Hero Video Background */
 .home-hero-wrap {
     position: relative;
@@ -1686,3 +1670,170 @@ footer{background:var(--ink); padding:70px 0 26px; font-size:13.5px;}
 }
 .top-bar svg { width: 16px; height: 16px; fill: var(--gold); }
 .hero-buttons svg { width: 22px; height: 22px; fill: var(--ink); }
+
+/* ======== BOSSO GARAGE HEADER CLONE ======== */
+.bosso-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+    color: #ccc;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+.bosso-topbar svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: var(--stone);
+    stroke-width: 1.5;
+    margin-right: 5px;
+    transform: translateY(2px);
+}
+.bosso-topbar .b-left svg { stroke: none; fill: var(--stone); }
+.bosso-topbar .b-right svg { stroke: none; fill: var(--stone); }
+
+.bosso-navbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 20px 60px;
+}
+.b-nav-left {
+    display: flex;
+    gap: 40px;
+    justify-content: flex-start;
+}
+.b-nav-right {
+    display: flex;
+    gap: 40px;
+    justify-content: flex-end;
+}
+.b-nav-left a, .b-nav-right a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s;
+}
+.b-nav-left a:hover, .b-nav-right a:hover {
+    opacity: 0.7;
+}
+
+/* Dropdown */
+.has-dropdown {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: -10px;
+}
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(11,11,10,0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s;
+    border-radius: 8px;
+}
+.has-dropdown:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Center Logo Typography (Like Bosso) */
+.b-logo-center {
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.9;
+    margin-top: 15px;
+}
+.b-logo-top {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+.b-logo-bot {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--gold-bright);
+    letter-spacing: 4px;
+}
+
+@media (max-width: 1024px) {
+    .bosso-topbar { display: none; }
+    .bosso-navbar { display: flex; justify-content: space-between; padding: 20px 30px; }
+    .b-nav-left, .b-nav-right { display: none; }
+    .b-logo-top { font-size: 2rem; }
+    .b-logo-bot { font-size: 1.5rem; }
+    .nav-toggle { display: block; }
+}
+
+.nav-toggle { display: none; background: transparent; border: none; cursor: pointer; }
+.nav-toggle span { display: block; width: 25px; height: 2px; background: #fff; margin-bottom: 5px; }
+
+/* Fix content gap for absolute header */
+#content.site-content { padding-top: 0 !important; margin-top: 0 !important; }
+body, html { margin: 0; padding: 0; }
+
+/* Fallback for video */
+.home-hero-wrap { background-color: #0b0b0a; }
+
+/* -------- GUARANTEED HEADER VISIBILITY -------- */
+#mobil-nav-master.bosso-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 999999 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateZ(1px);
+    transition: all 0.5s ease;
+}
+body.admin-bar #mobil-nav-master.bosso-header {
+    top: 32px !important;
+}
+
+/* Scrolled State */
+#mobil-nav-master.bosso-header.scrolled {
+    background: rgba(11,11,10,0.95) !important;
+    backdrop-filter: blur(10px);
+    padding-bottom: 0;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+}
+#mobil-nav-master.bosso-header.scrolled .bosso-topbar {
+    display: none; /* Hide topbar on scroll to save space */
+}
+#mobil-nav-master.bosso-header.scrolled .b-logo-top {
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+#mobil-nav-master.bosso-header.scrolled .b-logo-bot {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+#mobil-nav-master.bosso-header.scrolled .b-logo-center {
+    margin-top: 0;
+}
