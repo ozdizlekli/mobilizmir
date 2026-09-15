@@ -2,3 +2,20 @@
 */.DS_Store
 wp-cli.phar
 *.log
+
+# Ignore all of WordPress core, plugins, and parent themes to save ~10,000 files
+/wordpress/*
+
+# But KEEP wp-content directory structure
+!/wordpress/wp-content/
+/wordpress/wp-content/*
+
+# KEEP themes directory structure, but ignore all themes by default
+!/wordpress/wp-content/themes/
+/wordpress/wp-content/themes/*
+
+# EXCEPT our custom child theme! (This is what we actually code)
+!/wordpress/wp-content/themes/astra-child/
+
+# KEEP uploads so our images are backed up
+!/wordpress/wp-content/uploads/
