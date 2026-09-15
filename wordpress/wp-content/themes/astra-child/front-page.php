@@ -8,7 +8,7 @@ get_header(); ?>
 <section class="home-hero-wrap">
   <div class="home-hero-bg">
     <video autoplay loop muted playsinline poster="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero-main.jpg">
-      <source src="https://videos.pexels.com/video-files/5208643/5208643-uhd_2560_1440_30fps.mp4" type="video/mp4">
+      <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/videos/https_wwwbossogaragecom_b.mp4" type="video/mp4">
     </video>
   </div>
   <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(11,11,10,0.5) 0%, rgba(11,11,10,0.9) 100%);"></div>
