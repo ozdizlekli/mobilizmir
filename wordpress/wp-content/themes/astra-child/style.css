@@ -2014,3 +2014,8 @@ section.light .h-thumb {
     background-color: #f0f0f0;
 }
 section.light .btn.solid { background: var(--ink) !important; color: #ffffff !important; }
+
+
+/* Keep service card text white over dark gradients in light sections */
+section.light .srv-info h3 { color: #ffffff !important; text-shadow: 0 2px 10px rgba(0,0,0,0.8) !important; }
+section.light .srv-info p { color: #e0e0e0 !important; text-shadow: 0 2px 5px rgba(0,0,0,0.8) !important; }
