@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div><!-- #content -->
 
 <!-- ============ SON CTA ============ -->
-<div class="cta-band" id="iletisim">
+<div class="cta-band light" id="iletisim">
   <div class="wrap">
     <h2 class="serif">Aracınız için randevu almaya hazır mısınız?</h2>
     <div>
@@ -16,8 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) {
   </div>
 </div>
 
-<div class="site-footer-wrapper">
-    <div class="floating-footer">
+<div class="site-footer-wrapper light-footer-wrap">
+    <div class="floating-footer light-floating-footer">
         <div class="ff-top">
             <div class="ff-col">
                 <a href="/" style="display:inline-block; margin-bottom:15px;">

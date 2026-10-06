@@ -44,3 +44,11 @@ add_action('wp_footer', function() {
     ];
     echo '<script type="application/ld+json">' . wp_json_encode($schema) . '</script>';
 });
+
+// Enqueue front-page specific JS
+function astra_child_front_page_scripts() {
+    if (is_front_page()) {
+        wp_enqueue_script('front-page-js', get_stylesheet_directory_uri() . '/assets/js/front-page.js', array(), '1.0.0', true);
+    }
+}
+add_action('wp_enqueue_scripts', 'astra_child_front_page_scripts');

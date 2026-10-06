@@ -4,221 +4,252 @@
  */
 get_header(); ?>
 
+<!-- ============ INTRO SPLASH ============ -->
+<div id="site-intro" style="position: fixed; inset: 0; z-index: 9999; background: #050505; display: flex; align-items: center; justify-content: center; transition: opacity 1.5s ease-in-out;">
+    <video id="intro-video" autoplay muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+        <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/videos/parcaaraba.mp4" type="video/mp4">
+    </video>
+    <button id="skip-intro" style="position: absolute; bottom: 40px; right: 40px; background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.3); padding: 8px 16px; border-radius: 20px; font-size: 0.8rem; cursor: pointer; backdrop-filter: blur(5px); transition: all 0.3s; z-index: 10000; letter-spacing: 1px;">Geç &rarr;</button>
+</div>
+
+
+
 <!-- ============ HERO ============ -->
-<section class="home-hero-wrap">
+<section class="home-hero-wrap prime-hero">
   <div class="home-hero-bg">
     <video autoplay loop muted playsinline poster="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero-main.jpg">
       <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/videos/https_wwwbossogaragecom_b.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="hero-overlay"></div>
-  
-  <div class="hero-content-box reveal">
-    <div class="hero-badge">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20M5 20V9l4 4 3-7 3 7 4-4v11"/></svg>
-        <span>PREMIUM MOBİL ARAÇ BAKIM & KORUMA</span>
-    </div>
-    
-    <h2 class="hero-main-title">Mobilİzmir</h2>
-    
-    <div class="hero-cursive">Premium Mobil Bakım</div>
-    
-    <div class="hero-buttons">
-        <a href="https://wa.me/905533459073?text=Merhaba,%20randevu%20almak%20istiyorum." class="btn primary btn-icon" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Bizi Arayın
+  <div class="hero-overlay-dark"></div>
+
+  <!-- SOCIALS LEFT -->
+  <div class="hero-social-left">
+     <div class="hs-icons">
+         <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+         <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+     </div>
+     <div class="hs-line"></div>
+     <div class="hs-text">BİZİ TAKİP EDİN</div>
+  </div>
+
+  <!-- STATS RIGHT -->
+  <div class="hero-stats-right">
+     <div class="h-stat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="1.5"><path d="M6 3h12l4 6-10 12L2 9l4-6z"/></svg>
+        <div class="h-num">5+</div>
+        <div class="h-label">YILLIK DENEYİM</div>
+     </div>
+     <div class="h-stat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div class="h-num">1000+</div>
+        <div class="h-label">ARAÇ TESLİMATI</div>
+     </div>
+     <div class="h-stat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <div class="h-num">5.0</div>
+        <div class="h-label">MÜŞTERİ PUANI</div>
+     </div>
+  </div>
+
+  <!-- CENTER CONTENT -->
+  <div class="hero-center-content">
+     <div class="hc-subtitle">PREMİUM ARAÇ BAKIMI. KUSURSUZ SONUÇLAR.</div>
+     <h1 class="hc-title-white">DETAYLI</h1>
+     <h1 class="hc-title-gold">TEMİZLİK.</h1>
+     <p class="hc-desc">Aracınızın en iyi halini ortaya çıkaran profesyonel detaylı temizlik ve koruma hizmetleri.</p>
+     <div class="hc-buttons">
+        <a href="#hizmetler" class="hc-btn-gold">PAKETLERİ İNCELE &rarr;</a>
+        <a href="https://wa.me/905533459073" class="hc-btn-outline">RANDEVU AL 
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 8px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
         </a>
-        <a href="#hizmetler" class="btn secondary btn-icon">
-            Hizmetleri Görün 
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v3.153a2 2 0 01-1.105 1.789l-5.711 2.855A2 2 0 0113 16H8a2 2 0 01-2-2v-4a2 2 0 012-2h7z"/><path d="M7 10V6a3 3 0 016 0v4"/></svg>
-        </a>
-    </div>
+     </div>
+  </div>
+
+  <!-- BOTTOM PANEL -->
+  <div class="hero-bottom-panel">
+     <div class="hbp-col">
+        <div class="hbp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="1.5"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path></svg></div>
+        <div class="hbp-text">
+           <h4>DIŞ DETAY</h4>
+           <p>Derinlemesine temizlik, demir tozu arındırma ve boya koruma.</p>
+        </div>
+     </div>
+     <div class="hbp-col">
+        <div class="hbp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="1.5"><path d="M5 18h14v-4a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v4z"/><path d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4"/></svg></div>
+        <div class="hbp-text">
+           <h4>İÇ DETAY</h4>
+           <p>İlk günkü ferahlık için detaylı iç temizlik.</p>
+        </div>
+     </div>
+     <div class="hbp-col">
+        <div class="hbp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="hbp-text">
+           <h4>SERAMİK KAPLAMA</h4>
+           <p>Eşsiz parlaklık ile uzun ömürlü koruma.</p>
+        </div>
+     </div>
+     <div class="hbp-col">
+        <div class="hbp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle><line x1="12" y1="2" x2="12" y2="9"></line><line x1="12" y1="15" x2="12" y2="22"></line><line x1="22" y1="12" x2="15" y2="12"></line><line x1="9" y1="12" x2="2" y2="12"></line></svg></div>
+        <div class="hbp-text">
+           <h4>JANT & LASTİK BAKIMI</h4>
+           <p>Yenileme, koruma ve göz alıcı görünüm.</p>
+        </div>
+     </div>
   </div>
 </section>
 
-<style>
-/* Proportional scale down for the Hero Configurator */
-.hero-configurator { margin-top: -35px !important; }
-.hero-configurator h2.serif { font-size: 1.3rem !important; }
-.hero-configurator p { font-size: 0.75rem !important; }
-.hero-configurator h3 { font-size: 0.8rem !important; margin-bottom: 8px !important; }
-.hero-configurator .car-type-btn { flex: 0 0 70px !important; height: 55px !important; padding: 6px !important; }
-.hero-configurator .car-type-btn svg { transform: scale(0.8); margin-bottom: 2px !important; }
-.hero-configurator .car-type-btn span { font-size: 0.65rem !important; }
-.hero-configurator .issue-btn { padding: 8px 6px !important; font-size: 0.7rem !important; }
-#hero-whatsapp-btn { padding: 10px 0 !important; font-size: 13px !important; }
-</style>
-<style>
-/* Configurator Button Styles for Hero */
-.hero-configurator .conf-btn {
-  background: var(--ink); border: 1px solid var(--line); border-radius: 6px;
-  color: var(--stone); cursor: pointer; transition: all 0.3s ease;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  font-family: 'Montserrat', sans-serif; font-weight: 500; user-select: none; text-align: center;
-}
-.hero-configurator .conf-btn:hover { border-color: var(--gold); color: var(--cream); }
-.hero-configurator .conf-btn.selected {
-  background: rgba(212, 175, 55, 0.15); border-color: var(--gold-bright); color: var(--gold-bright);
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
-}
-.hero-configurator .car-type-group::-webkit-scrollbar { display: none; }
-.hero-configurator .car-type-btn svg { stroke: var(--stone); transition: stroke 0.3s ease; }
-.hero-configurator .car-type-btn:hover svg { stroke: var(--gold-bright); }
-.hero-configurator .car-type-btn.selected svg { stroke: var(--gold-bright); }
-</style>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    let heroCarName = '';
-    const heroIssues = new Set();
-    
-    const hCarBtns = document.querySelectorAll('.hero-configurator .car-type-btn');
-    const hIssueBtns = document.querySelectorAll('.hero-configurator .issue-btn');
-    const hWaBtn = document.getElementById('hero-whatsapp-btn');
-    
-    function updateHeroSummary() {
-        if(heroCarName !== '' && heroIssues.size > 0) {
-            hWaBtn.style.pointerEvents = 'auto';
-            hWaBtn.style.opacity = '1';
-        } else {
-            hWaBtn.style.pointerEvents = 'none';
-            hWaBtn.style.opacity = '0.5';
-        }
-        
-        if(heroCarName !== '' && heroIssues.size > 0) {
-            let issuesList = Array.from(heroIssues).join(', ');
-            let msg = `Merhaba, aracım için size özel bir paket oluşturdum.\n\nAraç Tipi: ${heroCarName}\nİhtiyacım Olan Hizmetler: ${issuesList}\n\nBu işlemler için fiyat teklifi ve randevu müsaitliği öğrenebilir miyim?`;
-            hWaBtn.href = `https://wa.me/905533459073?text=${encodeURIComponent(msg)}`;
-        }
-    }
-    
-    hCarBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            hCarBtns.forEach(b => b.classList.remove('selected'));
-            btn.classList.add('selected');
-            heroCarName = btn.getAttribute('data-name');
-            updateHeroSummary();
-        });
-    });
-    
-    hIssueBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const name = btn.getAttribute('data-name');
-            if(btn.classList.contains('selected')) {
-                btn.classList.remove('selected');
-                heroIssues.delete(name);
-            } else {
-                btn.classList.add('selected');
-                heroIssues.add(name);
-            }
-            updateHeroSummary();
-        });
-    });
-});
-</script>
-
-
-
-
-
-<!-- ============ SCROLL STORY (APPLE STYLE) ============ -->
-<section class="scroll-story-wrap" id="scroll-story">
-  <div class="scroll-story-sticky">
-    
-    <div class="story-layer layer-1"></div>
-    <div class="story-layer layer-2"></div>
-    <div class="story-layer layer-3"></div>
-    <div class="story-layer layer-4"></div>
-    <div class="story-layer layer-5"></div>
-
-    <div class="story-ui">
-      <div class="story-step" data-step="1">
-        <h3 class="serif">Gözleriniz yollarda.</h3>
-        <p class="reveal">Zamanla sararan ve görüşü düşüren farlar... <strong>Far Temizliği</strong> ile gece sürüşünde ilk günkü netlik ve güvenliğe dönün.</p>
-      </div>
-      <div class="story-step" data-step="2">
-        <h3 class="serif">Kusursuz parlaklık.</h3>
-        <p class="reveal">Güneş yanıkları, matlaşma ve kılcal çizikler tarihe karışıyor. <strong>Pasta Cila</strong> ile showroom parlaklığına kavuşun.</p>
-      </div>
-      <div class="story-step" data-step="3">
-        <h3 class="serif">Orijinalliğe dokunmadan.</h3>
-        <p class="reveal">Dolu hasarı veya park ezikleri canınızı sıkmasın. <strong>Boyasız Göçük Düzeltme (PDR)</strong> ile aracınızın değeri korunur.</p>
-      </div>
-      <div class="story-step" data-step="4">
-        <h3 class="serif">Şimdi içeri giriyoruz.</h3>
-        <p class="reveal">Vakumlu ekstraksiyon teknolojisi ile <strong>Koltuk Yıkama</strong>. Aracınızın içindeki tüm kir, bakteri ve kokular kapınızda yok edilir.</p>
-      </div>
-      <div class="story-step" data-step="5">
-        <h3 class="serif">Motorunuz bize emanet.</h3>
-        <p class="reveal">Sadece görünüm değil, performans da önemli. Filtre, yağ ve sıvı değişimlerini içeren <strong>Periyodik Bakım</strong> yerinde yapılır.</p>
-      </div>
-    </div>
-    
-    <div class="story-progress-bar"><div class="story-progress-fill"></div></div>
-  </div>
 </section>
 
-<!-- ============ HİZMETLER ============ -->
-<section id="hizmetler">
-  <div class="wrap">
-    <div class="folio reveal"><span class="num">01</span><div class="rule"></div><h2 class="serif">Hizmetlerimiz</h2></div>
 
-    <div class="service-row">
-      <span class="idx">01</span>
-      <div class="service-main"><h3 class="serif">Koltuk Yıkama</h3><p class="reveal">Vakumlu ekipmanla derinlemesine leke ve koku giderme; kumaş, deri ve alcantara döşemeye uygun.</p></div>
-      <div class="service-price"><div class="from">başlangıç</div><div class="amt serif">750 ₺</div><a href="/koltuk-yikama/">Detaylı bilgi</a></div>
+
+
+
+
+
+
+
+
+<!-- ============ HİZMETLER (BOSSOGARAGE STICKY CARDS) ============ -->
+<section id="hizmetler" style="background: var(--ink); padding: 120px 0;">
+  <div class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    
+    <div style="text-align: center; margin-bottom: 60px;">
+        <h2 style="color: #fff; font-size: 3rem; font-weight: 700; margin-bottom: 10px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; letter-spacing: -1px;">Hizmetlerimiz</h2>
+        <p style="color: #aaa; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Mobilİzmir olarak İzmir'de aracınızı koruma altına alarak profesyonel çözümler sunuyoruz.</p>
     </div>
-    <div class="service-row">
-      <span class="idx">02</span>
-      <div class="service-main"><h3 class="serif">Pasta Cila</h3><p class="reveal">Kılcal çizik giderme, boya koruma ve showroom parlaklığı — tek/çift/üç aşamalı seçenekler.</p></div>
-      <div class="service-price"><div class="from">başlangıç</div><div class="amt serif">1.800 ₺</div><a href="/pasta-cila/">Detaylı bilgi</a></div>
-    </div>
-    <div class="service-row">
-      <span class="idx">03</span>
-      <div class="service-main"><h3 class="serif">Far Temizliği</h3><p class="reveal">Sararmış farları saydamlaştırma, UV koruma kaplaması ve gece görüşünü artırma.</p></div>
-      <div class="service-price"><div class="from">başlangıç</div><div class="amt serif">450 ₺</div><a href="/far-temizligi/">Detaylı bilgi</a></div>
-    </div>
-    <div class="service-row">
-      <span class="idx">04</span>
-      <div class="service-main"><h3 class="serif">Boyasız Göçük Düzeltme (PDR)</h3><p class="reveal">Orijinal boyaya dokunmadan göçük onarımı; aracın değerini ve garantisini korur.</p></div>
-      <div class="service-price"><div class="from">başlangıç</div><div class="amt serif">1.200 ₺</div><a href="/boyasiz-gocuk-duzeltme/">Detaylı bilgi</a></div>
-    </div>
-    <div class="service-row">
-      <span class="idx">05</span>
-      <div class="service-main"><h3 class="serif">Periyodik Bakım</h3><p class="reveal">Sıvı, filtre ve rutin kontrol paketleri — servise gitmeden yerinizde.</p></div>
-      <div class="service-price"><div class="from">başlangıç</div><div class="amt serif">900 ₺</div><a href="/periyodik-bakim/">Detaylı bilgi</a></div>
+    
+    <div class="b-cards-container">
+      <div class="b-card" style="top: 120px;">
+         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/service-pdr.jpg" alt="Boyasız Göçük Düzeltme">
+         <div class="b-overlay"></div>
+         <div class="b-content">
+            <h3 class="b-title">Boyasız Göçük Düzeltme</h3>
+            <div class="b-desc-wrap">
+                <p>Orijinal boyaya dokunmadan göçük onarımı; aracın değerini ve garantisini korur.</p>
+                <a href="/boyasiz-gocuk-duzeltme/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
+            </div>
+         </div>
+      </div>
+      <div class="b-card" style="top: 140px;">
+         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/service-pastacila.jpg" alt="Pasta Cila">
+         <div class="b-overlay"></div>
+         <div class="b-content">
+            <h3 class="b-title">Pasta Cila</h3>
+            <div class="b-desc-wrap">
+                <p>Kılcal çizik giderme, boya koruma ve showroom parlaklığı — tek/çift/üç aşamalı seçenekler.</p>
+                <a href="/pasta-cila/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
+            </div>
+         </div>
+      </div>
+      <div class="b-card" style="top: 160px;">
+         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/new-arac-yikama.jpg" alt="Araç İç Dış Yıkama">
+         <div class="b-overlay"></div>
+         <div class="b-content">
+            <h3 class="b-title">Araç İç Dış Yıkama</h3>
+            <div class="b-desc-wrap">
+                <p>Mobil aracımızla kapınızda profesyonel iç ve dış detaylı yıkama.</p>
+                <a href="/arac-yikama/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
+            </div>
+         </div>
+      </div>
+      <div class="b-card" style="top: 180px;">
+         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/service-koltuk.jpg" alt="Koltuk Yıkama">
+         <div class="b-overlay"></div>
+         <div class="b-content">
+            <h3 class="b-title">Koltuk Yıkama</h3>
+            <div class="b-desc-wrap">
+                <p>Vakumlu ekipmanla derinlemesine leke ve koku giderme; kumaş, deri ve alcantara döşemeye uygun.</p>
+                <a href="/koltuk-yikama/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
+            </div>
+         </div>
+      </div>
+      <div class="b-card" style="top: 200px;">
+         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/service-motor.jpg" alt="Periyodik Bakım">
+         <div class="b-overlay"></div>
+         <div class="b-content">
+            <h3 class="b-title">Periyodik Bakım</h3>
+            <div class="b-desc-wrap">
+                <p>Sıvı, filtre ve rutin kontrol paketleri — servise gitmeden yerinizde.</p>
+                <a href="/periyodik-bakim/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
+            </div>
+         </div>
+      </div>
+      <div class="b-card" style="top: 220px;">
+         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/new-kaporta-boya.jpg" alt="Kaporta Boya">
+         <div class="b-overlay"></div>
+         <div class="b-content">
+            <h3 class="b-title">Kaporta Boya</h3>
+            <div class="b-desc-wrap">
+                <p>Orijinal renk koduna uygun bilgisayarlı karışım ile fırınlı boya uygulaması.</p>
+                <a href="/kaporta-boya/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
+            </div>
+         </div>
+      </div>
+      <div class="b-card" style="top: 240px;">
+         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/new-kaporta-tamir.png" alt="Kaporta Tamir">
+         <div class="b-overlay"></div>
+         <div class="b-content">
+            <h3 class="b-title">Kaporta Tamir</h3>
+            <div class="b-desc-wrap">
+                <p>Büyük hasarlar için donanımlı garajımızda profesyonel kaporta düzeltme ve onarım.</p>
+                <a href="/kaporta-tamir/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
+            </div>
+         </div>
+      </div>
+      <div class="b-card" style="top: 260px;">
+         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/service-far.jpg" alt="Far Temizliği">
+         <div class="b-overlay"></div>
+         <div class="b-content">
+            <h3 class="b-title">Far Temizliği</h3>
+            <div class="b-desc-wrap">
+                <p>Sararmış farları saydamlaştırma, UV koruma kaplaması ve gece görüşünü artırma.</p>
+                <a href="/far-temizligi/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
+            </div>
+         </div>
+      </div>
+      <div class="b-card" style="top: 280px;">
+         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/new-celik-rotus.png" alt="Çelik Rötuş">
+         <div class="b-overlay"></div>
+         <div class="b-content">
+            <h3 class="b-title">Çelik Rötuş</h3>
+            <div class="b-desc-wrap">
+                <p>Taş izleri ve derin çizikler için mikron düzeyinde çelik rötuş işlemi.</p>
+                <a href="/celik-rotus/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
+            </div>
+         </div>
+      </div>
+      <div class="b-card" style="top: 300px;">
+         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/new-cam-filmi.jpg" alt="Cam Filmi">
+         <div class="b-overlay"></div>
+         <div class="b-content">
+            <h3 class="b-title">Cam Filmi</h3>
+            <div class="b-desc-wrap">
+                <p>Isı ve UV korumalı, Amerikan çizilmez cam filmi uygulaması (Farklı ton seçenekleri).</p>
+                <a href="/cam-filmi/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
+            </div>
+         </div>
+      </div>
+      <div class="b-card" style="top: 320px;">
+         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/new-ppf-kaplama.jpg" alt="PPF Kaplama">
+         <div class="b-overlay"></div>
+         <div class="b-content">
+            <h3 class="b-title">PPF Kaplama</h3>
+            <div class="b-desc-wrap">
+                <p>Aracınızın boyasını çiziklere, taş izlerine, kuş pisliklerine ve güneşin zararlı etkilerine karşı koruyan şeffaf koruma filmi.</p>
+                <a href="/ppf-kaplama/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
+            </div>
+         </div>
+      </div>
     </div>
   </div>
 </section>
-
 
 
 <!-- ============ X-RAY ARAÇ İNCELEMESİ ============ -->
-<style>
-/* Proportional scale down for the Hero Configurator */
-.hero-configurator { margin-top: -35px !important; }
-.hero-configurator h2.serif { font-size: 1.3rem !important; }
-.hero-configurator p { font-size: 0.75rem !important; }
-.hero-configurator h3 { font-size: 0.8rem !important; margin-bottom: 8px !important; }
-.hero-configurator .car-type-btn { flex: 0 0 70px !important; height: 55px !important; padding: 6px !important; }
-.hero-configurator .car-type-btn svg { transform: scale(0.8); margin-bottom: 2px !important; }
-.hero-configurator .car-type-btn span { font-size: 0.65rem !important; }
-.hero-configurator .issue-btn { padding: 8px 6px !important; font-size: 0.7rem !important; }
-#hero-whatsapp-btn { padding: 10px 0 !important; font-size: 13px !important; }
-</style>
-<style>
-.xray-crop-wrapper {
-    width: 100%;
-    aspect-ratio: 2.2 / 1;
-    overflow: hidden;
-    position: relative;
-}
-@media(max-width: 768px) {
-    .xray-crop-wrapper {
-        aspect-ratio: 16 / 9;
-    }
-}
-</style>
+
+
 <section class="xray-section" style="padding: 0; background: var(--ink); overflow: hidden; position: relative;">
   
   <div style="position: relative; width: 100%; text-align: center; padding-top: 60px; padding-bottom: 20px; z-index: 10; background: var(--ink);">
@@ -298,25 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const hThumbs = document.querySelectorAll('.h-thumb');
-    const hMain = document.getElementById('homeMain');
-    if(!hMain || hThumbs.length === 0) return;
-    
-    hThumbs.forEach(t => {
-        t.addEventListener('click', () => {
-            hThumbs.forEach(th => {
-                th.style.borderColor = 'transparent';
-                th.style.opacity = '0.5';
-            });
-            t.style.borderColor = 'var(--gold-bright)';
-            t.style.opacity = '1';
-            hMain.style.backgroundImage = `url('${t.getAttribute('data-img')}')`;
-        });
-    });
-});
-</script>
+
 
 <!-- ============ SÜREÇ ============ -->
 <section class="alt">

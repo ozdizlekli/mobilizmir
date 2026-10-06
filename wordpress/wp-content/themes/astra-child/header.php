@@ -46,12 +46,24 @@ document.addEventListener("DOMContentLoaded", function() {
             <a href="/#hakkimizda">Hakkımızda</a>
             <div class="has-dropdown">
                 <a href="/#hizmetler">Hizmetlerimiz <svg viewBox="0 0 12 12" width="10" height="10" ><path d="M3 4.5L6 7.5L9 4.5"></path></svg></a>
-                <div class="dropdown">
-                    <a href="/koltuk-yikama/">Koltuk Yıkama</a>
-                    <a href="/pasta-cila/">Pasta Cila</a>
-                    <a href="/far-temizligi/">Far Temizliği</a>
-                    <a href="/boyasiz-gocuk-duzeltme/">Boyasız Göçük Düzeltme</a>
-                    <a href="/periyodik-bakim/">Periyodik Bakım</a>
+                <div class="dropdown mega-menu">
+                    <div class="menu-col">
+                        <span class="menu-heading">📍 Evde & İş Yerinde (Mobil)</span>
+                        <a href="/boyasiz-gocuk-duzeltme/">Boyasız Göçük Düzeltme</a>
+                        <a href="/far-temizligi/">Far Temizleme</a>
+                        <a href="/pasta-cila/">Pasta Cila</a>
+                        <a href="/koltuk-yikama/">Oto & Ev Koltuk Yıkama</a>
+                        <a href="/arac-yikama/">Araç İç Dış Yıkama</a>
+                        <a href="/periyodik-bakim/">Periyodik Bakım (Yağ & Filtre)</a>
+                    </div>
+                    <div class="menu-col">
+                        <span class="menu-heading">🏢 Garajımızda (Merkez)</span>
+                        <a href="/kaporta-tamir/">Kaporta Tamir</a>
+                        <a href="/kaporta-boya/">Kaporta Boya</a>
+                        <a href="/celik-rotus/">Çelik Rötuş</a>
+                        <a href="/cam-filmi/">Cam Filmi</a>
+                        <a href="/ppf-kaplama/">PPF Kaplama</a>
+                    </div>
                 </div>
             </div>
         </nav>
