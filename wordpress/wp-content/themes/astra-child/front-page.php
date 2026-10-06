@@ -111,138 +111,56 @@ get_header(); ?>
 
 
 
-<!-- ============ HİZMETLER (BOSSOGARAGE STICKY CARDS) ============ -->
-<section id="hizmetler" style="background: var(--ink); padding: 120px 0;">
-  <div class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-    
-    <div style="text-align: center; margin-bottom: 60px;">
-        <h2 style="color: #fff; font-size: 3rem; font-weight: 700; margin-bottom: 10px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; letter-spacing: -1px;">Hizmetlerimiz</h2>
-        <p style="color: #aaa; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Mobilİzmir olarak İzmir'de aracınızı koruma altına alarak profesyonel çözümler sunuyoruz.</p>
+<!-- ============ HİZMETLER ============ -->
+<section id="hizmetler" class="services-showcase">
+  <div class="wrap services-wrap">
+    <div class="services-heading">
+      <div>
+        <span class="section-kicker">02 — UYGULAMALARIMIZ</span>
+        <h2>Aracınız için doğru uzmanlık.</h2>
+      </div>
+      <p>Kapınızda sunduğumuz pratik çözümlerden, kapsamlı atölye uygulamalarına kadar aracınızın ihtiyacına uygun profesyonel hizmetler.</p>
     </div>
-    
-    <div class="b-cards-container">
-      <div class="b-card" style="top: 120px;">
-         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/service-pdr.jpg" alt="Boyasız Göçük Düzeltme">
-         <div class="b-overlay"></div>
-         <div class="b-content">
-            <h3 class="b-title">Boyasız Göçük Düzeltme</h3>
-            <div class="b-desc-wrap">
-                <p>Orijinal boyaya dokunmadan göçük onarımı; aracın değerini ve garantisini korur.</p>
-                <a href="/boyasiz-gocuk-duzeltme/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
-            </div>
-         </div>
-      </div>
-      <div class="b-card" style="top: 140px;">
-         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/service-pastacila.jpg" alt="Pasta Cila">
-         <div class="b-overlay"></div>
-         <div class="b-content">
-            <h3 class="b-title">Pasta Cila</h3>
-            <div class="b-desc-wrap">
-                <p>Kılcal çizik giderme, boya koruma ve showroom parlaklığı — tek/çift/üç aşamalı seçenekler.</p>
-                <a href="/pasta-cila/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
-            </div>
-         </div>
-      </div>
-      <div class="b-card" style="top: 160px;">
-         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/new-arac-yikama.jpg" alt="Araç İç Dış Yıkama">
-         <div class="b-overlay"></div>
-         <div class="b-content">
-            <h3 class="b-title">Araç İç Dış Yıkama</h3>
-            <div class="b-desc-wrap">
-                <p>Mobil aracımızla kapınızda profesyonel iç ve dış detaylı yıkama.</p>
-                <a href="/arac-yikama/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
-            </div>
-         </div>
-      </div>
-      <div class="b-card" style="top: 180px;">
-         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/service-koltuk.jpg" alt="Koltuk Yıkama">
-         <div class="b-overlay"></div>
-         <div class="b-content">
-            <h3 class="b-title">Koltuk Yıkama</h3>
-            <div class="b-desc-wrap">
-                <p>Vakumlu ekipmanla derinlemesine leke ve koku giderme; kumaş, deri ve alcantara döşemeye uygun.</p>
-                <a href="/koltuk-yikama/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
-            </div>
-         </div>
-      </div>
-      <div class="b-card" style="top: 200px;">
-         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/service-motor.jpg" alt="Periyodik Bakım">
-         <div class="b-overlay"></div>
-         <div class="b-content">
-            <h3 class="b-title">Periyodik Bakım</h3>
-            <div class="b-desc-wrap">
-                <p>Sıvı, filtre ve rutin kontrol paketleri — servise gitmeden yerinizde.</p>
-                <a href="/periyodik-bakim/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
-            </div>
-         </div>
-      </div>
-      <div class="b-card" style="top: 220px;">
-         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/new-kaporta-boya.jpg" alt="Kaporta Boya">
-         <div class="b-overlay"></div>
-         <div class="b-content">
-            <h3 class="b-title">Kaporta Boya</h3>
-            <div class="b-desc-wrap">
-                <p>Orijinal renk koduna uygun bilgisayarlı karışım ile fırınlı boya uygulaması.</p>
-                <a href="/kaporta-boya/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
-            </div>
-         </div>
-      </div>
-      <div class="b-card" style="top: 240px;">
-         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/new-kaporta-tamir.png" alt="Kaporta Tamir">
-         <div class="b-overlay"></div>
-         <div class="b-content">
-            <h3 class="b-title">Kaporta Tamir</h3>
-            <div class="b-desc-wrap">
-                <p>Büyük hasarlar için donanımlı garajımızda profesyonel kaporta düzeltme ve onarım.</p>
-                <a href="/kaporta-tamir/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
-            </div>
-         </div>
-      </div>
-      <div class="b-card" style="top: 260px;">
-         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/service-far.jpg" alt="Far Temizliği">
-         <div class="b-overlay"></div>
-         <div class="b-content">
-            <h3 class="b-title">Far Temizliği</h3>
-            <div class="b-desc-wrap">
-                <p>Sararmış farları saydamlaştırma, UV koruma kaplaması ve gece görüşünü artırma.</p>
-                <a href="/far-temizligi/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
-            </div>
-         </div>
-      </div>
-      <div class="b-card" style="top: 280px;">
-         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/new-celik-rotus.png" alt="Çelik Rötuş">
-         <div class="b-overlay"></div>
-         <div class="b-content">
-            <h3 class="b-title">Çelik Rötuş</h3>
-            <div class="b-desc-wrap">
-                <p>Taş izleri ve derin çizikler için mikron düzeyinde çelik rötuş işlemi.</p>
-                <a href="/celik-rotus/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
-            </div>
-         </div>
-      </div>
-      <div class="b-card" style="top: 300px;">
-         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/new-cam-filmi.jpg" alt="Cam Filmi">
-         <div class="b-overlay"></div>
-         <div class="b-content">
-            <h3 class="b-title">Cam Filmi</h3>
-            <div class="b-desc-wrap">
-                <p>Isı ve UV korumalı, Amerikan çizilmez cam filmi uygulaması (Farklı ton seçenekleri).</p>
-                <a href="/cam-filmi/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
-            </div>
-         </div>
-      </div>
-      <div class="b-card" style="top: 320px;">
-         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/new-ppf-kaplama.jpg" alt="PPF Kaplama">
-         <div class="b-overlay"></div>
-         <div class="b-content">
-            <h3 class="b-title">PPF Kaplama</h3>
-            <div class="b-desc-wrap">
-                <p>Aracınızın boyasını çiziklere, taş izlerine, kuş pisliklerine ve güneşin zararlı etkilerine karşı koruyan şeffaf koruma filmi.</p>
-                <a href="/ppf-kaplama/" class="b-btn">Detaylı Bilgi Al &rarr;</a>
-            </div>
-         </div>
-      </div>
+
+    <div class="service-filter" role="tablist" aria-label="Hizmet türleri">
+      <button class="service-filter-btn active" type="button" data-service-filter="all" role="tab" aria-selected="true">Tüm Hizmetler <span>11</span></button>
+      <button class="service-filter-btn" type="button" data-service-filter="mobile" role="tab" aria-selected="false">Mobil Hizmetler <span>6</span></button>
+      <button class="service-filter-btn" type="button" data-service-filter="workshop" role="tab" aria-selected="false">Atölye Hizmetleri <span>5</span></button>
     </div>
+
+    <?php
+    $services = [
+      ['title'=>'Boyasız Göçük Düzeltme', 'desc'=>'Orijinal boyaya dokunmadan göçük onarımı; aracın değerini ve garantisini korur.', 'image'=>'service-pdr.jpg', 'url'=>'/boyasiz-gocuk-duzeltme/', 'type'=>'mobile', 'label'=>'MOBİL HİZMET'],
+      ['title'=>'Pasta Cila', 'desc'=>'Kılcal çizik giderme, boya koruma ve showroom parlaklığı için aşamalı uygulama.', 'image'=>'service-pastacila.jpg', 'url'=>'/pasta-cila/', 'type'=>'mobile', 'label'=>'MOBİL HİZMET'],
+      ['title'=>'Araç İç & Dış Yıkama', 'desc'=>'Mobil aracımızla kapınızda profesyonel iç ve dış detaylı yıkama.', 'image'=>'new-arac-yikama.jpg', 'url'=>'/arac-yikama/', 'type'=>'mobile', 'label'=>'MOBİL HİZMET'],
+      ['title'=>'Koltuk Yıkama', 'desc'=>'Kumaş, deri ve alcantara döşemeler için derinlemesine leke ve koku giderme.', 'image'=>'service-koltuk.jpg', 'url'=>'/koltuk-yikama/', 'type'=>'mobile', 'label'=>'MOBİL HİZMET'],
+      ['title'=>'Periyodik Bakım', 'desc'=>'Sıvı, filtre ve rutin kontroller; servise gitmeden, yerinizde.', 'image'=>'service-motor.jpg', 'url'=>'/periyodik-bakim/', 'type'=>'mobile', 'label'=>'MOBİL HİZMET'],
+      ['title'=>'Kaporta Boya', 'desc'=>'Orijinal renk koduna uygun bilgisayarlı karışım ile fırınlı boya uygulaması.', 'image'=>'new-kaporta-boya.jpg', 'url'=>'/kaporta-boya/', 'type'=>'workshop', 'label'=>'ATÖLYE HİZMETİ'],
+      ['title'=>'Kaporta Tamir', 'desc'=>'Büyük hasarlar için donanımlı garajımızda profesyonel kaporta düzeltme ve onarım.', 'image'=>'new-kaporta-tamir.png', 'url'=>'/kaporta-tamir/', 'type'=>'workshop', 'label'=>'ATÖLYE HİZMETİ'],
+      ['title'=>'Far Temizliği', 'desc'=>'Sararmış farlarda saydamlık, UV koruma ve daha güçlü gece görüşü.', 'image'=>'service-far.jpg', 'url'=>'/far-temizligi/', 'type'=>'mobile', 'label'=>'MOBİL HİZMET'],
+      ['title'=>'Çelik Rötuş', 'desc'=>'Taş izleri ve derin çizikler için hassas, mikron düzeyinde rötuş işlemi.', 'image'=>'new-celik-rotus.png', 'url'=>'/celik-rotus/', 'type'=>'workshop', 'label'=>'ATÖLYE HİZMETİ'],
+      ['title'=>'Cam Filmi', 'desc'=>'Isı ve UV korumalı, çizilmeye dirençli cam filmi; farklı ton seçenekleriyle.', 'image'=>'new-cam-filmi.jpg', 'url'=>'/cam-filmi/', 'type'=>'workshop', 'label'=>'ATÖLYE HİZMETİ'],
+      ['title'=>'PPF Kaplama', 'desc'=>'Boyayı çizik, taş izi ve dış etkenlere karşı koruyan şeffaf koruma filmi.', 'image'=>'new-ppf-kaplama.jpg', 'url'=>'/ppf-kaplama/', 'type'=>'workshop', 'label'=>'ATÖLYE HİZMETİ'],
+    ];
+    ?>
+    <div class="service-grid">
+      <?php foreach ($services as $index => $service): ?>
+        <article class="service-card" data-service-type="<?php echo esc_attr($service['type']); ?>">
+          <a class="service-card-image" href="<?php echo esc_url($service['url']); ?>" aria-label="<?php echo esc_attr($service['title']); ?> hakkında detaylı bilgi">
+            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/' . $service['image']); ?>" alt="<?php echo esc_attr($service['title']); ?>">
+            <span class="service-card-shade"></span>
+            <span class="service-card-number"><?php echo str_pad($index + 1, 2, '0', STR_PAD_LEFT); ?></span>
+            <span class="service-card-label"><?php echo esc_html($service['label']); ?></span>
+          </a>
+          <div class="service-card-body">
+            <h3><a href="<?php echo esc_url($service['url']); ?>"><?php echo esc_html($service['title']); ?></a></h3>
+            <p><?php echo esc_html($service['desc']); ?></p>
+            <a href="<?php echo esc_url($service['url']); ?>" class="service-card-link">Detaylı bilgi <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      <?php endforeach; ?>
+    </div>
+    <p class="services-note"><span></span> Mobil hizmetler adresinizde planlanır. Atölye uygulamaları için uygunluk ve randevu bilgisi alabilirsiniz.</p>
   </div>
 </section>
 

@@ -98,6 +98,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    const serviceFilterButtons = document.querySelectorAll('[data-service-filter]');
+    const serviceCards = document.querySelectorAll('.service-card[data-service-type]');
+
+    serviceFilterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const selectedFilter = button.dataset.serviceFilter;
+
+            serviceFilterButtons.forEach((item) => {
+                const isActive = item === button;
+                item.classList.toggle('active', isActive);
+                item.setAttribute('aria-selected', String(isActive));
+            });
+
+            serviceCards.forEach((card) => {
+                const shouldShow = selectedFilter === 'all' || card.dataset.serviceType === selectedFilter;
+                card.classList.toggle('is-hidden', !shouldShow);
+            });
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
     const hThumbs = document.querySelectorAll('.h-thumb');
     const hMain = document.getElementById('homeMain');
     if(!hMain || hThumbs.length === 0) return;
