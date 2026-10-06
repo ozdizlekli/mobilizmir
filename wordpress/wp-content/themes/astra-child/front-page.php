@@ -143,27 +143,28 @@ get_header(); ?>
       ['title'=>'PPF Kaplama', 'desc'=>'Boyayı çizik, taş izi ve dış etkenlere karşı koruyan şeffaf koruma filmi.', 'image'=>'new-ppf-kaplama.jpg', 'url'=>'/ppf-kaplama/', 'type'=>'workshop', 'label'=>'ATÖLYE HİZMETİ'],
     ];
     ?>
-    <div class="service-grid">
+    <div class="pr-grid">
       <?php foreach ($services as $index => $service): ?>
-        <article class="service-card" data-service-type="<?php echo esc_attr($service['type']); ?>">
-          <a class="service-card-image" href="<?php echo esc_url($service['url']); ?>" aria-label="<?php echo esc_attr($service['title']); ?> hakkında detaylı bilgi">
+        <a href="<?php echo esc_url($service['url']); ?>" class="pr-card" data-service-type="<?php echo esc_attr($service['type']); ?>">
+          <div class="pr-bg">
             <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/' . $service['image']); ?>" alt="<?php echo esc_attr($service['title']); ?>">
-            <span class="service-card-shade"></span>
-            <span class="service-card-number"><?php echo str_pad($index + 1, 2, '0', STR_PAD_LEFT); ?></span>
-            <span class="service-card-label"><?php echo esc_html($service['label']); ?></span>
-          </a>
-          <div class="service-card-body">
-            <h3><a href="<?php echo esc_url($service['url']); ?>"><?php echo esc_html($service['title']); ?></a></h3>
-            <p><?php echo esc_html($service['desc']); ?></p>
-            <a href="<?php echo esc_url($service['url']); ?>" class="service-card-link">Detaylı bilgi <span aria-hidden="true">↗</span></a>
           </div>
-        </article>
+          <div class="pr-overlay"></div>
+          
+          <div class="pr-badge <?php echo $service['type'] === 'mobile' ? 'badge-mobile' : 'badge-workshop'; ?>">
+             <?php echo esc_html($service['label']); ?>
+          </div>
+          
+          <div class="pr-content">
+            <h3 class="pr-title"><?php echo esc_html($service['title']); ?></h3>
+            <p class="pr-desc"><?php echo esc_html($service['desc']); ?></p>
+            <span class="pr-link">İncele <span class="arr">&rarr;</span></span>
+          </div>
+        </a>
       <?php endforeach; ?>
     </div>
-    <p class="services-note"><span></span> Mobil hizmetler adresinizde planlanır. Atölye uygulamaları için uygunluk ve randevu bilgisi alabilirsiniz.</p>
   </div>
 </section>
-
 
 <!-- ============ X-RAY ARAÇ İNCELEMESİ ============ -->
 

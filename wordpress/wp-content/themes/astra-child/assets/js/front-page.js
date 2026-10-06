@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const serviceFilterButtons = document.querySelectorAll('[data-service-filter]');
-    const serviceCards = document.querySelectorAll('.service-card[data-service-type]');
+    const serviceCards = document.querySelectorAll('.pr-card[data-service-type]');
 
     serviceFilterButtons.forEach((button) => {
         button.addEventListener('click', () => {
